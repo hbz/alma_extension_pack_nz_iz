@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Doku für Wiki-Seite
- neue CV-Liste bei 506 $$a
- geänderte CV-Liste bei 506 $f
- ergänzte Beschreibung bei CV-Liste 506 $$2
- neue CV-Liste bei 540 $$f
- gelöschte CV-Liste bei 542 $$f
- neue Produktsigel bei 962 + umsortieren -->
 <marc_profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marc21_profile_configuration.xsd">
 	<data_fields_list>
 		<data_field_configuration repeatable="false" mandatory="false" tag="009" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -2709,7 +2702,7 @@
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
-		<data_field_configuration repeatable="false" mandatory="false" tag="245" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<data_field_configuration repeatable="false" mandatory="true" tag="245" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Titelangabe</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/245/245.html</help_url>
 			<first_indicator_configuration>
@@ -2738,13 +2731,13 @@
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="true" mandatory="false" code="b">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Zusätzliche Angaben zum Titel</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Verantwortlichkeitsangabe, etc.</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="true" mandatory="false" code="f">
+				<sub_field_configuration repeatable="false" mandatory="false" code="f">
 					<description>Entstehungszeitraum</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="g">
@@ -2768,6 +2761,9 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Zählung eines Teils/einer Abteilung eines Werkes</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="p">
+					<description>Titel eines Teils/einer Abteilung eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Version</description>
@@ -2855,6 +2851,12 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Ausreifung / Entstehungsstufe</description>
 				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
+					<description>Literarische Gattung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
+					<description>Explicit der Unterlage</description>
+				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="300" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
@@ -2897,6 +2899,7 @@
 						<value code="Online-Ressource"> | </value>
 						<value code="Schallplatte"> | </value>
 						<value code="SD-Karte"> | </value>
+						<value code="Ultra HD Blu-ray"> | </value>
 						<value code="USB-Sticks"> | </value>
 						<value code="Ansicht"> | </value>
 						<value code="Atlas"> | </value>
@@ -4609,8 +4612,11 @@
 					<description>Standardisierte Terminologie für Zugangsbeschränkungen</description>
 					<values>
 						<value code="Unrestricted online access$$2star"> | </value>
+						<value code="Unrestricted online access">bitte den Eintrag mit $$2 auswählen</value>
 						<value code="Online access with authorization$$2star"> | </value>
+						<value code="Online access with authorization">bitte den Eintrag mit $$2 auswählen</value>
 						<value code="Restrictions unspecified$$2star"> | </value>
+						<value code="Restrictions unspecified">bitte den Eintrag mit $$2 auswählen</value>
 					</values>
 				</sub_field_configuration>
 				<sub_field_configuration code="g" repeatable="true" mandatory="false">
@@ -4877,6 +4883,7 @@
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Bearbeitung, Angaben zur Langzeitarchivierung / Bestandsschutz-Maßnahmen</description>
 					<values>
+					    <value code="Archivierung prüfen"> | </value>
 						<value code="Archivierung/Langzeitarchivierung gewährleistet"> | </value>
 						<value code="Archivierung/Langzeitarchivierung geplant"> | </value>
 						<value code="Archivierung/Langzeitarchivierung nicht möglich"> | </value>
@@ -4886,10 +4893,22 @@
 						<value code="Digitalisiert"> | </value>
 						<value code="Digitalisierung geplant"> | </value>
 						<value code="Digitalisierung nicht möglich"> | </value>
-						<value code="Fremddigitalisat verfügbar"> | </value>
+						<value code="Fremddigitalisat/Parallelausgabe verfügbar"> | </value>
 						<value code="Verfilmt"> | </value>
 						<value code="Verfilmung geplant"> | </value>
 						<value code="Verfilmung nicht möglich"> | </value>
+						<value code="Restauriert"> | </value>
+						<value code="Restaurierung geplant"> | </value>
+						<value code="Restaurierung nicht möglich"> | </value>
+						<value code="Schutzverpackt"> | </value>
+						<value code="Schutzverpackung geplant"> | </value>
+						<value code="Schutzverpackung nicht möglich"> | </value>
+						<value code="Zustandserhebung erfolgt"> | </value>
+						<value code="Zustandserhebung geplant"> | </value>
+						<value code="Zustandserhebung nicht möglich"> | </value>
+						<value code="Präventive/stabilisierende Konservierung erfolgt"> | </value>
+						<value code="Präventive/stabilisierende Konservierung geplant"> | </value>
+						<value code="Präventive/stabilisierende Konservierung nicht möglich"> | </value>
 					</values>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="b">
@@ -5165,6 +5184,8 @@
 						<value code="Ausstellungskatalog">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Autobiografie$$0(DE-588)4003939-0$$2gnd-content">SE</value>
 						<value code="Autobiografie">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Autograf$$0(DE-588)4003942-0$$2gnd-content">SE</value>
+						<value code="Autograf">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Backbuch$$0(DE-588)7502992-3$$2gnd-content">SE</value>
 						<value code="Backbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Beispielsammlung$$0(DE-588)4144384-6$$2gnd-content">SE</value>
@@ -5183,18 +5204,24 @@
 						<value code="Bilderbogen">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Bilderbuch$$0(DE-588)4006604-6$$2gnd-content">SE</value>
 						<value code="Bilderbuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Bildnis$$0(DE-588)4006627-7$$2gnd-content">SE</value>
+						<value code="Bildnis">bitte den Eintrag mit $$0 auswählen</value>			
 						<value code="Bildwörterbuch$$0(DE-588)4145505-8$$2gnd-content">SE</value>
 						<value code="Bildwörterbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Biografie$$0(DE-588)4006804-3$$2gnd-content">SE</value>
 						<value code="Biografie">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Blindendruck$$0(DE-588)4282504-0$$2gnd-content">SE</value>
 						<value code="Blindendruck">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Brief$$0(DE-588)4008240-4$$2gnd-content">SE</value>
+						<value code="Brief">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Briefsammlung$$0(DE-588)4146609-3$$2gnd-content">SE</value>
 						<value code="Briefsammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Checkliste$$0(DE-588)4398750-3$$2gnd-content">SE</value>
 						<value code="Checkliste">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Comic$$0(DE-588)4010427-8$$2gnd-content">SE</value>
 						<value code="Comic">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Datenbank$$0(DE-588)4011119-2$$2gnd-content">SE</value>
+						<value code="Datenbank">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Datensammlung$$0(DE-588)4148875-1$$2gnd-content">SE</value>
 						<value code="Datensammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Diagramm$$0(DE-588)4012044-2$$2gnd-content">SE</value>
@@ -5217,6 +5244,8 @@
 						<value code="Fachkunde">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fahrplan$$0(DE-588)4153563-7$$2gnd-content">SE</value>
 						<value code="Fahrplan">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Faksimile$$0(DE-588)4153591-1$$2gnd-content">SE</value>
+						<value code="Faksimile">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fallsammlung$$0(DE-588)4153616-2$$2gnd-content">SE</value>
 						<value code="Fallsammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fallstudiensammlung$$0(DE-588)4522595-3$$2gnd-content">SE</value>
@@ -5257,6 +5286,8 @@
 						<value code="Grafik">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Graphzine$$0(DE-588)1032889837$$2gnd-content">SE</value>
 						<value code="Graphzine">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Handschrift$$0(DE-588)4023287-6$$2gnd-content">SE</value>
+						<value code="Handschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Haushaltsplan$$0(DE-588)4072349-5$$2gnd-content">SE</value>
 						<value code="Haushaltsplan">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Hochschulschrift$$0(DE-588)4113937-9$$2gnd-content">SE</value>
@@ -5267,6 +5298,8 @@
 						<value code="Hörspiel">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Humoristische Darstellung$$0(DE-588)4160799-5$$2gnd-content">SE</value>
 						<value code="Humoristische Darstellung">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Inkunabel$$0(DE-588)4027041-5$$2gnd-content">SE</value>
+						<value code="Inkunabel">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Interview$$0(DE-588)4027503-6$$2gnd-content">SE</value>
 						<value code="Interview">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Inventar$$0(DE-588)4027540-1$$2gnd-content">SE</value>
@@ -5319,6 +5352,8 @@
 						<value code="Liederbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Literaturbericht$$0(DE-588)4167870-9$$2gnd-content">SE</value>
 						<value code="Literaturbericht">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Loseblattsammlung$$0(DE-588)4343271-2$$2gnd-content">SE</value>
+						<value code="Loseblattsammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Mehrsprachiges Wörterbuch$$0(DE-588)4491366-7$$2gnd-content">SE</value>
 						<value code="Mehrsprachiges Wörterbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Mitgliederverzeichnis$$0(DE-588)4170173-2$$2gnd-content">SE</value>
@@ -5327,16 +5362,24 @@
 						<value code="Modell">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Monografische Reihe$$0(DE-588)4179998-7$$2gnd-content">SE</value>
 						<value code="Monografische Reihe">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Musikhandschrift$$0(DE-588)4040847-4$$2gnd-content">SE</value>
+						<value code="Musikhandschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Nachruf$$0(DE-588)4128540-2$$2gnd-content">SE</value>
 						<value code="Nachruf">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Norm$$0(DE-588)4419668-4$$2gnd-content">SE</value>
 						<value code="Norm">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Ortsverzeichnis$$0(DE-588)4067870-2$$2gnd-content">SE</value>
+						<value code="Ortsverzeichnis">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Papyrus$$0(DE-588)4044571-9$$2gnd-content">SE</value>
+						<value code="Papyrus">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Patentschrift$$0(DE-588)4173536-5$$2gnd-content">SE</value>
 						<value code="Patentschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Plakat$$0(DE-588)4046198-1$$2gnd-content">SE</value>
 						<value code="Plakat">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Plan$$0(DE-588)4188555-7$$2gnd-content">SE</value>
 						<value code="Plan">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Podcast$$0(DE-588)7527248-9$$2gnd-content">SE</value>
+						<value code="Podcast">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Postkarte$$0(DE-588)4046902-5$$2gnd-content">SE</value>
 						<value code="Postkarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Praktikum$$0(DE-588)4127380-1$$2gnd-content">SE</value>
@@ -5355,8 +5398,10 @@
 						<value code="Quelle">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Ratgeber$$0(DE-588)4048476-2$$2gnd-content">SE</value>
 						<value code="Ratgeber">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Referateblatt$$0(DE-588)4177322-6$$2gnd-content">SE</value>
-						<value code="Referateblatt">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Rede$$0(DE-588)4048882-2$$2gnd-content">SE</value>
+						<value code="Rede">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Referateorgan$$0(DE-588)4177322-6$$2gnd-content">SE</value>
+						<value code="Referateorgan">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Regest$$0(DE-588)4049007-5$$2gnd-content">SE</value>
 						<value code="Regest">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Reisebericht$$0(DE-588)4076645-7$$2gnd-content">SE</value>
@@ -5373,6 +5418,8 @@
 						<value code="Rücklaufiges Wörterbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Sachbilderbuch$$0(DE-588)4221860-3$$2gnd-content">SE</value>
 						<value code="Sachbilderbuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Satzung$$0(DE-588)4051778-0$$2gnd-content">SE</value>
+						<value code="Satzung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Schematismus$$0(DE-588)4179484-9$$2gnd-content">SE</value>
 						<value code="Schematismus">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Schulbuch$$0(DE-588)4053458-3$$2gnd-content">SE</value>
@@ -5413,6 +5460,8 @@
 						<value code="Umfrage">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Unterrichtseinheit$$0(DE-588)4187074-8$$2gnd-content">SE</value>
 						<value code="Unterrichtseinheit">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Urkunde$$0(DE-588)4062132-7$$2gnd-content">SE</value>
+						<value code="Urkunde">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Verkaufskatalog$$0(DE-588)4187788-3$$2gnd-content">SE</value>
 						<value code="Verkaufskatalog">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Verzeichnis$$0(DE-588)4188171-0$$2gnd-content">SE</value>
@@ -5425,6 +5474,8 @@
 						<value code="Weltkarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Werkverzeichnis$$0(DE-588)4189680-4$$2gnd-content">SE</value>
 						<value code="Werkverzeichnis">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Werkzeitschrift$$0(DE-588)4189682-8$$2gnd-content">SE</value>
+						<value code="Werkzeitschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Wörterbuch$$0(DE-588)4066724-8$$2gnd-content">SE</value>
 						<value code="Wörterbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Zeichnung$$0(DE-588)4127900-1$$2gnd-content">SE</value>
@@ -5461,6 +5512,8 @@
 						<value code="Schallplatte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="SD-Karte$$0(DE-588)1082509396$$2gnd-carrier"> | </value>
 						<value code="SD-Karte">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Ultra HD Blu-ray$$0(DE-588)1261605802$$2gnd-carrier"> | </value>
+						<value code="Ultra HD Blu-ray">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="USB-Stick$$0(DE-588)4770596-6$$2gnd-carrier"> | </value>
 						<value code="USB-Stick">bitte den Eintrag mit $$0 auswählen</value>
 					</values>
@@ -5616,202 +5669,6 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="D">
 					<description>GND-Indikator - mit Verknüpfung zur GND in $0(DE-588)</description>
-				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="F">
-					<description>Schlagwort - Name</description>
-					<values>
-						<value code="Adressbuch"> | </value>
-						<value code="Altkarte"> | </value>
-						<value code="Amtliche Publikation"> | </value>
-						<value code="Anleitung"> | </value>
-						<value code="Anthologie"> | </value>
-						<value code="Antiquariatskatalog"> | </value>
-						<value code="Anzeigenblatt"> | </value>
-						<value code="Atlas"> | </value>
-						<value code="Audiovisuelles Material"> | </value>
-						<value code="Audiovisuelles Material &lt;für Kinder&gt;"> | </value>
-						<value code="Aufgabensammlung"> | </value>
-						<value code="Aufsatzsammlung"> | </value>
-						<value code="Auktionskatalog"> | </value>
-						<value code="Ausstellungskatalog"> | </value>
-						<value code="Autobiografie"> | </value>
-						<value code="Backbuch"> | </value>
-						<value code="Beispielsammlung"> | </value>
-						<value code="Bericht"> | </value>
-						<value code="Bestimmungsbuch"> | </value>
-						<value code="Bibliografie"> | </value>
-						<value code="Bild"> | </value>
-						<value code="Bildband"> | </value>
-						<value code="Bilderbogen"> | </value>
-						<value code="Bilderbuch"> | </value>
-						<value code="Bildplatte"> | </value>
-						<value code="Bildwörterbuch"> | </value>
-						<value code="Biografie"> | </value>
-						<value code="Blindendruck"> | </value>
-						<value code="Briefsammlung"> | </value>
-						<value code="CD"> | </value>
-						<value code="CD &lt;für Kinder&gt;"> | </value>
-						<value code="CD-ROM"> | </value>
-						<value code="CD-ROM &lt;für Kinder&gt;"> | </value>
-						<value code="Comic"> | </value>
-						<value code="Datensammlung"> | </value>
-						<value code="Dia"> | </value>
-						<value code="Diagramm"> | </value>
-						<value code="Diskette"> | </value>
-						<value code="Diskette &lt;für Kinder&gt;"> | </value>
-						<value code="Diskografie"> | </value>
-						<value code="Drehbuch"> | </value>
-						<value code="DVD-Audio"> | </value>
-						<value code="DVD-Audio &lt;für Kinder&gt;"> | </value>
-						<value code="DVD-ROM"> | </value>
-						<value code="DVD-ROM &lt;für Kinder&gt;"> | </value>
-						<value code="DVD-Video"> | </value>
-						<value code="DVD-Video &lt;für Kinder&gt;"> | </value>
-						<value code="Einblattdruck"> | </value>
-						<value code="Einführung"> | </value>
-						<value code="Elektronische Publikation"> | </value>
-						<value code="Elektronische Publikation &lt;für Kinder&gt;"> | </value>
-						<value code="Entscheidungssammlung"> | </value>
-						<value code="Enzyklopädie"> | </value>
-						<value code="Erlebnisbericht"> | </value>
-						<value code="Fachkunde"> | </value>
-						<value code="Fahrplan"> | </value>
-						<value code="Fallsammlung"> | </value>
-						<value code="Fallstudiensammlung"> | </value>
-						<value code="Festschrift"> | </value>
-						<value code="Fiktionale Darstellung"> | </value>
-						<value code="Film"> | </value>
-						<value code="Film &lt;für Kinder&gt;"> | </value>
-						<value code="Film 8mm"> | </value>
-						<value code="Film Super-8"> | </value>
-						<value code="Film 16mm"> | </value>
-						<value code="Film 35mm"> | </value>
-						<value code="Film 65mm"> | </value>
-						<value code="Film 70mm"> | </value>
-						<value code="Filmografie"> | </value>
-						<value code="Flugblatt"> | </value>
-						<value code="Formelsammlung"> | </value>
-						<value code="Formularsammlung"> | </value>
-						<value code="Forschungsbericht"> | </value>
-						<value code="Fotografie"> | </value>
-						<value code="Führer"> | </value>
-						<value code="Fundstellenverzeichnis"> | </value>
-						<value code="Genealogische Tafel"> | </value>
-						<value code="Gespräch"> | </value>
-						<value code="Globus"> | </value>
-						<value code="Grafik"> | </value>
-						<value code="Graphzine"> | </value>
-						<value code="Haushaltsplan"> | </value>
-						<value code="Hochschulschrift"> | </value>
-						<value code="Hörbuch"> | </value>
-						<value code="Hörspiel"> | </value>
-						<value code="Humoristische Darstellung"> | </value>
-						<value code="Interview"> | </value>
-						<value code="Inventar"> | </value>
-						<value code="Jugendbuch"> | </value>
-						<value code="Jugendsachbuch"> | </value>
-						<value code="Kalender"> | </value>
-						<value code="Karikatur"> | </value>
-						<value code="Karte"> | </value>
-						<value code="Katalog"> | </value>
-						<value code="Kinderbuch"> | </value>
-						<value code="Kindersachbuch"> | </value>
-						<value code="Kochbuch"> | </value>
-						<value code="Kolumnensammlung"> | </value>
-						<value code="Kommentar"> | </value>
-						<value code="Konferenzschrift"> | </value>
-						<value code="Konkordanz"> | </value>
-						<value code="Künstlerbuch"> | </value>
-						<value code="Kunstführer"> | </value>
-						<value code="Laudatio"> | </value>
-						<value code="Lehrbuch"> | </value>
-						<value code="Lehrerhandbuch"> | </value>
-						<value code="Lehrmittel"> | </value>
-						<value code="Lehrplan"> | </value>
-						<value code="Lernsoftware"> | </value>
-						<value code="Lesebuch"> | </value>
-						<value code="Liederbuch"> | </value>
-						<value code="Literaturbericht"> | </value>
-						<value code="Medienkombination"> | </value>
-						<value code="Mehrsprachiges Wörterbuch"> | </value>
-						<value code="Mikroform"> | </value>
-						<value code="Mitgliederverzeichnis"> | </value>
-						<value code="Modell"> | </value>
-						<value code="Monografische Reihe"> | </value>
-						<value code="Musikdruck"> | </value>
-						<value code="Nachruf"> | </value>
-						<value code="Norm"> | </value>
-						<value code="Online-Publikation"> | </value>
-						<value code="Ortsverzeichnis"> | </value>
-						<value code="Patentschrift"> | </value>
-						<value code="Plakat"> | </value>
-						<value code="Plan"> | </value>
-						<value code="Postkarte"> | </value>
-						<value code="Praktikum"> | </value>
-						<value code="Predigthilfe"> | </value>
-						<value code="Pressendruck"> | </value>
-						<value code="Pressestimme"> | </value>
-						<value code="Programmheft"> | </value>
-						<value code="Puzzle"> | </value>
-						<value code="Quelle"> | </value>
-						<value code="Ratgeber"> | </value>
-						<value code="Regest"> | </value>
-						<value code="Reisebericht"> | </value>
-						<value code="Reportagensammlung"> | </value>
-						<value code="Rezension"> | </value>
-						<value code="Richtlinie"> | </value>
-						<value code="Röntgenbild"> | </value>
-						<value code="Rückläufiges Wörterbuch"> | </value>
-						<value code="Sachbilderbuch"> | </value>
-						<value code="Schallplatte"> | </value>
-						<value code="Schallplatte &lt;für Kinder&gt;"> | </value>
-						<value code="Schematismus"> | </value>
-						<value code="Schulbuch"> | </value>
-						<value code="Software"> | </value>
-						<value code="Spiel"> | </value>
-						<value code="Sprachatlas"> | </value>
-						<value code="Sprachführer"> | </value>
-						<value code="Stadtplan"> | </value>
-						<value code="Statistik"> | </value>
-						<value code="Tabelle"> | </value>
-						<value code="Tafel"> | </value>
-						<value code="Tagebuch"> | </value>
-						<value code="Technische Zeichnung"> | </value>
-						<value code="Telefonbuch"> | </value>
-						<value code="Testmaterial"> | </value>
-						<value code="Text"> | </value>
-						<value code="Theaterstück"> | </value>
-						<value code="Thesaurus"> | </value>
-						<value code="Tonbildreihe"> | </value>
-						<value code="Tonkassette"> | </value>
-						<value code="Tonkassette &lt;für Kinder&gt;"> | </value>
-						<value code="Tonträger"> | </value>
-						<value code="Tonträger &lt;für Kinder&gt;"> | </value>
-						<value code="Übungssammlung"> | </value>
-						<value code="Umfrage"> | </value>
-						<value code="Unterrichtseinheit"> | </value>
-						<value code="Verkaufskatalog"> | </value>
-						<value code="Verzeichnis"> | </value>
-						<value code="Videokassette"> | </value>
-						<value code="Videokassette &lt;für Kinder&gt;"> | </value>
-						<value code="Vorlesungsverzeichnis"> | </value>
-						<value code="Website"> | </value>
-						<value code="Weltkarte"> | </value>
-						<value code="Werkverzeichnis"> | </value>
-						<value code="Wörterbuch"> | </value>
-						<value code="Zeichnung"> | </value>
-						<value code="Zeitschrift"> | </value>
-						<value code="Zeittafel"> | </value>
-						<value code="Zeitung"> | </value>
-						<value code="Zitatensammlung"> | </value>
-						<value code="Geschichte"> | </value>
-						<value code="Prognose"> | </value>
-						<value code="Geistesgeschichte"> | </value>
-						<value code="Ideengeschichte"> | </value>
-						<value code="Kirchengeschichte"> | </value>
-						<value code="Sozialgeschichte"> | </value>
-						<value code="Vor- und Frühgeschichte"> | </value>
-					</values>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="Z">
 					<description>Presentation format</description>
@@ -6743,28 +6600,28 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Verknüpfungsangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Beilage"> | </value>
@@ -6773,49 +6630,49 @@
 						<value code="Supplement"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Gesamttitelangabe des verknüpften Exemplars</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Berichts-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>ISBN mit Bindestrichen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -6839,28 +6696,28 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>In Beziehung stehende Teile</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Beigelegt in"> | </value>
@@ -6869,53 +6726,160 @@
 						<value code="Supplement zu"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Gesamttitelangabe des verknüpften Exemplars</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Report-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>ISBN mit Bindestrichen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
+		<data_field_configuration repeatable="true" mandatory="false" tag="773" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
+			<description>Übergeordnete Einheit</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/773/773.html</help_url>
+			<first_indicator_configuration>
+				<description>Anzeige</description>
+				<values>
+					<value code="0">Anzeige</value>
+					<value code="1">keine Anzeige</value>
+				</values>
+			</first_indicator_configuration>
+			<second_indicator_configuration>
+				<description>Anzeigekonstante</description>
+				<values>
+					<value code="#">Anzeigetext wird generiert: In</value>
+					<value code="8">keine Anzeigekonstante</value>
+				</values>
+			</second_indicator_configuration>
+			<sub_fields_list>
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
+					<description>Haupteintragung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
+					<description>Ausgabe</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
+					<description>Ort, Verlag, Erscheinungsjahr</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
+					<description>Fundort innerhalb der Quelle</description>
+					<values>
+					    <value code="day:">Tageszählung</value>
+						<value code="elocationid:">nicht-standardisierte verlagseigene ID (“Artikel-ID”) von Online-Publikationen</value>
+						<value code="extent:">Gesamtzahl der Aufsatzseiten</value>
+						<value code="month:">Monatszählung</value>
+						<value code="number:">Heftzählung</value>
+						<value code="pages:">Seitenangabe</value>
+						<value code="part:">Zählung der Einzelteile mehrteiliger größerer Einheiten, z.B. der Bände mehrteiliger Monografien</value>
+						<value code="partend:">Teil, in dem das unselbständige Werk endet (wenn ungleich "part:")</value>
+						<value code="position:">Position, wo eine Seitenangabe nicht möglich ist, z.B. Tracknummern einer CD</value>
+						<value code="positionend:">Position, an der das unselbständige Werk in letztem Teil endet</value>
+						<value code="supplement:">ergänzende Angaben (wie "Sonderheft", "Sonderbeilage", ...)</value>
+						<value code="volume:">Bandzählung</value>
+						<value code="year:">Berichtsjahr</value>
+					</values>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
+					<description>Allgemeine Materialbezeichnung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
+					<description>Anzeigetext</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
+					<description>Gesamttitelangabe des verknüpften Exemplars</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
+					<description>Materialspezifische Angabe</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
+					<description>Fussnote</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
+					<description>Andere Identifer</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="p">
+					<description>Kurztitel</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="q">
+					<description>Zählung und erste Seite</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
+					<description>Berichts-Nummer</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
+					<description>Werktitel</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
+					<description>Titel</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
+					<description>Standardnummer für Forschungsberichte</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
+					<description>Kontrollnummer des Datensatzes</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
+					<description>ISSN</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
+					<description>CODEN</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
+					<description>ISBN</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
+					<description>Betroffener Materialteil</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
+					<description>Verknüpfung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
+					<description>Feld-Verknüpfung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
+					<description>ISBN mit Bindestrichen</description>
+				</sub_field_configuration>
+			</sub_fields_list>
+		</data_field_configuration>		
 		<data_field_configuration repeatable="true" mandatory="false" tag="775" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
 			<description>Andere Ausgabe</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/775/775.html</help_url>
@@ -6934,34 +6898,34 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="e">
 					<description>Sprachen-Code</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="f">
 					<description>Ländercode</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Beziehungsangaben zu Teilen</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Äquivalent"> | </value>
@@ -6984,49 +6948,49 @@
 						<value code="Übersetzung von"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Gesamttitelangabe des verknüpften Exemplars</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Berichts-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>ISBN mit Bindestrichen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -7049,28 +7013,28 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Verknüpfungsangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Äquivalent"> | </value>
@@ -7082,13 +7046,13 @@
 						<value code="Reproduziert als"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Gesamttitelangabe des verknüpften Exemplars</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 					<values>
 						<value code="CD-Ausgabe"> | </value>
@@ -7105,40 +7069,40 @@
 						<value code="USB-Stick-Ausgabe"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Berichts-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>ISBN mit Bindestrichen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -7161,28 +7125,28 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Beziehungsangaben zu Teilen</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Auf Disk mit"> | </value>
@@ -7191,46 +7155,46 @@
 						<value code="Verfilmt mit"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Gesamttitelangabe des verknüpften Exemplars</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Berichts-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -7259,28 +7223,28 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Verknüpfungsangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Abgespalten von"> | </value>
@@ -7296,49 +7260,49 @@
 						<value code="Vorangegangen ist"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Gesamttitelangabe des verknüpften Exemplars</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Berichts-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>ISBN mit Bindestrichen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -7368,28 +7332,28 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Verknüpfungsangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Aufgegangen in"> | </value>
@@ -7405,49 +7369,49 @@
 						<value code="Vereinigt, um ... zu bilden"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Gesamttitelangabe des verknüpften Exemplars</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Berichts-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>ISBN mit Bindestrichen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -7470,28 +7434,28 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Haupteintragung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Ausgabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Nähere Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Ort, Verlag, Erscheinungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>In Beziehung stehende Teile</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Physische Beschreibung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anzeigetext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="I" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="I">
 					<description>Anzeigetext</description>
 					<values>
 						<value code="Abgeleitet"> | </value>
@@ -7660,49 +7624,49 @@
 						<value code="Zusammengefasst als"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Angaben zur Reihe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Materialspezifische Angabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Fussnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Andere Identifer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Report-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Werktitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Titel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Standardnummer für Forschungsberichte</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Kontrollnummer des Datensatzes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="x">
 					<description>ISSN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="y">
 					<description>CODEN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>ISBN</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feld-Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>ISBN mit Bindestrichen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -9377,10 +9341,11 @@
 			     <sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Selektionskennzeichen EBooks, Digitalisate</description>
 					<values>
-						<value code="ZDB-1-BBEO">Brill / Biology E-Books Online [Nationallizenz / FID-Lizenz]</value>			     		
+					    <value code="ZDB-1-BBEO">Brill / Biology E-Books Online [Nationallizenz / FID-Lizenz]</value>			     		
 						<value code="ZDB-1-EWE">Edward Elgar E-Book Archive in Business &amp; Management, Economics and Finance [Nationallizenz]</value>
 					    <value code="ZDB-1-HBE">Handbooks in Economics Series [Nationallizenz]</value>
 						<value code="ZDB-1-LEO">Der literarische Expressionismus-E-Books</value>
+						<value code="ZDB-1-MISA">Brill / Middle East and Islamic Studies E-Books Online</value>
 						<value code="ZDB-1-MMA">MSP E-Journals [FID-Lizenz]</value>
 						<value code="ZDB-1-NBR">Nomos eLibrary / Zivilrecht [E-Books] [DFG-geförderte Allianz-Lizenz]</value>
 						<value code="ZDB-1-NEP">Nomos eLibrary / Europapolitik [DFG-geförderte Allianz-Lizenz]</value>
@@ -9411,11 +9376,21 @@
 						<value code="ZDB-2-PEF">Springer ebook collection / Palgrave Economics &amp; Finance Collection</value>
 						<value code="ZDB-2-PRO">Springer Protocols</value>
 						<value code="ZDB-2-REF">SpringerReference</value>
+						<value code="ZDB-2-SLR">Springer ebook collection / Springer Reference / Living References</value>
 						<value code="ZDB-2-SOB">Springer Nature Open Access Bücher</value>
 						<value code="ZDB-4-EBA">EBSCO eBook Academic Collection</value>
 						<value code="ZDB-4-NLEBK">EBSCO eBook Collection</value>	
 						<value code="ZDB-5-VTC">wiso Videos Technik</value>
 						<value code="ZDB-5-VWW">wiso Videos Wirtschaftswissenschaften</value>
+						<value code="ZDB-5-WIP">wiso Pflege</value>
+						<value code="ZDB-5-WMP">wiso Psychologie</value>
+						<value code="ZDB-5-WMR">wiso Recht</value>
+						<value code="ZDB-5-WMS">wiso Sozialwissenschaften</value>
+						<value code="ZDB-5-WMT">wiso Technik</value>
+						<value code="ZDB-5-WMW">wiso Wirtschaftswissenschaften</value>
+						<value code="ZDB-5-WSC">wiso Schlütersche Pflege</value>
+						<value code="ZDB-5-WVB">wiso Videos Business (Lecturio)</value>
+						<value code="ZDB-5-WVW">wiso Videos Wirtschaftswissenschaften (Lecturio)</value>
 						<value code="ZDB-7-ARS">Taylor &amp; Francis eBooks / Area Studies</value>
 						<value code="ZDB-7-BEN">Taylor &amp; Francis eBooks / Built Environment</value>
 						<value code="ZDB-7-BES">Taylor &amp; Francis eBooks / Behavioral Sciences</value>
@@ -9451,16 +9426,22 @@
 						<value code="ZDB-7-SSC">Taylor &amp; Francis eBooks / Social Sciences</value>
 						<value code="ZDB-7-TAR">Taylor &amp; Francis eBooks / Arts</value>
 						<value code="ZDB-7-TFC">Taylor &amp; Francis eBooks / Complete</value>
+						<value code="ZDB-7-THE">Taylor &amp; Francis eBooks / Tourism, Hospitality and Events</value>
 						<value code="ZDB-7-TLL">Taylor &amp; Francis eBooks / Language &amp; Linguistics</value>
 						<value code="ZDB-7-TLW">Taylor &amp; Francis eBooks / Law</value>
-						<value code="ZDB-7-THE">Taylor &amp; Francis eBooks / Tourism, Hospitality and Events</value>
 						<value code="ZDB-7-URB">Taylor &amp; Francis eBooks / Urban Studies</value>
 						<value code="ZDB-8-APN">PsycBOOKS (via APA PsycNET)</value>
 						<value code="ZDB-9-GMT">Gale Archives Unbound / Global Missions and Theology</value>
 						<value code="ZDB-9-VRL">Gale Virtual Reference Library-E-Books</value>
 						<value code="ZDB-10-KNL">Knovel library</value>
-						<value code="ZDB-11-EBC">RSC eBook Collection</value>									
+						<value code="ZDB-11-EBC">RSC eBook Collection</value>
+						<value code="ZDB-13-SOC">OECD iLibrary</value>
+						<value code="ZDB-13-SOC-article">OECD iLibrary - Artikel</value>
+						<value code="ZDB-13-SOC-ebook">OECD iLibrary - E-Books</value>
+						<value code="ZDB-13-SOC-statistic">OECD iLibrary - Statistiken</value>
+						<value code="ZDB-14-DLO">Deutsche Literatur des 18. Jahrhunderts online</value>
 						<value code="ZDB-15-ACM">ACM Digital Library</value>
+						<value code="ZDB-16-Hanser-EBA">Hanser EBA</value>
 						<value code="ZDB-16-HEA">Hanser eLibrary / Backlist</value>
 						<value code="ZDB-16-HEB">Hanser eLibrary</value>
 						<value code="ZDB-16-HEC">Hanser eLibrary / Bautechnik</value>
@@ -9482,6 +9463,8 @@
 						<value code="ZDB-18-BAR">beck-online / Arbeitsrecht PREMIUM</value>
 						<value code="ZDB-18-BDA">beck-online / Datenschutz- und Informationsfreiheitsrecht PREMIUM</value>
 						<value code="ZDB-18-BDI">beck-online / Datenschutz- und Informationsfreiheitsrecht PLUS</value>
+						<value code="ZDB-18-Beck-EBA">Beck EBA</value>
+						<value code="ZDB-18-Beck-exEBA">Ehemaliges Beck EBA</value>
 						<value code="ZDB-18-BEL">Beck eLibrary</value>
 						<value code="ZDB-18-BEO">Beck online</value>
 						<value code="ZDB-18-BFP">beck-online / Familienrecht PREMIUM</value>
@@ -9502,12 +9485,17 @@
 						<value code="ZDB-18-BOP">beck-online / Arbeitsrecht OPTIMUM</value>
 						<value code="ZDB-18-BSB">Beck eLibrary / SPH Allgemeine BWL</value>
 						<value code="ZDB-18-BSG">beck-online / Steuerrecht Grundmodul</value>
+						<value code="ZDB-18-BSI">Beck eLibrary / SPH Investitionen</value>
 						<value code="ZDB-18-BSJ">Beck eLibrary / SPH Buchführung, Bilanzen, Steuern I</value>
+						<value code="ZDB-18-BSL">Beck eLibrary / SPH Steuern - Lehrbuch</value>
+						<value code="ZDB-18-BSM">Beck eLibrary / SPH Management</value>
+						<value code="ZDB-18-BSN">Beck eLibrary / SPH Marketing, Vertrieb, Handel</value>
 						<value code="ZDB-18-BSQ">Beck eLibrary / SPH Kostenrechnung, Controlling</value>
 						<value code="ZDB-18-BSR">beck-online / Sozialrecht PREMIUM</value>
 						<value code="ZDB-18-BST">beck-eBibliothek - Die Studienliteratur</value>
 						<value code="ZDB-18-BSU">beck-online / Sozialrecht PLUS</value>
 						<value code="ZDB-18-BSV">Beck eLibrary / SPH Volkswirtschaftslehre</value>
+						<value code="ZDB-18-BSW">Beck eLibrary / SPH Verwalter, Wohnungswirt</value>
 						<value code="ZDB-18-BSX">Beck eLibrary / SPH Personalmanagement</value>
 						<value code="ZDB-18-BVK">beck-online / Verwaltungsrecht Kohlhammer</value>
 						<value code="ZDB-18-BVP">beck-online / Verwaltungsrecht PREMIUM</value>
@@ -9532,6 +9520,13 @@
 						<value code="ZDB-18-NOJ">Nomos eLibrary / Jura Grundlagen</value>
 						<value code="ZDB-18-NOL">Nomos eLibrary</value>
 						<value code="ZDB-18-NOM">Nomos eLibrary / Medienwissenschaft und Kommunikationsforschung</value>
+						<value code="ZDB-18-Nomos-EBA">Nomos EBA</value>
+						<value code="ZDB-18-Nomos-Klostermann-EBA">Nomos Klostermann EBA</value>
+						<value code="ZDB-18-Nomos-VDI-EBA">Nomos VDI EBA</value>
+						<value code="ZDB-18-Nomos-NRW">Nomos NRW</value>
+						<value code="ZDB-18-Nomos-Alber-NRW">Nomos Alber NRW</value>
+						<value code="ZDB-18-Nomos-Klostermann-NRW">Nomos Klostermann NRW</value>
+						<value code="ZDB-18-Nomos-VDI-NRW">Nomos VDI NRW</value>						
 						<value code="ZDB-18-NOP">Nomos eLibrary / Politik</value>
 						<value code="ZDB-18-NOR">Nomos eLibrary / Europarecht</value>
 						<value code="ZDB-18-NOS">NomosOnline Sozialrecht</value>
@@ -9560,6 +9555,7 @@
 						<value code="ZDB-20-CUL">Cambridge University Press / London Mathematical Society Lecture Note Series</value>
 						<value code="ZDB-21-EIL">Torrossa</value>
 						<value code="ZDB-22-CAN">Ciando-E-Books</value>
+						<value code="ZDB-22-CWC">Ciando / Lehrbuchpaket Wiley Chemie</value>
 						<value code="ZDB-22-CWH">Ciando / Lehrbuchpaket Wiley Hauptfach</value>
 						<value code="ZDB-22-CWN">Ciando / Lehrbuchpaket Wiley Nebenfach</value>
 						<value code="ZDB-23-AKU">eBook-Paket Akademie / Kunst</value>
@@ -9590,10 +9586,12 @@
 						<value code="ZDB-23-DEM">de Gruyter eBook-Paket Mathematik und Physik</value>
 						<value code="ZDB-23-DGA">de Gruyter E-Books / Linguistik und Literaturwissenschaft</value>
 						<value code="ZDB-23-DGB">de Gruyter eBook-Paket Bibliothekswesen, Dokumentation und Information</value>
+						<value code="ZDB-23-DGC">De Gruyter E-Books / Rechtswissenschaften</value>
 						<value code="ZDB-23-DGD">de Gruyter E-Books / Altertumswissenschaften</value>
 						<value code="ZDB-23-DGE">de Gruyter E-Books / Philosophie und Geschichte</value>
 						<value code="ZDB-23-DGF">de Gruyter E-Books / Theologie, Religionswissenschaften, Judaistik</value>
 						<value code="ZDB-23-DGG">de Gruyter E-Books</value>
+						<value code="ZDB-23-DGG-eba">de Gruyter E-Books EBA</value>
 						<value code="ZDB-23-DGH">de Gruyter e-dition: Best of German Studies / Germanistik </value>
 						<value code="ZDB-23-DGO">de Gruyter e-dition: Best of Linguistics / Linguistik</value>
 						<value code="ZDB-23-DGS">de Gruyter Handbücher zur Sprach- und Kommunikationswissenschaft</value>
@@ -9651,6 +9649,7 @@
 						<value code="ZDB-25-KNS">Karger eBook Non-Series Collection</value>
 						<value code="ZDB-25-KRG">Karger eBook Collection</value>
 						<value code="ZDB-25-KSE">Karger eBook Series Collection</value>
+						<value code="ZDB-26-MYL">MyiLibrary</value>
 						<value code="ZDB-27-OVI">Books@Ovid</value>
 						<value code="ZDB-28-CHI">Chicago Scholarship Online / Music</value>
 						<value code="ZDB-28-CMU">Cornell Scholarship Online / Music</value>
@@ -9718,6 +9717,7 @@
 						<value code="ZDB-33-COS">Elsevier e-book collection - Computer Science</value>
 						<value code="ZDB-33-EGE">Elsevier e-book collection - Engineering</value>
 						<value code="ZDB-33-EGY">Elsevier e-book collection - Energy</value>
+						<value code="ZDB-33-Elsevier-EBA">Elsevier-EBA</value>
 						<value code="ZDB-33-ENV">Elsevier e-book collection - Environmental science</value>
 						<value code="ZDB-33-EPS">Elsevier e-book collection - Earth &amp; Planetary Sciences</value>
 						<value code="ZDB-33-ESD">Elsevier Online Books on ScienceDirect</value>
@@ -9754,6 +9754,7 @@
 						<value code="ZDB-34-TKPN">Thieme / Neurologie</value>
 						<value code="ZDB-34-TKPO">Thieme / Ophthalmologie</value>
 						<value code="ZDB-34-TKPP">Thieme / Pädiatrie</value>
+						<value code="ZDB-34-TKPQ">Thieme / Psychiatrie, Psychotherapie</value>
 						<value code="ZDB-34-TKPR">Thieme / Radiologie</value>
 						<value code="ZDB-34-TKPU">Thieme / Urologie</value>
 						<value code="ZDB-34-TKPZ">Thieme / Zahnmedizin</value>
@@ -9780,6 +9781,7 @@
 						<value code="ZDB-35-WCV">Wiley Collection Pharmaceutical &amp; Medicinal Chemistry</value>
 						<value code="ZDB-35-WEL">IEEE-Wiley eBooks Library</value>
 						<value code="ZDB-35-WIC">Wiley-E-Books (Wiley InterScience Online Books)</value>
+						<value code="ZDB-35-Wiley-EBA">Wiley-EBA</value>
 						<value code="ZDB-37-IED">IEEE Computer Society Digital Library</value>
 						<value code="ZDB-37-IEL">IEEE/IET Electronic Library (IEL)</value>
 						<value code="ZDB-37-IEX">IEEE Xplore digital library</value>
@@ -9898,43 +9900,38 @@
 						<value code="ZDB-54-DHE">Duncker &amp; Humblot eLibrary</value>
 						<value code="ZDB-54-DHG">Duncker &amp; Humblot eLibrary / GYIL (German Yearbook of International Law)</value>
 						<value code="ZDB-54-DHH">Duncker &amp; Humblot eLibrary / Paket HIST</value>
-						<value code="ZDB-54-DHR">Duncker &amp; Humblot eLibrary / Paket RECHT</value>
+						<value code="ZDB-54-DHL">Duncker &amp; Humblot eLibrary / PHIL (Kollektion Philosophie)</value>
 						<value code="ZDB-54-DHO">Duncker &amp; Humblot eLibrary / Paket SÖR</value>
 						<value code="ZDB-54-DHP">Duncker &amp; Humblot eLibrary / Paket WISO</value>
-						<value code="ZDB-54-DHL">Duncker &amp; Humblot eLibrary / PHIL (Kollektion Philosophie)</value>
+						<value code="ZDB-54-DHR">Duncker &amp; Humblot eLibrary / Paket RECHT</value>
 						<value code="ZDB-54-DHS">Duncker &amp; Humblot eLibrary / SCHMITT (Karl-Schmitt-Kollektion)</value>
 						<value code="ZDB-55-BME">Emerald Business, Management and Economics eBook Series Collection</value>
 						<value code="ZDB-55-ELD">Emerald eBooks</value>
-						<value code="ZDB-55-EJC">Emerald Engineering eJournal Collection</value>
-						<value code="ZDB-55-HSO">Emerald Health &amp; Social Care eJournal Collection</value>
-						<value code="ZDB-55-IKM">Emerald Information &amp; Knowledge Management eJournal Collection</value>
-						<value code="ZDB-55-LSE">Emerald Library Studies eJournal Collection</value>
-						<value code="ZDB-55-EM1">Emerald Management 120 eJournal Collection</value>
-						<value code="ZDB-55-EM2">Emerald Management 200 eJournal Collection</value>
-						<value code="ZDB-55-EMP">Emerald Management Premier eJournal Collection</value>
-						<value code="ZDB-55-OLQ">Emerald Operations, Logistics &amp; Quality eJournal Collection</value>
-						<value code="ZDB-55-PRM">Emerald Property Management &amp; Built Environment eJournal Collection</value>
-						<value code="ZDB-55-PPE">Emerald Public Policy &amp; Environmental Management eJournal Collection</value>
 						<value code="ZDB-55-ESS">Emerald Social Sciences eBook Series Collection</value>
-						<value code="ZDB-55-THM">Emerald Tourism &amp; Hospitality Management eJournal Collection</value>
 						<value code="ZDB-55-ETC">Emerald Transport eBooks Collection</value>
-						<value code="ZDB-59-BTZ">Beltz E-Books</value>
+						<value code="ZDB-57-DFS">Digi20 / Fink - Schöningh</value>
+						<value code="ZDB-57-DSG">Digi20 / Sagner</value>
+						<value code="ZDB-57-DVR">Digi20 / Vandenhoeck &amp; Ruprecht</value>
 						<value code="ZDB-59-BEZ">Beltz Erziehungswissenschaft</value>
-						<value code="ZDB-59-BPF">Beltz Frühpädagogik</value>
-						<value code="ZDB-59-BPH">Beltz Hochschuldidaktik</value>
+						<value code="ZDB-59-BPA">Beltz Psychologie Anwendung</value>
+						<value code="ZDB-59-BPB">Beltz Psychologie</value>
 						<value code="ZDB-59-BPD">Beltz Pädagogik</value>
+						<value code="ZDB-59-BPF">Beltz Frühpädagogik</value>
+						<value code="ZDB-59-BPG">Beltz Psychologie Grundlagen</value>
+						<value code="ZDB-59-BPH">Beltz Hochschuldidaktik</value>
+						<value code="ZDB-59-BPL">Beltz Psychologie Heute</value>
+						<value code="ZDB-59-BPP">Beltz Pflege</value>
+						<value code="ZDB-59-BPR">Beltz Reformpädagogik</value>
 						<value code="ZDB-59-BPS">Beltz Pädagogik Studium</value>
 						<value code="ZDB-59-BPU">Beltz Pädagogik Unterricht</value>
-						<value code="ZDB-59-BPP">Beltz Pflege</value>
-						<value code="ZDB-59-BPB">Beltz Psychologie</value>
-						<value code="ZDB-59-BPA">Beltz Psychologie Anwendung</value>
-						<value code="ZDB-59-BPG">Beltz Psychologie Grundlagen</value>
-						<value code="ZDB-59-BPL">Beltz Psychologie Heute</value>
-						<value code="ZDB-59-BPR">Beltz Reformpädagogik</value>
 						<value code="ZDB-59-BSA">Beltz Soziale Arbeit</value>
 						<value code="ZDB-59-BSO">Beltz Soziologie</value>
-						<value code="ZDB-59-TCB">Beltz Training, Coaching und Beratung</value>
+						<value code="ZDB-59-BTZ">Beltz E-Books</value>
 						<value code="ZDB-59-BWB">Beltz Weiterbildung</value>
+						<value code="ZDB-59-TCB">Beltz Training, Coaching und Beratung</value>
+						<value code="ZDB-71-NAR">Narr-E-Books</value>
+						<value code="ZDB-71-NVL">Narr-E-Books / Literaturwissenschaft</value>
+						<value code="ZDB-72-SIA">SIAM E-Books</value>
 						<value code="ZDB-73-CVA">campus e-books</value>
 						<value code="ZDB-73-CVB">campus e-books / Business</value>
 						<value code="ZDB-73-CVC">campus e-books / Business Backlist</value>
@@ -9965,61 +9962,73 @@
 						<value code="ZDB-74-AKS">akademie-link / Studienbücher</value>
 						<value code="ZDB-75-TLO">Torrossa / Leo S. Olschki eBooks</value>
 						<value code="ZDB-77-EEC">Edward Elgar Ebook Collection</value>
-						<value code="ZDB-84-KHA">Kohlhammer Altenpflege, Demenz und Palliativpflege</value>
-						<value code="ZDB-84-KOL">Kohlhammer Bildung, Erziehung u. Sozialisation</value>
-						<value code="ZDB-84-KOS">Kohlhammer Biographien</value>
-						<value code="ZDB-84-KOU">Kohlhammer Dynastien</value>
-						<value code="ZDB-84-KHU">Kohlhammer E-Books</value>
-						<value code="ZDB-84-KOJ">Kohlhammer Einführungen u. Allg. Psychologie</value>
-						<value code="ZDB-84-KOA">Kohlhammer Entwicklungspsychologie</value>
-						<value code="ZDB-84-KOR">Kohlhammer Europa</value>
+						<value code="ZDB-82-BOE">BioOne Komplett</value>
 						<value code="ZDB-84-KEK">Kohlhammer Exegese, Kirchen- und Theologiegeschichte</value>
 						<value code="ZDB-84-KER">Kohlhammer Exegese, Religionspädagogik und Religionswissenschaft</value>
-						<value code="ZDB-84-KHB">Kohlhammer Geschichte</value>
 						<value code="ZDB-84-KGK">Kohlhammer Geschichte, Kultur- &amp; Politikwissenschaft</value>
 						<value code="ZDB-84-KGW">Kohlhammer Grundlagen Wirtschaftswissenschaften</value>
-						<value code="ZDB-84-KOO">Kohlhammer Heil- u. Sonderpädagogik</value>
-						<value code="ZDB-84-KOP">Kohlhammer Kinder fördern</value>
-						<value code="ZDB-84-KOB">Kohlhammer Klinische Psychologie Kindes- u. Jugendalter</value>
-						<value code="ZDB-84-KOC">Kohlhammer Klinische Praxis - Erwachsene/Allgemein</value>
+						<value code="ZDB-84-KHA">Kohlhammer Altenpflege, Demenz und Palliativpflege</value>
+						<value code="ZDB-84-KHB">Kohlhammer Geschichte</value>
 						<value code="ZDB-84-KHC">Kohlhammer Krankenhaus</value>
-						<value code="ZDB-84-KHM">Kohlhammer Medizin</value>
 						<value code="ZDB-84-KHD">Kohlhammer Medizin und Ethik</value>
 						<value code="ZDB-84-KHE">Kohlhammer Medizin: Kinder- und Jugendpsychiatrie, Psychotherapie</value>
 						<value code="ZDB-84-KHF">Kohlhammer Medizin: Psychiatrie &amp; Psychotherapie</value>
 						<value code="ZDB-84-KHG">Kohlhammer Neurologie</value>
-						<value code="ZDB-84-KHO">Kohlhammer Öffentliches Recht</value>
-						<value code="ZDB-84-KOW">Kohlhammer Pädagogik</value>
-						<value code="ZDB-84-KOF">Kohlhammer Pädagogische Psychologie</value>
 						<value code="ZDB-84-KHI">Kohlhammer Palliativmedizin, Geriatrie</value>
-						<value code="ZDB-84-KPE">Kohlhammer Philosophie und Ethik</value>
-						<value code="ZDB-84-KHP">Kohlhammer Pflege</value>
 						<value code="ZDB-84-KHJ">Kohlhammer Pflege: Aus- und Weiterbildung, Nachschlagewerke</value>
 						<value code="ZDB-84-KHK">Kohlhammer Pflegemanagement und Recht</value>
 						<value code="ZDB-84-KHL">Kohlhammer Pflegepraxis</value>
-						<value code="ZDB-84-KOD">Kohlhammer Praktische Theologie, Religionspädagogik, Diakonie</value>
-						<value code="ZDB-84-KTD">Kohlhammer Praktische Theologie und Diakoniewissenschaft</value>
-						<value code="ZDB-84-KPR">Kohlhammer Praktische Theologie und Religionsphilosophie</value>
-						<value code="ZDB-84-KOG">Kohlhammer Psychoanalyse</value>
-						<value code="ZDB-84-KOX">Kohlhammer Psychologie</value>
-						<value code="ZDB-84-KOH">Kohlhammer Ratgeber</value>
+						<value code="ZDB-84-KHM">Kohlhammer Medizin</value>
+						<value code="ZDB-84-KHN">Kohlhammer Strafrecht</value>
+						<value code="ZDB-84-KHO">Kohlhammer Öffentliches Recht</value>
+						<value code="ZDB-84-KHP">Kohlhammer Pflege</value>
+						<value code="ZDB-84-KHQ">Kohlhammer Zivilrecht</value>
 						<value code="ZDB-84-KHR">Kohlhammer Recht</value>
+						<value code="ZDB-84-KHU">Kohlhammer E-Books</value>
+						<value code="ZDB-84-KHV">Kohlhammer Verwaltung</value>
+						<value code="ZDB-84-KHW">Kohlhammer Wirtschaftswissenschaften</value>
+						<value code="ZDB-84-KOA">Kohlhammer Entwicklungspsychologie</value>
+						<value code="ZDB-84-KOB">Kohlhammer Klinische Psychologie Kindes- u. Jugendalter</value>
+						<value code="ZDB-84-KOC">Kohlhammer Klinische Praxis - Erwachsene/Allgemein</value>
+						<value code="ZDB-84-KOD">Kohlhammer Praktische Theologie, Religionspädagogik, Diakonie</value>
+						<value code="ZDB-84-KOE">Kohlhammer Sozial-, Persönlichkeits-, Arbeits- &amp; Organisationspsychologie</value>
+						<value code="ZDB-84-KOF">Kohlhammer Pädagogische Psychologie</value>
+						<value code="ZDB-84-KOG">Kohlhammer Psychoanalyse</value>	
+						<value code="ZDB-84-KOH">Kohlhammer Ratgeber</value>
 						<value code="ZDB-84-KOI">Kohlhammer Religions- und Kulturwissenschaft</value>
+						<value code="ZDB-84-KOJ">Kohlhammer Einführungen u. Allg. Psychologie</value>
+						<value code="ZDB-84-KOK">Kohlhammer Theologie: Exegese</value>
+						<value code="ZDB-84-KOL">Kohlhammer Bildung, Erziehung u. Sozialisation</value>
 						<value code="ZDB-84-KOM">Kohlhammer Schulpädagogik</value>
 						<value code="ZDB-84-KON">Kohlhammer Sozialpädagogik</value>
-						<value code="ZDB-84-KOE">Kohlhammer Sozial-, Persönlichkeits-, Arbeits- &amp; Organisationspsychologie</value>
-						<value code="ZDB-84-KHN">Kohlhammer Strafrecht</value>
-						<value code="ZDB-84-KSY">Kohlhammer Systematsche Theologie, Religionsphilosophie und Ethik</value>
-						<value code="ZDB-84-KOY">Kohlhammer Theologie</value>
-						<value code="ZDB-84-KOK">Kohlhammer Theologie: Exegese</value>
-						<value code="ZDB-84-KTP">Kohlhammer Theologie, Philosophie, Kulturwissenschaft</value>
+						<value code="ZDB-84-KOO">Kohlhammer Heil- u. Sonderpädagogik</value>
+						<value code="ZDB-84-KOP">Kohlhammer Kinder fördern</value>	
 						<value code="ZDB-84-KOQ">Kohlhammer Theologie: Systematik - Ethik</value>
-						<value code="ZDB-84-KHV">Kohlhammer Verwaltung</value>
+						<value code="ZDB-84-KOR">Kohlhammer Europa</value>
+						<value code="ZDB-84-KOS">Kohlhammer Biographien</value>
+						<value code="ZDB-84-KOU">Kohlhammer Dynastien</value>
 						<value code="ZDB-84-KOV">Kohlhammer Völkergeschichte</value>
-						<value code="ZDB-84-KHW">Kohlhammer Wirtschaftswissenschaften</value>
-						<value code="ZDB-84-KHQ">Kohlhammer Zivilrecht</value>
+						<value code="ZDB-84-KOW">Kohlhammer Pädagogik</value>
+						<value code="ZDB-84-KOX">Kohlhammer Psychologie</value>
+						<value code="ZDB-84-KOY">Kohlhammer Theologie</value>
+						<value code="ZDB-84-KPE">Kohlhammer Philosophie und Ethik</value>
+						<value code="ZDB-84-KPR">Kohlhammer Praktische Theologie und Religionsphilosophie</value>
+						<value code="ZDB-84-KSY">Kohlhammer Systematsche Theologie, Religionsphilosophie und Ethik</value>
+						<value code="ZDB-84-KTD">Kohlhammer Praktische Theologie und Diakoniewissenschaft</value>
+						<value code="ZDB-84-KTP">Kohlhammer Theologie, Philosophie, Kulturwissenschaft</value>					
+						<value code="ZDB-88-JPG">Juris PraxisKommentar SGB - Gesamtausgabe</value>
+						<value code="ZDB-88-JRB">juris Spectrum / Hochschulen</value>
+						<value code="ZDB-88-JSO">juris Staudinger Online</value>
+						<value code="ZDB-88-LEG">Juris / OVS Module in juris</value>
+						<value code="ZDB-88-SOP">ESV Modul Sozialrecht Premium powered by juris</value>		
+						<value code="ZDB-88-ZHS">juris Zusatzmodul Hochschulen</value>
+						<value code="ZDB-89-EBL">EBL Ebook Library</value>
+						<value code="ZDB-89-EBM">EBL Ebook Library / Business and Management</value>
+						<value code="ZDB-89-EIT">EBL Ebook Library / IT</value>
+						<value code="ZDB-89-ELE">EBL Ebook Library / Engineering</value>
 						<value code="ZDB-90-HGE">Hogrefe eLibrary</value>
 						<value code="ZDB-92-LJC">Liverpool University Press / Littman E-Library of Jewish Civilization</value>
+						<value code="ZDB-92-TTH">Liverpool University Press / Translated Texts for Historians E-Library</value>
 						<value code="ZDB-93-VOS">Verlag Otto Sagner Digital</value>
 						<value code="ZDB-94-OAB">Directory of Open Access Books</value>
 						<value code="ZDB-95-BAS">Brill Online / Asian Studies</value>
@@ -10050,12 +10059,207 @@
 						<value code="ZDB-95-WFB">Wilhelm Fink eBooks</value>
 						<value code="ZDB-96-SKC">Sage knowledge / Complete</value>
 						<value code="ZDB-98-IGB">IGI Global Books</value>
-						<value code="ZDB-168-MAM">Access Medicine / EBooks</value>
-						<value code="ZDB-275-AIPB">AIP / Gesamt E-Books</value>
-						<value code="ZDB-215-ALN">Aisthesis / Literaturwissenschaften Novitäten</value>
-						<value code="ZDB-215-ATH">Aisthesis / Theater</value>
-						<value code="ZDB-215-AWR1">Aisthesis / Zur Literatur der Weimarer Republik 1</value>
-						<value code="ZDB-203-AHO">Artech House eBooks</value>
+						<value code="ZDB-101-LinkedIn-eng">LinkedIn Englisch</value>
+						<value code="ZDB-101-LinkedIn-fre">LinkedIn Französisch</value>
+						<value code="ZDB-101-LinkedIn-ger">LinkedIn Deutsch</value>
+						<value code="ZDB-101-LinkedIn-por">LinkedIn Portugiesisch</value>
+						<value code="ZDB-101-LinkedIn-spa">LinkedIn Spanisch</value>
+						<value code="ZDB-104-KIT">KIT Monographs and Scientific Reports</value>
+						<value code="ZDB-105-MC4">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 4</value>
+						<value code="ZDB-105-MC6">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 6</value>
+						<value code="ZDB-105-MC7">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 7</value>
+						<value code="ZDB-105-MC8">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 8</value>
+						<value code="ZDB-105-MC9">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 9</value>
+						<value code="ZDB-105-MC10">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection ten</value>
+						<value code="ZDB-105-MC11">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection eleven</value>
+						<value code="ZDB-105-MCB">Morgen &amp; Claypool Publishers eBooks</value>
+						<value code="ZDB-105-MCL">Morgan &amp; Claypool: Synthesis Lectures on Information Concepts, Retrieval, and Services</value>
+						<value code="ZDB-107-WAE">Waxmann / Allgemeine Erziehungswissenschaft</value>
+						<value code="ZDB-107-WBM">Waxmann / Bildungsmanagement</value>
+						<value code="ZDB-107-WDI">Waxmann / Diversität und Inklusion</value>
+						<value code="ZDB-107-WDN">Waxmann / Didaktik der Naturwissenschaften und Mathematik</value>
+						<value code="ZDB-107-WDS">Waxmann / Schule und Unterricht</value>
+						<value code="ZDB-107-WEC">Waxmann / E-Books</value>
+						<value code="ZDB-107-WEF">Waxmann / Europäische Ethnologie</value>
+						<value code="ZDB-107-WEG">Waxmann / Geschichte</value>
+						<value code="ZDB-107-WER">Waxmann / Erwachsenenbildung</value>
+						<value code="ZDB-107-WEW">Waxmann / Empirische Erziehungswissenschaft</value>
+						<value code="ZDB-107-WFK">Waxmann / Sozialpädagogik &amp; Pädagogik der frühen Kindheit</value>
+						<value code="ZDB-107-WIV">Waxmann / Interkulturelle und vergleichende Erziehungswissenschaft</value>
+						<value code="ZDB-107-WKU">Waxmann / Kunst</value>
+						<value code="ZDB-107-WLB">Waxmann / Lehrerbildung</value>
+						<value code="ZDB-107-WLI">Waxmann / Linguistik</value>
+						<value code="ZDB-107-WMU">Waxmann / Musik und Musikpädagogik</value>
+						<value code="ZDB-107-WPH">Waxmann / Philosophie</value>
+						<value code="ZDB-107-WPO">Waxmann / Politik</value>
+						<value code="ZDB-107-WPS">Waxmann / Psychologie</value>
+						<value code="ZDB-107-WRE">Waxmann / Religion und Religionspädagogik</value>
+						<value code="ZDB-107-WSA">Waxmann / soziale Arbeit</value>
+						<value code="ZDB-107-WSB">Waxmann / Sprachliche Bildung</value>
+						<value code="ZDB-107-WSO">Waxmann / Soziologie</value>
+						<value code="ZDB-107-WSP">Waxmann / Sozialpädagogik</value>
+						<value code="ZDB-109-LAP">Lambertus / Alter und Pflege</value>
+						<value code="ZDB-109-LCE">Lambertus / Caritas, Ethik und Theologie</value>
+						<value code="ZDB-109-LFA">Lambertus / Familien</value>
+						<value code="ZDB-109-LHH">Lambertus / Heilpädagogik und Heilerziehungspflege</value>
+						<value code="ZDB-109-LIB">Lambertus / Inklusion und Behindertenarbeit</value>
+						<value code="ZDB-109-LKF">Lambertus / Kita- und Frühpädagogik</value>
+						<value code="ZDB-109-LKS">Lambertus / Klassiker der Sozialen Arbeit</value>
+						<value code="ZDB-109-LLS">Lambertus / Lehrbücher für die Soziale Arbeit</value>
+						<value code="ZDB-109-LMI">Lambertus / Migration, Integration &amp; besondere Lebenslagen</value>
+						<value code="ZDB-109-LPC">Lambertus / Palliative Care und Hospizarbeit</value>
+						<value code="ZDB-109-LPK">Lambertus / Pädagogik, Kinder- und Jugendhilfe</value>
+						<value code="ZDB-109-LPS">Lambertus / Praxis der Sozialen Arbeit</value>
+						<value code="ZDB-109-LSA">Lambertus / Sucht und Abhängigkeit</value>
+						<value code="ZDB-109-LSC">Lambertus / Sozialmanagement und Coaching</value>
+						<value code="ZDB-109-LSK">Lambertus / Sozial- und Kommunalpolitik</value>
+						<value code="ZDB-109-LSP">Lambertus / Studium und Praxis der Sozialen Arbeit</value>
+						<value code="ZDB-109-LSR">Lambertus / Sozialrecht</value>
+						<value code="ZDB-109-LSS">Lambertus / Sozialmanagement und Sozialwirtschaft</value>
+						<value code="ZDB-109-LST">Lambertus / Studium und Theorie der Sozialen Arbeit</value>
+						<value code="ZDB-109-LTC">Lambertus / Tarifrecht der Caritas</value>
+						<value code="ZDB-109-LTS">Lambertus / Theorie der Sozialen Arbeit</value>
+						<value code="ZDB-110-WBO">World Bank Group / Open Knowledge Repository</value>
+						<value code="ZDB-112-SRF">Schattauer E-Medien / Kardio Vascular</value>
+						<value code="ZDB-112-SRK">Schattauer E-Medien / Orthopädie, Sportmedizin</value>
+						<value code="ZDB-112-SRM">Schattauer E-Medien / Psychotherapie</value>
+						<value code="ZDB-114-LAA">Peter Lang eBooks / Die Künste</value>
+						<value code="ZDB-114-LAC">Peter Lang eBooks / Complete</value>
+						<value code="ZDB-114-LAR">Peter Lang eBooks / Rechtswissenschaft</value>
+						<value code="ZDB-114-VOS">Peter Lang eBooks / Slavistik online</value>
+						<value code="ZDB-116-KEZ">Klett-Cotta / Erziehung</value>
+						<value code="ZDB-116-KGL">Klett-Cotta / Gegenwartsliteratur</value>
+						<value code="ZDB-116-KGP">Klett-Cotta / Gesellschaft/Politik</value>
+						<value code="ZDB-116-KGT">Klett-Cotta / Geschichte</value>
+						<value code="ZDB-116-KKJ">Klett-Cotta / Kinder und Jugendliche</value>
+						<value code="ZDB-116-KPF">Klett-Cotta / Psychologie Fachbuch</value>
+						<value code="ZDB-116-KPT">Klett-Cotta / Psychotherapie</value>
+						<value code="ZDB-116-KST">Klett-Cotta / Systemische Therapie</value>
+						<value code="ZDB-116-KTR">Klett-Cotta / Trauma</value>
+						<value code="ZDB-117-APE">V&amp;R eLibrary / Angewandte Psychologie Erwachsene</value>
+						<value code="ZDB-117-APK">Vandenhoeck &amp; Ruprecht eBooks / Angewandte Psychologie Kinder</value>
+						<value code="ZDB-117-EXE">V&amp;R eLibrary / Exegese</value>
+						<value code="ZDB-117-FRB">Vandenhoeck &amp; Ruprecht eBooks / Frühe Bildung</value>
+						<value code="ZDB-117-IDP">Vandenhoeck &amp; Ruprecht eBooks / Individualpsychologie</value>
+						<value code="ZDB-117-KIG">V&amp;R eLibrary / Kirchengeschichte</value>
+						<value code="ZDB-117-LIS">V&amp;R eLibrary / Literatur- und Sprachwissenschaft</value>
+						<value code="ZDB-117-NGZ">V&amp;R eLibrary / Neueste Geschichte - Zeitgeschichte</value>
+						<value code="ZDB-117-NSP">Vandenhoeck &amp; Ruprecht eBooks / Neue Studien zur Philosophie</value>
+						<value code="ZDB-117-NTE">V&amp;R eLibrary / Neues Testament</value>
+						<value code="ZDB-117-PAE">V&amp;R eLibrary / Pädagogik und Erziehung</value>
+						<value code="ZDB-117-PUS">V&amp;R eLibrary / Psychologie und Systemik</value>
+						<value code="ZDB-117-RCR">V&amp;R eLibrary / Research in Contemporary Religion</value>
+						<value code="ZDB-117-SFG">V&amp;R eLibrary / Schriften des Sigmund-Freud-Instituts</value>
+						<value code="ZDB-117-THO">V&amp;R eLibrary / Theologie</value>
+						<value code="ZDB-117-VPP">V&amp;R eLibrary / Psychotherapie und Psychologie</value>
+						<value code="ZDB-117-VRE">V&amp;R eLibrary / E-Books</value>
+						<value code="ZDB-119-KH1">Knowledge Unlatched / History 1</value>
+						<value code="ZDB-119-KH2">Knowledge Unlatched / History 2</value>
+						<value code="ZDB-119-KLS">Knowledge Unlatched / Language Science Press</value>
+						<value code="ZDB-119-KMP">Knowledge Unlatched / Politics</value>
+						<value code="ZDB-119-KNA">Knowledge Unlatched / Anthropology</value>
+						<value code="ZDB-119-KNU">Knowledge Unlatched</value>
+						<value code="ZDB-119-KPL">Knowledge Unlatched / Peter Lang IT Law</value>
+						<value code="ZDB-119-KSH">KU select HSS</value>
+						<value code="ZDB-119-KSS">KU select STEM</value>
+						<value code="ZDB-119-KTO">Knowledge Unlatched / transcript OPEN library Politikwissenschaft</value>
+						<value code="ZDB-119-KURG">Knowledge Unlatched / Routledge Gender Studies</value>						
+						<value code="ZDB-120-SVA">Franz Steiner Verlag eLibrary / Jahresgesamtpaket</value>
+						<value code="ZDB-120-SVB">Franz Steiner Verlag eLibrary / Geisteswissenschaften</value>
+						<value code="ZDB-120-SVG">Franz Steiner Verlag eLibrary / EBooks</value>
+						<value code="ZDB-121-UFW">Ulmer E-Books / Forstwirtschaft</value>
+						<value code="ZDB-121-UGA">Ulmer E-Books / Garten</value>
+						<value code="ZDB-121-UGB">Ulmer E-Books / Gartenbau</value>
+						<value code="ZDB-121-UGL">Ulmer E-Books / Garten und Landschaftsbau</value>
+						<value code="ZDB-121-UGP">Ulmer E-Books / Garten und Pflanzen</value>
+						<value code="ZDB-121-UTI">Ulmer E-Books / Tiere</value>
+						<value code="ZDB-122-SHP">Schäffer-Poeschel E-Books</value>
+						<value code="ZDB-124-WMH">World Scientific Publishing / Mathematics</value>
+						<value code="ZDB-124-WOP">World Scientific Publishing</value>
+						<value code="ZDB-124-WPN">World Scientific Publishing /Physics, Nonlinear Science</value>
+						<value code="ZDB-125-TAG">transcript Verlag / Aging - Disability - Fashion - Human Animal - Postcolonial Studies</value>
+						<value code="ZDB-125-TEK">transcript Verlag / Ethnologie und Kulturanthropologie</value>
+						<value code="ZDB-125-TGE">transcript Verlag / Gesamtpaket</value>
+						<value code="ZDB-125-TGS">transcript Verlag / Gender Studies and Queer Studies</value>
+						<value code="ZDB-125-TKL">transcript Verlag / Kulturwissenschaft</value>
+						<value code="ZDB-125-TKT">transcript Verlag / Kulturtheorie</value>
+						<value code="ZDB-125-TKU">transcript Verlag / Kultur- und Mediensoziologie</value>
+						<value code="ZDB-125-TLT">transcript Verlag / Literaturwissenschaft</value>
+						<value code="ZDB-125-TMR">transcript Verlag / Migrations- und Religionssoziologie</value>
+						<value code="ZDB-125-TMS">transcript Verlag / Musikwissenschaft</value>
+						<value code="ZDB-125-TMW">transcript Verlag / Medienwissenschaft</value>
+						<value code="ZDB-125-TPA">transcript Verlag / Pädagogik</value>
+						<value code="ZDB-125-TPO">transcript Verlag / Politikwissenschaft</value>
+						<value code="ZDB-125-TPU">transcript Verlag / Politische Soziologie und Soziale Ungleichheit</value>
+						<value code="ZDB-125-TSG">transcript Verlag / Soziologie des Geschlechts und des Körpers</value>
+						<value code="ZDB-125-TSR">transcript Verlag / Stadt- und Raumsoziologie</value>
+						<value code="ZDB-125-TST">transcript Verlag / Soziologische Theorie</value>
+						<value code="ZDB-125-TSZ">transcript Verlag / Soziologie</value>
+						<value code="ZDB-125-TWI">transcript Verlag / Wissenschafts-, Technik- und Umweltsoziologie</value>
+						<value code="ZDB-125-TWO">transcript Verlag / Wirtschafts-, Organisations- und Arbeitssoziologie</value>
+						<value code="ZDB-126-OEA">oekom verlag / Gesamt</value>
+						<value code="ZDB-126-OKE">oekom verlag / Konsum und Ernährung</value>
+						<value code="ZDB-126-ONW">oekom verlag / Nachhaltiges Wirtschaften</value>
+						<value code="ZDB-126-OPG">oekom verlag / Politik &amp; Gesellschaft</value>
+						<value code="ZDB-126-OUN">oekom verlag / Umwelt- &amp; Nachhaltigkeitsforschung</value>
+						<value code="ZDB-126-OVD">oekom verlag / Vordenker</value>
+						<value code="ZDB-127-KPH">Klostermann-E-Books / Philosophie</value>
+						<value code="ZDB-128-BJO">Beck eLibrary / C.H. Beck Jura Öffentliches Recht</value>
+						<value code="ZDB-128-BJS">Beck eLibrary / C.H. Beck Jura Strafrecht</value>
+						<value code="ZDB-128-BJZ1">Beck eLibrary / C.H. Beck Jura Zivilrecht I</value>
+						<value code="ZDB-128-BJZ2">Beck eLibrary / C.H. Beck Jura Zivilrecht II</value>
+						<value code="ZDB-128-JUR">Beck eLibrary / Vahlen Jura Referendariat</value>
+						<value code="ZDB-128-UFI">Beck eLibrary / UVK Finance</value>
+						<value code="ZDB-128-UMM">Beck eLibrary / UVK Management &amp; Marketing</value>
+						<value code="ZDB-128-URC">Beck eLibrary / UVK Rechnungswesen &amp; Controlling</value>
+						<value code="ZDB-128-UVK">Beck eLibrary / UVK Wirtschaft</value>
+						<value code="ZDB-128-UWW">Beck eLibrary / UVK Wirtschaftswissenschaften</value>
+						<value code="ZDB-128-VAB">Beck eLibrary / Vahlen Allgemeine Betriebswirtschaftslehre</value>
+						<value code="ZDB-128-VBB">Beck eLibrary / Vahlen Buchführung, Bilanz, Steuern</value>
+						<value code="ZDB-128-VEL">Beck eLibrary</value>
+						<value code="ZDB-128-VIF">Beck eLibrary / Vahlen Investition und Finanzierung</value>
+						<value code="ZDB-128-VJR">Beck eLibrary / Vahlen Jura Öffentliches Recht</value>
+						<value code="ZDB-128-VJS">Beck eLibrary / Vahlen Jura Strafrecht</value>
+						<value code="ZDB-128-VKC">Beck eLibrary / Vahlen Kostenrechnung und Controlling</value>
+						<value code="ZDB-128-VMH">Beck eLibrary / Vahlen Marketing und Handel</value>
+						<value code="ZDB-128-VMW">Beck eLibrary / Vahlen Mathematik für Wirtschaftswissenschaftler</value>
+						<value code="ZDB-128-VPL">Beck eLibrary / Vahlen Produktion und Logistik</value>
+						<value code="ZDB-128-VPM">Beck eLibrary / Vahlen Personalmanagement</value>						
+						<value code="ZDB-128-VRW">Beck eLibrary / Vahlen Recht für Wirtschaftswissenschaftler</value>
+						<value code="ZDB-128-VSO">Beck eLibrary / Vahlen Strafrecht/Öffentliches Recht</value>
+						<value code="ZDB-128-VUM">Beck eLibrary / Vahlen Unternehmensführung, Management, Organisation</value>
+						<value code="ZDB-128-VVA">Beck eLibrary / Versus Allgemeine Betriebswirtschaftslehre</value>
+						<value code="ZDB-128-VVK">Beck eLibrary / Versus kompakt BWL</value>
+						<value code="ZDB-128-VVM">Beck eLibrary / Versus kompakt Management</value>
+						<value code="ZDB-128-VVW">Beck eLibrary / Vahlen Volkswirtschaftslehre</value>
+						<value code="ZDB-128-ZR1">Beck eLibrary / Vahlen Zivilrecht I</value>
+						<value code="ZDB-128-ZR2">Beck eLibrary / Vahlen Zivilrecht II</value>
+						<value code="ZDB-129-JBB">John Benjamin / Bochumer Studien zur Philosphie</value>
+						<value code="ZDB-129-JBC">John Benjamin / Communication studies</value>
+						<value code="ZDB-129-JBE">John Benjamin e-Books</value>
+						<value code="ZDB-129-JBO">John Benjamin Open Access Books</value>
+						<value code="ZDB-130-BBA">UTB scholars-e-library / Pädagogik/ Betriebliche Aus- und Weiterbildung / Backlist wbv</value>
+						<value code="ZDB-130-BBW">wbv / Berufs- und Wirtschaftspädagogik</value>
+						<value code="ZDB-130-BEB">UTB scholars-e-library / Pädagogik / Erwachsenenbildung Praktiker / Backlist wbv</value>
+						<value code="ZDB-130-BEW">UTB scholars-e-library / Pädagogik / Erwachsenenbildungsforschung / Backlist wbv</value>
+						<value code="ZDB-130-BPE">wbv / Personalentwicklung</value>
+						<value code="ZDB-130-BZS">wbv / Erziehungswissenchaft &amp; Sozialforschung</value>
+						<value code="ZDB-133-HEL">Hirzel eLibrary</value>
+						<value code="ZDB-133-HGM">Hirzel eLibrary / Germanistik</value>
+						<value code="ZDB-135-IAL">IOP ebooks (All collections)</value>
+						<value code="ZDB-135-IAS">IOP ebooks / AAS-IOP Astronomy</value>
+						<value code="ZDB-135-ICP">IOP ebooks / Concise physics</value>
+						<value code="ZDB-135-IEP">IOP ebooks / Expanding physics</value>
+						<value code="ZDB-136-PUG">Suhrkamp / Politik &amp; Gesellschaft</value>
+						<value code="ZDB-136-PUR">Suhrkamp / Philosophie und Religion</value>
+						<value code="ZDB-136-SKI">Suhrkamp / Philosophie</value>
+						<value code="ZDB-136-SKS">Suhrkamp / Kultur- und Sozialwissenschaft</value>
+						<value code="ZDB-136-SPT">Suhrkamp / Politische Theorie</value>
+						<value code="ZDB-136-SUS">Suhrkamp / Soziologie und Systemtheorie</value>
+						<value code="ZDB-136-SWE">Suhrkamp / Werkausgabe Elias</value>
+						<value code="ZDB-136-SWS">Suhrkamp / Werkausgabe Simmel</value>						
+						<value code="ZDB-136-WEM">Suhrkamp / Werkausgabe Marcuse</value>
+						<value code="ZDB-137-MGW">medhochzwei Onlinebibliothek - Medien für das Gesundheitswesen</value>
 						<value code="ZDB-138-AMA">AMS ebooks / Memoirs of the American Mathematical Society</value>
 						<value code="ZDB-138-AMB">AMS ebooks / Fields Institute Monographs</value>
 						<value code="ZDB-138-AMD">AMS ebooks / Fields Institute Communications</value>
@@ -10069,45 +10273,54 @@
 						<value code="ZDB-138-AMR">AMS ebooks / Graduate Studies in Mathematics</value>
 						<value code="ZDB-138-AMS">AMS ebooks / Mathematical Surveys and Monographs</value>
 						<value code="ZDB-138-AMU">AMS ebooks / University Lecture Series</value>
-						<value code="ZDB-265-AFC">AVA Library / Film collection</value>
-						<value code="ZDB-128-BJO">Beck eLibrary / C.H. Beck Jura Öffentliches Recht</value>
-						<value code="ZDB-128-BJS">Beck eLibrary / C.H. Beck Jura Strafrecht</value>
-						<value code="ZDB-128-BJZ1">Beck eLibrary / C.H. Beck Jura Zivilrecht I</value>
-						<value code="ZDB-128-BJZ2">Beck eLibrary / C.H. Beck Jura Zivilrecht II</value>
-						<value code="ZDB-128-UFI">Beck eLibrary / UVK Finance</value>
-						<value code="ZDB-128-UMM">Beck eLibrary / UVK Management &amp; Marketing</value>
-						<value code="ZDB-128-URC">Beck eLibrary / UVK Rechnungswesen &amp; Controlling</value>
-						<value code="ZDB-128-UVK">Beck eLibrary / UVK Wirtschaft</value>
-						<value code="ZDB-128-UWW">Beck eLibrary / UVK Wirtschaftswissenschaften</value>
-						<value code="ZDB-128-VAB">Beck eLibrary / Vahlen Allgemeine Betriebswirtschaftslehre</value>
-						<value code="ZDB-128-VBB">Beck eLibrary / Vahlen Buchführung, Bilanz, Steuern</value>
-						<value code="ZDB-128-VIF">Beck eLibrary / Vahlen Investition und Finanzierung</value>
-						<value code="ZDB-128-VJR">Beck eLibrary / Vahlen Jura Öffentliches Recht</value>
-						<value code="ZDB-128-JUR">Beck eLibrary / Vahlen Jura Referendariat</value>
-						<value code="ZDB-128-VEL">Beck eLibrary</value>
-						<value code="ZDB-128-VJS">Beck eLibrary / Vahlen Jura Strafrecht</value>
-						<value code="ZDB-128-VKC">Beck eLibrary / Vahlen Kostenrechnung und Controlling</value>
-						<value code="ZDB-128-VMH">Beck eLibrary / Vahlen Marketing und Handel</value>
-						<value code="ZDB-128-VMW">Beck eLibrary / Vahlen Mathematik für Wirtschaftswissenschaftler</value>
-						<value code="ZDB-128-VPM">Beck eLibrary / Vahlen Personalmanagement</value>
-						<value code="ZDB-128-VPL">Beck eLibrary / Vahlen Produktion und Logistik</value>
-						<value code="ZDB-128-VRW">Beck eLibrary / Vahlen Recht für Wirtschaftswissenschaftler</value>
-						<value code="ZDB-128-VSO">Beck eLibrary / Vahlen Strafrecht/Öffentliches Recht</value>
-						<value code="ZDB-128-VUM">Beck eLibrary / Vahlen Unternehmensführung, Management, Organisation</value>
-						<value code="ZDB-128-VVW">Beck eLibrary / Vahlen Volkswirtschaftslehre</value>
-						<value code="ZDB-128-ZR1">Beck eLibrary / Vahlen Zivilrecht I</value>
-						<value code="ZDB-128-ZR2">Beck eLibrary / Vahlen Zivilrecht II</value>
-						<value code="ZDB-128-VVA">Beck eLibrary / Versus Allgemeine Betriebswirtschaftslehre</value>
-						<value code="ZDB-128-VVK">Beck eLibrary / Versus kompakt BWL</value>
-						<value code="ZDB-128-VVM">Beck eLibrary / Versus kompakt Management</value>
-						<value code="ZDB-266-BWE">Berliner Wissenschafts-Verlag / eLibrary</value>
+						<value code="ZDB-139-LCB">Loeb Classical Library</value>
+						<value code="ZDB-140-STO">Stotax First</value>						
+						<value code="ZDB-142-WAG">WBG / Alte Geschichte</value>
+						<value code="ZDB-142-WAR">WBG / Archäologie</value>
+						<value code="ZDB-142-WBG">WBG Gesamtbestand</value>
+						<value code="ZDB-142-WBP">WBG / Philosophie</value>
+						<value code="ZDB-142-WEA">WBG / Edition Antike</value>
+						<value code="ZDB-142-WEH">WBG / Erziehungswissenschaft</value>
+						<value code="ZDB-142-WFS">WBG / Freiherr-vom-Stein-Gedächnisausgabe - Quellen zur deutschen Geschichte des Mittelalters</value>
+						<value code="ZDB-142-WGE">WBG / Germanistik</value>
+						<value code="ZDB-142-WGF">WBG / Germanistik - Einführungen</value>
+						<value code="ZDB-142-WGM">WBG / Germanistik - Mediävistik</value>
+						<value code="ZDB-142-WGN">WBG / Germanistik - Neuere deutsche Literatur </value>
+						<value code="ZDB-142-WGW">WBG / Geowissenschaften</value>
+						<value code="ZDB-142-WKA">WBG / Kunst und Architektur</value>
+						<value code="ZDB-142-WKP">WBG / Klassische Philologie</value>
+						<value code="ZDB-142-WMA">WBG / Mittelalter</value>
+						<value code="ZDB-142-WPE">WBG / Philosophie Einführungen</value>
+						<value code="ZDB-142-WPT">WBG / Praktische Theologie</value>
+						<value code="ZDB-142-WQB">WBG / Freiherr-vom-Stein-Gedächnisausgabe - Quellen zu den Beziehungen Deutschlands zu seinen Nachbarn im 19. und 20. Jahrhundert</value>
+						<value code="ZDB-142-WSY">WBG / Systemische Theologie</value>
+						<value code="ZDB-142-WTH">WBG / Theologie</value>
+						<value code="ZDB-142-WWG">WBG / Weltgeschichte</value>
+						<value code="ZDB-142-WWI">WBG / Weltreligionen und interreligiöser Dialog</value>
+						<value code="ZDB-142-WZG">WBG / Geschichte - Zeitgeschichte </value>
+						<value code="ZDB-144-PVB">Psychiatrie Verlag eBooks</value>
+						<value code="ZDB-147-EMB">EMS E-Books (European Mathematical Society E-Books)</value>
+						<value code="ZDB-149-HCB">Herdt Campus eBooks</value>
+						<value code="ZDB-150-PEB">Pearson eBooks</value>
+						<value code="ZDB-156-WGG">Wichmann / Geoinformatik, Geodäsie, Photogrammetrie</value>
+						<value code="ZDB-157-HFP">Herder / Frühpädagogik, aktuelle Themen</value>
+						<value code="ZDB-157-HPS">Herder / Psychologie</value>
+						<value code="ZDB-157-HPT">Herder / Praktische Theologie</value>
+						<value code="ZDB-157-HSU">Herder / Studienliteratur</value>
+						<value code="ZDB-158-VER">VDE Verlag EBooks / Elektrotechnik</value>
+						<value code="ZDB-158-VKK">VDE Verlag EBooks / Kälte- und Klimatechnik</value>
+						<value code="ZDB-158-VNV">VDE Verlag EBooks / Normen verständlich</value>
+						<value code="ZDB-159-SCF">SciFo</value>
+						<value code="ZDB-159-TPT">SciFo / Thermoprozesstechnik</value>
+						<value code="ZDB-159-WAB">SciFo / Wasser &amp; Abwasser</value>
 						<value code="ZDB-161-CSL">Commonwealth Secretariat iLibrary</value>
 						<value code="ZDB-162-ACT">Bloomsbury Collections / Aesthetics and Cultural Theory Archive 1999-2012</value>
 						<value code="ZDB-162-BCC">Bloomsbury Collections / Complete</value>
-						<value code="ZDB-162-BCL">Bloomsbury Collections / Literary Studies</value>
+						<value code="ZDB-162-BCL">Bloomsbury Collections / Literary Studies</value>						
 						<value code="ZDB-162-BFM">Bloomsbury Collections / Film &amp; Media Studies</value>
 						<value code="ZDB-162-BFS">Bloomsbury Collections / Film Studies Archive 2000-2013</value>
 						<value code="ZDB-162-BLO">Bloomsbury open</value>
+						<value code="ZDB-162-Bloom-EBA">Bloom-EBA</value>
 						<value code="ZDB-162-BMA">Bloomsbury Collections / Modernism Archive 2005-2012</value>
 						<value code="ZDB-162-BMS">Bloomsbury Collections / Media Studies Archive 2008-2013</value>
 						<value code="ZDB-162-CWT">Bloomsbury Collections / Contemprary Writing, Theory and Culture Archive 2006-2012</value>
@@ -10115,355 +10328,140 @@
 						<value code="ZDB-162-LCT">Bloomsbury Collections / Literary Criticism Landmark Texts (Bloomsbury Academic Collection series)</value>
 						<value code="ZDB-162-PHY">Bloomsbury Collections / Philosophy</value>
 						<value code="ZDB-162-SSL">Bloomsbury Collections / Shakespeare Studies Landmark Texts (Bloomsbury Academic Collections)</value>
-						<value code="ZDB-211-BRE">BrepolsOnline Books</value>
-						<value code="ZDB-272-BSE">BuildingSMART Germany / E-Books</value>
-						<value code="ZDB-176-DCH">Digital Concert Hall</value>
-						<value code="ZDB-219-DPV">dpunkt.verlag E-Books</value>
-						<value code="ZDB-219-DAI">dpunkt.verlag / Administration &amp; IT-Sicherheit</value>
-						<value code="ZDB-219-DIB">dpunkt.verlag / IT &amp; Business</value>
-						<value code="ZDB-219-DMT">dpunkt.verlag / Maker-Themen</value>
-						<value code="ZDB-219-DPR">dpunkt.verlag / Programmierung - dpunkt</value>
-						<value code="ZDB-219-DSO">dpunkt.verlag / Softwareentwicklung</value>
-						<value code="ZDB-219-DWE">dpunkt.verlag / Webentwicklung</value>
-						<value code="ZDB-198-DUG">Duke University Press / Gender Studies e-book collection</value>
-						<value code="ZDB-147-EMB">EMS E-Books (European Mathematical Society E-Books)</value>
-						<value code="ZDB-268-EGB">Equinox / Gesamt E-Books</value>
-						<value code="ZDB-88-SOP">ESV Modul Sozialrecht Premium powered by juris</value>
-						<value code="ZDB-269-FFD">Filmfriend</value>
-						<value code="ZDB-120-SVG">Franz Steiner Verlag eLibrary / EBooks</value>
-						<value code="ZDB-120-SVB">Franz Steiner Verlag eLibrary / Geisteswissenschaften</value>
-						<value code="ZDB-120-SVA">Franz Steiner Verlag eLibrary / Jahresgesamtpaket</value>
-						<value code="ZDB-210-GSC">GeoScienceWorld eBooks</value>
-						<value code="hade">Harri Deutsch</value>
-						<value code="ZDB-178-HEG">hep E-Books</value>
-						<value code="herder">Herder-E-Books</value>
-						<value code="ZDB-157-HFP">Herder / Frühpädagogik, aktuelle Themen</value>
-						<value code="ZDB-157-HPT">Herder / Praktische Theologie</value>
-						<value code="ZDB-157-HPS">Herder / Psychologie</value>
-						<value code="ZDB-157-HSU">Herder / Studienliteratur</value>
-						<value code="ZDB-149-HCB">Herdt Campus eBooks</value>
-						<value code="ZDB-133-HEL">Hirzel eLibrary</value>
-						<value code="huguenots">Huguenots-E-Book</value>
-						<value code="ZDB-207-IBV">Iberoamericana Vervuert / eBooks</value>
-						<value code="ZDB-239-IPG">International Press / Geometry, Topology, Analysis and Theoretical Physics Package</value>
-						<value code="ZDB-239-IPP">International Press / Pure Mathematics Package</value>
-						<value code="ZDB-135-IAL">IOP ebooks (All collections)</value>
-						<value code="ZDB-135-IAS">IOP ebooks / AAS-IOP Astronomy</value>
-						<value code="ZDB-135-ICP">IOP ebooks / Concise physics</value>
-						<value code="ZDB-135-IEP">IOP ebooks / Expanding physics</value>
-						<value code="ZDB-218-IOS">IOS Press Ebooks</value>
-						<value code="ZDB-184-ITO">InTechOpen</value>
-						<value code="igi global">IGI Global-E-Books</value>
-						<value code="iorm">INFORMS</value>
-						<value code="ZDB-129-JBB">John Benjamin / Bochumer Studien zur Philosphie</value>
-						<value code="ZDB-129-JBC">John Benjamin / Communication studies</value>
-						<value code="ZDB-129-JBE">John Benjamin e-Books</value>
-						<value code="ZDB-129-JBO">John Benjamin Open Access Books</value>
-						<value code="ZDB-88-LEG">Juris / OVS Module in juris</value>
-						<value code="ZDB-88-JPG">Juris PraxisKommentar SGB - Gesamtausgabe</value>
-						<value code="ZDB-88-JRB">juris Spectrum / Hochschulen</value>
-						<value code="ZDB-88-JSO">juris Staudinger Online</value>
-						<value code="ZDB-88-ZHS">juris Zusatzmodul Hochschulen</value>
-						<value code="juris">Juris-E-Books</value>
-						<value code="ZDB-104-KIT">KIT Monographs and Scientific Reports</value>
-						<value code="ZDB-116-KEZ">Klett-Cotta / Erziehung</value>
-						<value code="ZDB-116-KGL">Klett-Cotta / Gegenwartsliteratur</value>
-						<value code="ZDB-116-KGT">Klett-Cotta / Geschichte</value>
-						<value code="ZDB-116-KGP">Klett-Cotta / Gesellschaft/Politik</value>
-						<value code="ZDB-116-KKJ">Klett-Cotta / Kinder und Jugendliche</value>
-						<value code="ZDB-116-KPF">Klett-Cotta / Psychologie Fachbuch</value>
-						<value code="ZDB-116-KPT">Klett-Cotta / Psychotherapie</value>
-						<value code="ZDB-116-KST">Klett-Cotta / Systemische Therapie</value>
-						<value code="ZDB-116-KTR">Klett-Cotta / Trauma</value>
-						<value code="vkv">Klostermann-E-Books</value>
-						<value code="ZDB-127-KPH">Klostermann-E-Books / Philosophie</value>
-						<value code="ZDB-119-KNU">Knowledge Unlatched</value>
-						<value code="ZDB-119-KH1">Knowledge Unlatched / History 1</value>
-						<value code="ZDB-119-KH2">Knowledge Unlatched / History 2</value>
-						<value code="ZDB-119-KLS">Knowledge Unlatched / Language Science Press</value>
-						<value code="ZDB-119-KURG">Knowledge Unlatched / Routledge Gender Studies</value>
-						<value code="ZDB-119-KTO">Knowledge Unlatched / transcript OPEN library Politikwissenschaft</value>
-						<value code="ZDB-119-KSH">KU select HSS</value>
-						<value code="ZDB-119-KSS">KU select STEM</value>
-						<value code="ZDB-267-KEL">Kogan Page / Ebook Collection Logistics</value>
-						<value code="ZDB-119-KSH">KU select HSS</value>
-						<value code="ZDB-109-LAP">Lambertus / Alter und Pflege</value>
-						<value code="ZDB-109-LCE">Lambertus / Caritas, Ethik und Theologie</value>
-						<value code="ZDB-109-LFA">Lambertus / Familien</value>
-						<value code="ZDB-109-LHH">Lambertus / Heilpädagogik und Heilerziehungspflege</value>
-						<value code="ZDB-109-LIB">Lambertus / Inklusion und Behindertenarbeit</value>
-						<value code="ZDB-109-LKF">Lambertus / Kita- und Frühpädagogik</value>
-						<value code="ZDB-109-LKS">Lambertus / Klassiker der Sozialen Arbeit</value>
-						<value code="ZDB-109-LLS">Lambertus / Lehrbücher für die Soziale Arbeit</value>
-						<value code="ZDB-109-LMI">Lambertus / Migration, Integration &amp; besondere Lebenslagen</value>
-						<value code="ZDB-109-LPK">Lambertus / Pädagogik, Kinder- und Jugendhilfe</value>
-						<value code="ZDB-109-LPC">Lambertus / Palliative Care und Hospizarbeit</value>
-						<value code="ZDB-109-LPS">Lambertus / Praxis der Sozialen Arbeit</value>
-						<value code="ZDB-109-LSC">Lambertus / Sozialmanagement und Coaching</value>
-						<value code="ZDB-109-LSS">Lambertus / Sozialmanagement und Sozialwirtschaft</value>
-						<value code="ZDB-109-LSR">Lambertus / Sozialrecht</value>
-						<value code="ZDB-109-LSK">Lambertus / Sozial- und Kommunalpolitik</value>
-						<value code="ZDB-109-LSP">Lambertus / Studium und Praxis der Sozialen Arbeit</value>
-						<value code="ZDB-109-LST">Lambertus / Studium und Theorie der Sozialen Arbeit</value>
-						<value code="ZDB-109-LSA">Lambertus / Sucht und Abhängigkeit</value>
-						<value code="ZDB-109-LTC">Lambertus / Tarifrecht der Caritas</value>
-						<value code="ZDB-109-LTS">Lambertus / Theorie der Sozialen Arbeit</value>
-						<value code="ZDB-114-LAC">Peter Lang eBooks / Complete</value>
-						<value code="learntechlib">LearnTechLib-E-Books</value>
-						<value code="ZDB-139-LCB">Loeb Classical Library</value>
-						<value code="Logos">Logos Verlag Berlin</value>
+						<value code="ZDB-164-UNL">UN iLibrary</value>
+						<value code="ZDB-165-NOC">Nordic iLibrary</value>
+						<value code="ZDB-168-MAM">Access Medicine / EBooks</value>
+						<value code="ZDB-169-VWI">Velbrück Wissenschaft</value>
+						<value code="ZDB-170-ETU">Die digitale SAP-Bibliothek</value>
 						<value code="ZDB-171-LAK">Logos / Akustik</value>
 						<value code="ZDB-171-LAS">Logos / Arbeits- und Sozialrecht</value>
 						<value code="ZDB-171-LBW">Logos / BWL</value>
-						<value code="ZDB-171-LOD">Logos / Didaktik</value>
 						<value code="ZDB-171-LDW">Logos / Didaktik der Naturwissenschaften</value>
-						<value code="ZDB-171-LPE">Logos / Didaktik, Pädagogik, Erziehungswissenschaften</value>
-						<value code="ZDB-171-LTE">Logos / E-Technik, Elektronik</value>
-						<value code="ZDB-171-LOI">Logos / Informatik</value>
 						<value code="ZDB-171-LIA">Logos / Ingenieurwissenschaften Allgemein</value>
 						<value code="ZDB-171-LMN">Logos / Management</value>
 						<value code="ZDB-171-LMS">Logos / Maschinenbau</value>
 						<value code="ZDB-171-LMT">Logos / Mathematik</value>
+						<value code="ZDB-171-LOD">Logos / Didaktik</value>
+						<value code="ZDB-171-LOI">Logos / Informatik</value>
+						<value code="ZDB-171-LOT">Logos / Technik</value>
+						<value code="ZDB-171-LPE">Logos / Didaktik, Pädagogik, Erziehungswissenschaften</value>
 						<value code="ZDB-171-LPO">Logos / Politik</value>
 						<value code="ZDB-171-LPY">Logos / Psychologie</value>
 						<value code="ZDB-171-LRA">Logos / Recht Allgemein</value>
 						<value code="ZDB-171-LSO">Logos / Soziologie, Soziale Arbeit</value>
+						<value code="ZDB-171-LTE">Logos / E-Technik, Elektronik</value>
 						<value code="ZDB-171-LVE">Logos / Strafrecht</value>
-						<value code="ZDB-171-LOT">Logos / Technik</value>
 						<value code="ZDB-171-LVT">Logos / Verfahrenstechnik</value>
-						<value code="ZDB-171-LWE">Logos / Wärme-, Energietechnik</value>
 						<value code="ZDB-171-LWA">Logos / Wirtschaft Allgemein</value>
-						<value code="luther">Luther-E-Books</value>
-						<value code="lyell">Lyell Collection</value>
-						<value code="mpig">Max-Planck-Institut für Gesellschaftsforschung Open Access</value>
-						<value code="ZDB-201-MGF">manchesterhive / Gesamt [E-Books]</value>
-						<value code="mansi">Manchester Studies in Imperialism</value>
-						<value code="mso">Manchester University Press / Manchester Scholarship Online</value>
-						<value code="ZDB-137-MGW">medhochzwei Onlinebibliothek - Medien für das Gesundheitswesen</value>
+						<value code="ZDB-171-LWE">Logos / Wärme-, Energietechnik</value>
+						<value code="ZDB-173-HKC">Haufe Lexware / Kostenrechnung und Controlling</value>
+						<value code="ZDB-173-HLE">Haufe Lexware / Ebooks [Gesamt]</value>
+						<value code="ZDB-173-HMG">Haufe Lexware / Management</value>
+						<value code="ZDB-173-HMV">Haufe Lexware / Marketing, Vertrieb, Handel</value>
+						<value code="ZDB-173-HPF">Haufe Lexware / Personalmanagement, Führung, Karriere</value>
+						<value code="ZDB-174-OHU">Open Humanities Press / Books</value>
+						<value code="ZDB-176-DCH">Digital Concert Hall</value>
+						<value code="ZDB-178-HEG">hep E-Books</value>
+						<value code="ZDB-179-WAL">Walhalla E-Books</value>
+						<value code="ZDB-181-TCP">Tectum eLibrary / Pädagogik</value>
+						<value code="ZDB-181-TEC">Tectum eLibrary</value>
+						<value code="ZDB-181-TGC">Tectum eLibrary / Geschichte</value>
+						<value code="ZDB-181-TME">Tectum eLibrary / Medienwissenschaften</value>
+						<value code="ZDB-181-TMI">Tectum eLibrary / Musikwissenschaft</value>
+						<value code="ZDB-181-TPL">Tectum eLibrary / Politik</value>
+						<value code="ZDB-181-TSE">Tectum eLibrary / Soziologie</value>						
+						<value code="ZDB-181-TWW">Tectum eLibrary / Wirtschaftswissenschaften</value>
+						<value code="ZDB-184-ITO">InTechOpen</value>
+						<value code="ZDB-185-SDI">Statista Dossiers international</value>
+						<value code="ZDB-185-STD">Statista Dossiers</value>
+						<value code="ZDB-186-WTM">WTM-Verlag E-Books</value>
+						<value code="ZDB-187-JFB">Junfermann / Fachbuch</value>
+						<value code="ZDB-187-JKG">Junfermann / Kommunikation / GFK</value>
+						<value code="ZDB-196-Meiner-EBA">Meiner-EBA</value>
 						<value code="ZDB-196-MEL">Meiner eLibrary</value>
 						<value code="ZDB-196-MPB">Meiner eLibrary / Philosophische Bibliothek</value>
-						<value code="melanchthon">Melanchthon-E-Books</value>
-						<value code="ZDB-205-MET">Metropois eBooks</value>
-						<value code="minnso">University of Minnesota Press / Minnesota Scholarship Online</value>
-						<value code="ZDB-197-MSE">Mohr Siebeck eBooks</value>
 						<value code="ZDB-197-MAW">Mohr Siebeck / Altertumswissenschaft</value>
-						<value code="ZDB-197-MWE">Mohr Siebeck / Max Weber Gesamtausgabe</value>
 						<value code="ZDB-197-MRW">Mohr Siebeck / Rechtswissenschaft</value>
+						<value code="ZDB-197-MSE">Mohr Siebeck eBooks</value>
 						<value code="ZDB-197-MSR">Mohr Siebeck / Theologie / Religionswissenschaft</value>
-						<value code="MohrSiebeckLizenz2013">MohrSiebeck Lizenzzugehörigkeit 2013</value>
-						<value code="MohrSiebeckLizenz2013-2015">MohrSiebeck Lizenzzugehörigkeit 2013-2015</value>
-						<value code="MohrSiebeckLizenz2014">MohrSiebeck Lizenzzugehörigkeit 2014</value>
-						<value code="MohrSiebeckLizenz2015">MohrSiebeck Lizenzzugehörigkeit 2015</value>
-						<value code="MohrSiebeckLizenz2018">MohrSiebeck Lizenzzugehörigkeit 2018</value>
-						<value code="MohrSiebeckLizenz2019">MohrSiebeck Lizenzzugehörigkeit 2019</value>
-						<value code="ZDB-105-MC4">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 4</value>
-						<value code="ZDB-105-MC6">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 6</value>
-						<value code="ZDB-105-MC7">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 7</value>
-						<value code="ZDB-105-MC8">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 8</value>
-						<value code="ZDB-105-MC9">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection 9</value>
-						<value code="ZDB-105-MC10">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection ten</value>
-						<value code="ZDB-105-MC11">Morgan &amp; Claypool: Computer &amp; Information Science Collections / CIS collection eleven</value>
-						<value code="ZDB-105-MCL">Morgan &amp; Claypool: Synthesis Lectures on Information Concepts, Retrieval, and Services</value>
-						<value code="ZDB-105-MCB">Morgen &amp; Claypool Publishers eBooks</value>
-						<value code="MPSO">MIT Press Scholarship Online</value>
+						<value code="ZDB-197-MWE">Mohr Siebeck / Max Weber Gesamtausgabe</value>
+						<value code="ZDB-198-DUG">Duke University Press / Gender Studies e-book collection</value>
+						<value code="ZDB-199-WTO">WTO iLibrary</value>
+						<value code="ZDB-199-WTO-article">WTO iLibrary - Artikel</value>
+						<value code="ZDB-199-WTO-ebook">WTO iLibrary - E-Books</value>
+						<value code="ZDB-199-WTO-statist">WTO iLibrary - Statistiken</value>
+						<value code="ZDB-200-WAL">Wallstein / Literaturwissenschaft</value>
+						<value code="ZDB-200-WGC">Wallstein / Geschichte</value>
+						<value code="ZDB-200-WKL">Wallstein / Kulturwissenschaft</value>
+						<value code="ZDB-200-WLG">Wallstein / Gesamt</value>
+						<value code="ZDB-201-MGF">manchesterhive / Gesamt [E-Books]</value>
+						<value code="ZDB-202-PSG">Psychosozial-Verlag / Gesamt</value>
+						<value code="ZDB-202-PSP">Psychosozial-Verlag / Psychologie</value>
+						<value code="ZDB-202-PPT">Psychosozial-Verlag / Psychotherapie</value>
+						<value code="ZDB-202-PVP">Psychosozial-Verlag / Pädagogik</value>
+						<value code="ZDB-203-AHO">Artech House eBooks</value>
+						<value code="ZDB-205-MET">Metropois eBooks</value>
+						<value code="ZDB-207-IBV">Iberoamericana Vervuert / eBooks</value>
+						<value code="ZDB-210-GSC">GeoScienceWorld eBooks</value>
+						<value code="ZDB-211-BRE">BrepolsOnline Books</value>
+						<value code="ZDB-212-VOE">Verlag Österreich eLibrary</value>
 						<value code="ZDB-213-MIA">mitp / Anwendungen</value>
-						<value code="synthesis lectures">Morgan &amp; Claypool / Synthesis Lectures-Reihen</value>
-						<value code="NNg">Nielsen Norman Group</value>
-						<value code="ZDB-71-NAR">Narr-E-Books</value>
-						<value code="ZDB-71-NVL">Narr-E-Books / Literaturwissenschaft</value>
-						<value code="ZDB-165-NOC">Nordic iLibrary</value>
-						<value code="ZDB-245-NWSG">NWB Campus Library / Steuerrecht - Gesamt</value>
-						<value code="ZDB-245-NWSL">NWB Campus Library / Steuerrecht - Lehrbücher</value>
-						<value code="ZDB-245-NPR">NWB PRO</value>
-						<value code="ZDB-245-NPM">NWB PRO max</value>
-						<value code="ZDB-245-NPU">NWB PRO plus</value>
-						<value code="ZDB-126-OKE">oekom verlag / Konsum und Ernährung</value>
-						<value code="ZDB-126-ONW">oekom verlag / Nachhaltiges Wirtschaften</value>
-						<value code="ZDB-126-OVD">oekom verlag / Vordenker</value>
-						<value code="ZDB-174-OHU">Open Humanities Press / Books</value>
-						<value code="obp">OpenBook Publishers-E-Books</value>
+						<value code="ZDB-215-ALN">Aisthesis / Literaturwissenschaften Novitäten</value>
+						<value code="ZDB-215-ATH">Aisthesis / Theater</value>
+						<value code="ZDB-215-AWR1">Aisthesis / Zur Literatur der Weimarer Republik 1</value>
+						<value code="ZDB-218-IOS">IOS Press Ebooks</value>
+						<value code="ZDB-219-DAI">dpunkt.verlag / Administration &amp; IT-Sicherheit</value>
+						<value code="ZDB-219-DIB">dpunkt.verlag / IT &amp; Business</value>
+						<value code="ZDB-219-DMT">dpunkt.verlag / Maker-Themen</value>
+						<value code="ZDB-219-DPR">dpunkt.verlag / Programmierung - dpunkt</value>
+						<value code="ZDB-219-DPV">dpunkt.verlag E-Books</value>
+						<value code="ZDB-219-DSO">dpunkt.verlag / Softwareentwicklung</value>
+						<value code="ZDB-219-DWE">dpunkt.verlag / Webentwicklung</value>						
 						<value code="ZDB-219-OAG">O'Reilly / Agil</value>
 						<value code="ZDB-219-ODS">O'Reilly / Data Science &amp; Deep Learning</value>
 						<value code="ZDB-219-ODV">O'Reilly / Divers</value>
 						<value code="ZDB-219-OMT">O'Reilly / Microsoft-Themen</value>
 						<value code="ZDB-219-ORG">O'Reilly / Programmierung</value>
-						<value code="ZDB-219-OWD">O'Reilly / Webprogrammierung/-Design</value>
-						<value code="oso">Otto Schmidt online</value>
+						<value code="ZDB-219-OWD">O'Reilly / Webprogrammierung/-Design</value>						
+						<value code="ZDB-220-VWE">VVW E-Books</value>
 						<value code="ZDB-221-PCL">Packt Cloud</value>
 						<value code="ZDB-221-PDA">Packt Data</value>
 						<value code="ZDB-221-PPR">Packt Programming</value>
 						<value code="ZDB-221-PWD">Packt Web Development</value>
-						<value code="palgraveoa">Palgrave Open Access E-Books</value>
-						<value code="pearson">Pearson-E-Books</value>
-						<value code="ZDB-150-PEB">Pearson eBooks</value>
-						<value code="ZDB-114-LAC">Peter Lang eBooks / Complete</value>
-						<value code="ZDB-114-LAA">Peter Lang eBooks / Die Künste</value>
-						<value code="ZDB-114-LAR">Peter Lang eBooks / Rechtswissenschaft</value>
-						<value code="ZDB-114-VOS">Peter Lang eBooks / Slavistik online</value>
-						<value code="philon">Philosophy Online-E-Books</value>
-						<value code="ZDB-202-PSG">Psychosozial-Verlag / Gesamt</value>
-						<value code="ZDB-202-PVP">Psychosozial-Verlag / Pädagogik</value>
-						<value code="ZDB-202-PSP">Psychosozial-Verlag / Psychologie</value>
-						<value code="ZDB-202-PPT">Psychosozial-Verlag / Psychotherapie</value>
+						<value code="ZDB-239-IPG">International Press / Geometry, Topology, Analysis and Theoretical Physics Package</value>
+						<value code="ZDB-239-IPP">International Press / Pure Mathematics Package</value>
+						<value code="ZDB-245-NPM">NWB PRO max</value>
+						<value code="ZDB-245-NPR">NWB PRO</value>
+						<value code="ZDB-245-NPU">NWB PRO plus</value>
+						<value code="ZDB-245-NWIR">NWB Internationale Rechnungslegung</value>
+						<value code="ZDB-245-NWSG">NWB Campus Library / Steuerrecht - Gesamt</value>
+						<value code="ZDB-245-NWSI">NWB Steuern International</value>	
+						<value code="ZDB-245-NWSL">NWB Campus Library / Steuerrecht - Lehrbücher</value>
+						<value code="ZDB-246-WVE">Wochenschau Verlag E-Books</value>
+						<value code="ZDB-254-IBI">ibidem-Verlag E-Books</value>
 						<value code="ZDB-256-RHV">Rainer Hampp Verlag e-books</value>
-						<value code="ZDB-112-SRF">Schattauer E-Medien / Kardio Vascular</value>
-						<value code="ZDB-112-SRK">Schattauer E-Medien / Orthopädie, Sportmedizin</value>
-						<value code="ZDB-122-SHP">Schäffer-Poeschel E-Books</value>
+						<value code="ZDB-263-SEG">Schüren / Schüren E-Books Gesamt</value>
 						<value code="ZDB-263-SFA">Schüren / Filmanalyse</value>
 						<value code="ZDB-263-SFI">Schüren / Filmgeschichte</value>
 						<value code="ZDB-263-SFK">Schüren / Filmschaffende</value>
 						<value code="ZDB-263-SMQ">Schüren / Medienpraxis</value>
-						<value code="ZDB-263-SMW">Schüren / Medienwissenschaft</value>
-						<value code="ZDB-263-SEG">Schüren / Schüren E-Books Gesamt</value>
+						<value code="ZDB-263-SMW">Schüren / Medienwissenschaft</value>						
+						<value code="ZDB-265-AFC">AVA Library / Film collection</value>
+						<value code="ZDB-266-BWE">Berliner Wissenschafts-Verlag / eLibrary</value>
+						<value code="ZDB-267-KEL">Kogan Page / Ebook Collection Logistics</value>
+						<value code="ZDB-268-EGB">Equinox / Gesamt E-Books</value>						
+						<value code="ZDB-269-FFD">Filmfriend</value>	
+						<value code="ZDB-272-BSE">BuildingSMART Germany / E-Books</value>
+						<value code="ZDB-275-AIPB">AIP / Gesamt E-Books</value>
 						<value code="ZDB-280-SWG">Schwabe Ebooks Gesamt</value>
-						<value code="ZDB-159-WAB">SciFo / Wasser &amp; Abwasser</value>
-						<value code="ZDB-72-SIA">SIAM E-Books</value>
-						<value code="smalib">The Smashing Library for Universities and Enterprises</value>
-						<value code="ZDB-185-STD">Statista Dossiers</value>
-						<value code="ZDB-185-SDI">Statista Dossiers international</value>
-						<value code="ZDB-140-STO">Stotax First</value>
-						<value code="ZDB-136-SKS">Suhrkamp / Kultur- und Sozialwissenschaft</value>
-						<value code="ZDB-136-SPT">Suhrkamp / Politische Theorie</value>
-						<value code="ZDB-136-PUG">Suhrkamp / Politik &amp; Gesellschaft</value>
-						<value code="ZDB-136-SKI">Suhrkamp / Philosophie</value>
-						<value code="ZDB-136-PUR">Suhrkamp / Philosophie und Religion</value>
-						<value code="ZDB-136-SUS">Suhrkamp / Soziologie und Systemtheorie</value>
-						<value code="ZDB-136-SWE">Suhrkamp / Werkausgabe Elias</value>
-						<value code="ZDB-136-WEM">Suhrkamp / Werkausgabe Marcuse</value>
-						<value code="ZDB-181-TEC">Tectum eLibrary</value>
-						<value code="ZDB-181-TGC">Tectum eLibrary / Geschichte</value>
-						<value code="ZDB-181-TME">Tectum eLibrary / Medienwissenschaften</value>
-						<value code="ZDB-181-TMI">Tectum eLibrary / Musikwissenschaft</value>
-						<value code="ZDB-181-TCP">Tectum eLibrary / Pädagogik</value>
-						<value code="ZDB-181-TPL">Tectum eLibrary / Politik</value>
-						<value code="ZDB-181-TSE">Tectum eLibrary / Soziologie</value>
-						<value code="ZDB-181-TWW">Tectum eLibrary / Wirtschaftswissenschaften</value>
-						<value code="kenso">The University Press of Kentucky / Kentucky Scholarship Online</value>
-						<value code="uncso">The University of North Carolina Press / North Carolina Scholarship Online</value>
-						<value code="thieref">Thieme eRef</value>
-						<value code="ZDB-125-TAG">transcript Verlag / Aging - Disability - Fashion - Human Animal - Postcolonial Studies</value>
-						<value code="ZDB-125-TEK">transcript Verlag / Ethnologie und Kulturanthropologie</value>
-						<value code="ZDB-125-TGS">transcript Verlag / Gender Studies and Queer Studies</value>
-						<value code="ZDB-125-TGE">transcript Verlag / Gesamtpaket</value>
-						<value code="ZDB-125-TKT">transcript Verlag / Kulturtheorie</value>
-						<value code="ZDB-125-TKU">transcript Verlag / Kultur- und Mediensoziologie</value>
-						<value code="ZDB-125-TKL">transcript Verlag / Kulturwissenschaft</value>
-						<value code="ZDB-125-TLT">transcript Verlag / Literaturwissenschaft</value>
-						<value code="ZDB-125-TMW">transcript Verlag / Medienwissenschaft</value>
-						<value code="ZDB-125-TMR">transcript Verlag / Migrations- und Religionssoziologie</value>
-						<value code="ZDB-125-TMS">transcript Verlag / Musikwissenschaft</value>
-						<value code="ZDB-125-TPA">transcript Verlag / Pädagogik</value>
-						<value code="ZDB-125-TPO">transcript Verlag / Politikwissenschaft</value>
-						<value code="ZDB-125-TPU">transcript Verlag / Politische Soziologie und Soziale Ungleichheit</value>
-						<value code="ZDB-125-TSZ">transcript Verlag / Soziologie</value>
-						<value code="ZDB-125-TSG">transcript Verlag / Soziologie des Geschlechts und des Körpers</value>
-						<value code="ZDB-125-TST">transcript Verlag / Soziologische Theorie</value>
-						<value code="ZDB-125-TSR">transcript Verlag / Stadt- und Raumsoziologie</value>
-						<value code="ZDB-125-TWO">transcript Verlag / Wirtschafts-, Organisations- und Arbeitssoziologie</value>
-						<value code="ZDB-125-TWI">transcript Verlag / Wissenschafts-, Technik- und Umweltsoziologie</value>
-						<value code="TTP-MCE">Trans Tech Publikations: Materials Science and Engineering</value>
-						<value code="ZDB-121-UFW">Ulmer E-Books / Forstwirtschaft</value>
-						<value code="ZDB-121-UGA">Ulmer E-Books / Garten</value>
-						<value code="ZDB-121-UGL">Ulmer E-Books / Garten und Landschaftsbau</value>
-						<value code="ZDB-121-UGP">Ulmer E-Books / Garten und Pflanzen</value>
-						<value code="ZDB-121-UGB">Ulmer E-Books / Gartenbau</value>
-						<value code="ZDB-121-UTI">Ulmer E-Books / Tiere</value>
-						<value code="ZDB-164-UNL">UN iLibrary</value>
-						<value code="chiso">University of Chicago Press / Chicago Scholarship Online</value>
-						<value code="misso">University Press Scholarship Online / Mississippi Scholarship Online</value>
-						<value code="ZDB-117-APE">V&amp;R eLibrary / Angewandte Psychologie Erwachsene</value>
-						<value code="ZDB-117-VRE">V&amp;R eLibrary / E-Books</value>
-						<value code="ZDB-117-EXE">V&amp;R eLibrary / Exegese</value>
-						<value code="ZDB-117-KIG">V&amp;R eLibrary / Kirchengeschichte</value>
-						<value code="ZDB-117-LIS">V&amp;R eLibrary / Literatur- und Sprachwissenschaft</value>
-						<value code="ZDB-117-NTE">V&amp;R eLibrary / Neues Testament</value>
-						<value code="ZDB-117-NGZ">V&amp;R eLibrary / Neueste Geschichte - Zeitgeschichte</value>
-						<value code="ZDB-117-PAE">V&amp;R eLibrary / Pädagogik und Erziehung</value>
-						<value code="ZDB-117-PUS">V&amp;R eLibrary / Psychologie und Systemik</value>
-						<value code="ZDB-117-VPP">V&amp;R eLibrary / Psychotherapie und Psychologie</value>
-						<value code="ZDB-117-RCR">V&amp;R eLibrary / Research in Contemporary Religion</value>
-						<value code="ZDB-117-SFG">V&amp;R eLibrary / Schriften des Sigmund-Freud-Instituts</value>
-						<value code="ZDB-117-THO">V&amp;R eLibrary / Theologie</value>
-						<value code="ZDB-117-APK">Vandenhoeck &amp; Ruprecht eBooks / Angewandte Psychologie Kinder</value>
-						<value code="ZDB-117-FRB">Vandenhoeck &amp; Ruprecht eBooks / Frühe Bildung</value>
-						<value code="ZDB-117-IDP">Vandenhoeck &amp; Ruprecht eBooks / Individualpsychologie</value>
-						<value code="ZDB-117-NSP">Vandenhoeck &amp; Ruprecht eBooks / Neue Studien zur Philosophie</value>
-						<value code="ZDB-158-VER">VDE Verlag EBooks / Elektrotechnik</value>
-						<value code="ZDB-158-VKK">VDE Verlag EBooks / Kälte- und Klimatechnik</value>
-						<value code="ZDB-158-VNV">VDE Verlag EBooks / Normen verständlich</value>
-						<value code="ZDB-169-VWI">Velbrück Wissenschaft</value>
-						<value code="vkal">Verlag Karl Alber</value>
-						<value code="ZDB-212-VOE">Verlag Österreich eLibrary</value>
-						<value code="vd18">Projekt VD 18</value>
-						<value code="vogel">Vogel-E-Books</value>
-						<value code="ZDB-220-VWE">VVW E-Books</value>
-						<value code="wageningen">Wageningen Academic Publishers-E-Books</value>
-						<value code="ZDB-200-WAL">Wallstein / Literaturwissenschaft</value>
-						<value code="ZDB-200-WLG">Wallstein / Gesamt</value>
-						<value code="ZDB-200-WGC">Wallstein / Geschichte</value>
-						<value code="ZDB-200-WKL">Wallstein / Kulturwissenschaft</value>
-						<value code="WallsteinLizenz2018">Wallstein Lizenzzugehörigkeit 2018</value>
-						<value code="WallsteinLizenz2019">Wallstein Lizenzzugehörigkeit 2019</value>
-						<value code="ZDB-179-WAL">Walhalla E-Books</value>
-						<value code="ZDB-107-WAE">Waxmann / Allgemeine Erziehungswissenschaft</value>
-						<value code="ZDB-107-WBM">Waxmann / Bildungsmanagement</value>
-						<value code="ZDB-107-WDN">Waxmann / Didaktik der Naturwissenschaften und Mathematik</value>
-						<value code="ZDB-107-WDI">Waxmann / Diversität und Inklusion</value>
-						<value code="ZDB-107-WEC">Waxmann / E-Books</value>
-						<value code="ZDB-107-WEW">Waxmann / Empirische Erziehungswissenschaft</value>
-						<value code="ZDB-107-WER">Waxmann / Erwachsenenbildung</value>
-						<value code="ZDB-107-WEF">Waxmann / Europäische Ethnologie</value>
-						<value code="ZDB-107-WEG">Waxmann / Geschichte</value>
-						<value code="ZDB-107-WIV">Waxmann / Interkulturelle und vergleichende Erziehungswissenschaft</value>
-						<value code="ZDB-107-WKU">Waxmann / Kunst</value>
-						<value code="ZDB-107-WLB">Waxmann / Lehrerbildung</value>
-						<value code="ZDB-107-WLI">Waxmann / Linguistik</value>
-						<value code="ZDB-107-WMU">Waxmann / Musik und Musikpädagogik</value>
-						<value code="ZDB-107-WPH">Waxmann / Philosophie</value>
-						<value code="ZDB-107-WPO">Waxmann / Politik</value>
-						<value code="ZDB-107-WPS">Waxmann / Psychologie</value>
-						<value code="ZDB-107-WRE">Waxmann / Religion und Religionspädagogik</value>
-						<value code="ZDB-107-WDS">Waxmann / Schule und Unterricht</value>
-						<value code="ZDB-107-WSA">Waxmann / soziale Arbeit</value>
-						<value code="ZDB-107-WSP">Waxmann / Sozialpädagogik</value>
-						<value code="ZDB-107-WFK">Waxmann / Sozialpädagogik &amp; Pädagogik der frühen Kindheit</value>
-						<value code="ZDB-107-WSO">Waxmann / Soziologie</value>
-						<value code="ZDB-107-WSB">Waxmann / Sprachliche Bildung</value>
-						<value code="ZDB-124-WMH">World Scientific Publishing / Mathematics</value>
-						<value code="ZDB-124-WOP">World Scientific Publishing</value>
-						<value code="ZDB-124-WPN">World Scientific Publishing /Physics, Nonlinear Science</value>
-						<value code="ZDB-130-BBA">UTB scholars-e-library / Pädagogik/ Betriebliche Aus- und Weiterbildung / Backlist wbv</value>
-						<value code="ZDB-130-BBW">wbv / Berufs- und Wirtschaftspädagogik</value>
-						<value code="ZDB-130-BEB">UTB scholars-e-library / Pädagogik / Erwachsenenbildung Praktiker / Backlist wbv</value>
-						<value code="ZDB-130-BEW">UTB scholars-e-library / Pädagogik / Erwachsenenbildungsforschung / Backlist wbv</value>
-						<value code="ZDB-130-BPE">wbv / Personalentwicklung</value>
-						<value code="ZDB-130-BZS">wbv / Erziehungswissenchaft &amp; Sozialforschung</value>
-						<value code="ZDB-142-WAR">WBG / Archäologie</value>
-						<value code="ZDB-142-WAG">WBG / Alte Geschichte</value>
-						<value code="ZDB-142-WEA">WBG / Edition Antike</value>
-						<value code="ZDB-142-WEH">WBG / Erziehungswissenschaft</value>
-						<value code="ZDB-142-WFS">WBG / Freiherr-vom-Stein-Gedächnisausgabe - Quellen zur deutschen Geschichte des Mittelalters</value>
-						<value code="ZDB-142-WGW">WBG / Geowissenschaften</value>
-						<value code="ZDB-142-WGF">WBG / Germanistik - Einführungen</value>
-						<value code="ZDB-142-WGM">WBG / Germanistik - Mediävistik</value>
-						<value code="ZDB-142-WGN">WBG / Germanistik - Neuere deutsche Literatur </value>
-						<value code="ZDB-142-WBG">WBG Gesamtbestand</value>
-						<value code="ZDB-142-WZG">WBG / Geschichte - Zeitgeschichte </value>
-						<value code="ZDB-142-WKP">WBG / Klassische Philologie</value>
-						<value code="ZDB-142-WKA">WBG / Kunst und Architektur</value>
-						<value code="ZDB-142-WMA">WBG / Mittelalter</value>
-						<value code="ZDB-142-WPE">WBG / Philosophie Einführungen</value>
-						<value code="ZDB-142-WBP">WBG / Philosophie</value>
-						<value code="ZDB-142-WTH">WBG / Theologie</value>
-						<value code="ZDB-142-WPT">WBG / Praktische Theologie</value>
-						<value code="ZDB-142-WQB">WBG / Freiherr-vom-Stein-Gedächnisausgabe - Quellen zu den Beziehungen Deutschlands zu seinen Nachbarn im 19. und 20. Jahrhundert</value>
-						<value code="ZDB-142-WSY">WBG / Systemische Theologie</value>
-						<value code="ZDB-142-WWG">WBG / Weltgeschichte</value>
-						<value code="ZDB-142-WWI">WBG / Weltreligionen und interreligiöser Dialog</value>
-						<value code="ZDB-156-WGG">Wichmann / Geoinformatik, Geodäsie, Photogrammetrie</value>
-						<value code="ZDB-246-WVE">Wochenschau Verlag E-Books</value>
-						<value code="ZDB-186-WTM">WTM-Verlag E-Books</value>
-						<value code="ZDB-199-WTO">WTO iLibrary</value>
+						<value code="ZDB-281-VDG">VDI Verlag-eLibrary / Gesamt</value>
+						<value code="ZDB-287-WOA">wbv / Open Access</value>
+						<value code="ZDB-291-LRG">Reichert Media Library / Gesamt</value>
+						<value code="ZDB-298-BUSA">Buske eLibrary</value>
+						<value code="ZDB-299-HHOA">hhu.books Open Access</value>
+						<value code="ZDB-302-SKG">SKVdirect / Gesamt</value>
+						<value code="ZDB-306-IRE">iRead eBooks</value>
+						<value code="ZDB-605-Prslct-exEBA">Preselect-exEBA</value>
 						<value code="APA PsycBOOKS (via APA PsycNET)">s. PsycBOOKS (via APA PsycNET)</value>
 						<value code="asmi">American Society for Microbiology /EBooks</value>
 						<value code="BeltzLizenz2012">Beltz Lizenzzugehörigkeit 2012</value>
@@ -10488,6 +10486,7 @@
 						<value code="bloomsbury2018">Bloomsbury Lizenzzugehörigkeit 2018</value>
 						<value code="budri">budrich academic / Open Access</value>
 						<value code="caso">California Scholarship Online</value>
+						<value code="chiso">University of Chicago Press / Chicago Scholarship Online</value>
 						<value code="Cont">Content-Select</value>
 						<value code="cuvillier">Cuvillier-E-Books</value>
 						<value code="dawsonera">dawsonera-E-Books</value>
@@ -10496,6 +10495,13 @@
 						<value code="edso">Edinburgh University Press / Edinburgh Scholarship Online</value>
 						<value code="elgar">Elgar-E-Books</value>
 						<value code="fzo">kostenfreie und ohne Registrierung zugängliche Online-Ressource, deren Link bei der Print-Aufnahme angegeben wird</value>
+						<value code="hade">Harri Deutsch</value>
+						<value code="herder">Herder-E-Books</value>
+						<value code="huguenots">Huguenots-E-Book</value>
+						<value code="igi global">IGI Global-E-Books</value>
+						<value code="iorm">INFORMS</value>
+						<value code="juris">Juris-E-Books</value>
+						<value code="kenso">The University Press of Kentucky / Kentucky Scholarship Online</value>
 						<value code="KohlhammerLizenz2012">Kohlhammer Lizenzzugehörigkeit</value>
 						<value code="KohlhammerLizenz2013">Kohlhammer Lizenzzugehörigkeit</value>
 						<value code="KohlhammerLizenz2014">Kohlhammer Lizenzzugehörigkeit</value>
@@ -10506,6 +10512,7 @@
 						<value code="KohlhammerLizenz2019">Kohlhammer Lizenzzugehörigkeit</value>
 						<value code="KohlhammerLizenz2020">Kohlhammer Lizenzzugehörigkeit</value>
 						<value code="ldd">layoutgetr. digit. Drucke</value>
+						<value code="learntechlib">LearnTechLib-E-Books</value>						
 						<value code="Lizenz2013">De Gruyter-E-Books Lizenzzugehörigkeit</value>
 						<value code="Lizenz2014">De Gruyter-E-Books Lizenzzugehörigkeit</value>
 						<value code="Lizenz2015">De Gruyter-E-Books Lizenzzugehörigkeit</value>
@@ -10513,37 +10520,68 @@
 						<value code="Lizenz2017">De Gruyter-E-Books Lizenzzugehörigkeit</value>
 						<value code="Lizenz2018">De Gruyter-E-Books Lizenzzugehörigkeit</value>
 						<value code="Lizenz2019">De Gruyter-E-Books Lizenzzugehörigkeit</value>
-						<value code="Lizenz2020">De Gruyter-E-Books Lizenzzugehörigkeit</value>						
+						<value code="Lizenz2020">De Gruyter-E-Books Lizenzzugehörigkeit</value>
+						<value code="Logos">Logos Verlag Berlin</value>
+						<value code="luther">Luther-E-Books</value>
+						<value code="lyell">Lyell Collection</value>						
 						<value code="manebo">manuell erfasste ebook-Titel</value>
+						<value code="mansi">Manchester Studies in Imperialism</value>
+						<value code="melanchthon">Melanchthon-E-Books</value>
+						<value code="minnso">University of Minnesota Press / Minnesota Scholarship Online</value>
+						<value code="misso">University Press Scholarship Online / Mississippi Scholarship Online</value>
+						<value code="MohrSiebeckLizenz2013">MohrSiebeck Lizenzzugehörigkeit 2013</value>
+						<value code="MohrSiebeckLizenz2013-2015">MohrSiebeck Lizenzzugehörigkeit 2013-2015</value>
+						<value code="MohrSiebeckLizenz2014">MohrSiebeck Lizenzzugehörigkeit 2014</value>
+						<value code="MohrSiebeckLizenz2015">MohrSiebeck Lizenzzugehörigkeit 2015</value>
+						<value code="MohrSiebeckLizenz2018">MohrSiebeck Lizenzzugehörigkeit 2018</value>
+						<value code="MohrSiebeckLizenz2019">MohrSiebeck Lizenzzugehörigkeit 2019</value>
+						<value code="mpig">Max-Planck-Institut für Gesellschaftsforschung Open Access</value>
+						<value code="MPSO">MIT Press Scholarship Online</value>
+						<value code="mso">Manchester University Press / Manchester Scholarship Online</value>
+						<value code="NNg">Nielsen Norman Group</value>
+						<value code="obp">OpenBook Publishers-E-Books</value>
+						<value code="oso">Otto Schmidt online</value>
+						<value code="palgraveoa">Palgrave Open Access E-Books</value>
+						<value code="pearson">Pearson-E-Books</value>
+						<value code="philon">Philosophy Online-E-Books</value>
+						<value code="smalib">The Smashing Library for Universities and Enterprises</value>
 						<value code="s2w-hsspadubpb">s2w-hsspadubpb</value>
+						<value code="s2w-hsswupubw">s2w-hsswupubw</value>
+						<value code="s2w-llbdetmold">s2w-llbdetmold</value>
 						<value code="s2w-lld">s2w-lld</value>
 						<value code="s2w-retropadubpb">s2w-retropadubpb</value>
+						<value code="s2w-retrowupubw">s2w-retrowupubw</value>
 						<value code="s2w-ulbbonn">s2w-ulbbonn</value>
 						<value code="s2w-ulbbonndfg">s2w-ulbbonndfg</value>
 						<value code="s2w-zbmed">s2w-zbmed</value>
+						<value code="synthesis lectures">Morgan &amp; Claypool / Synthesis Lectures-Reihen</value>
+						<value code="thieref">Thieme eRef</value>
+						<value code="TTP-MCE">Trans Tech Publikations: Materials Science and Engineering</value>
+						<value code="uncso">The University of North Carolina Press / North Carolina Scholarship Online</value>
 						<value code="V&amp;RELibraryLizenz2014">V&amp;R eLibrary Lizenzzugehörigkeit 2014</value>
 						<value code="V&amp;RELibraryLizenz2015">V&amp;R eLibrary Lizenzzugehörigkeit 2015</value>
 						<value code="V&amp;RELibraryLizenz2016">V&amp;R eLibrary Lizenzzugehörigkeit 2016</value>
 						<value code="V&amp;RELibraryLizenz2017">V&amp;R eLibrary Lizenzzugehörigkeit 2017</value>
 						<value code="V&amp;RELibraryLizenz2018">V&amp;R eLibrary Lizenzzugehörigkeit 2018</value>
 						<value code="V&amp;RELibraryLizenz2019">V&amp;R eLibrary Lizenzzugehörigkeit 2019</value>
+						<value code="vd18">Projekt VD 18</value>
+						<value code="vlhfmtk">vlhfmtk</value>
+						<value code="vkal">Verlag Karl Alber</value>
+						<value code="vkv">Klostermann-E-Books</value>
 						<value code="vl-ddbk">vl-ddbk</value>
 						<value code="vl-ulbd">vl-ulbd</value>
 						<value code="vl-ulbms">vl-ulbms</value>
+						<value code="vogel">Vogel-E-Books</value>
+						<value code="wageningen">Wageningen Academic Publishers-E-Books</value>
+						<value code="WallsteinLizenz2018">Wallstein Lizenzzugehörigkeit 2018</value>
+						<value code="WallsteinLizenz2019">Wallstein Lizenzzugehörigkeit 2019</value>
 						<value code="WBGLizenz2016">WBG Lizenzzugehörigkeit</value>
 						<value code="WBGLizenz2017">WBG Lizenzzugehörigkeit</value>
 						<value code="WBGLizenz2018">WBG Lizenzzugehörigkeit</value>
 						<value code="WBGLizenz2019">WBG Lizenzzugehörigkeit</value>
 						<value code="WBGLizenz2020">WBG Lizenzzugehörigkeit</value>
-						<value code="wbv">W. Bertelsmann Verlag E-Books</value>						
+						<value code="wbv">W. Bertelsmann Verlag E-Books</value>		
 						<value code="woodhead">Woodhead</value>							
-						<value code="ZDB-159-SCF">SciFo</value>
-						<value code="ZDB-159-TPT">SciFo / Thermoprozesstechnik</value>
-						<value code="ZDB-281-VDG">VDI Verlag-eLibrary / Gesamt</value>
-						<value code="ZDB-245-NWIR">NWB Internationale Rechnungslegung</value>
-						<value code="ZDB-245-NWSI">NWB Steuern International</value>	
-						<value code="ZDB-287-WOA">wbv / Open Access</value>
-						<value code="ZDB-291-LRG">Reichert Media Library / Gesamt</value>
 					</values>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -10561,6 +10599,7 @@
 				<values>
 					<value code="s">save</value>
 					<value code="u">unknown</value>
+					<value code="i">information</value>
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
