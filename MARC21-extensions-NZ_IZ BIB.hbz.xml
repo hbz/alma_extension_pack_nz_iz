@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <marc_profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marc21_profile_configuration.xsd">
 	<data_fields_list>
-		<data_field_configuration repeatable="false" mandatory="false" tag="009" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>HBZ-IDN Aleph NZ</description>
-			<first_indicator_configuration>
-				<description>nicht definiert</description>
-				<values>
-					<value code="#">nicht definiert</value>
-				</values>
-			</first_indicator_configuration>
-			<second_indicator_configuration>
-				<description>nicht definiert</description>
-				<values>
-					<value code="#">nicht definiert</value>
-				</values>
-			</second_indicator_configuration>
-			<sub_fields_list>
-				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>HBZ-IDN Aleph NZ</description>
-				</sub_field_configuration>
-			</sub_fields_list>
-		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="020" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Internationale Standardbuchnummer</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/020/020.html</help_url>
@@ -149,6 +129,7 @@
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="034" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Kodierte kartografische mathematische Angaben</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/034/034.html</help_url>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -248,7 +229,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Sprachcode der Ressource</description>
 					<values>
 						<value code="egy">Ägyptisch</value>
@@ -770,22 +751,22 @@
 						<value code="zun">Zuni</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Sprachcode der Zusammenfassung, des Abstracts oder der Untertitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Sprachcode von gesungenem oder gesprochenem Text</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Sprachcode von Operntexten</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Sprachcode der Inhaltsangabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Sprachcode von Begleitmaterial mit Ausnahme von Operntexten</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="h">
 					<description>Sprachcode der Originalsprache</description>
 					<values>
 						<value code="egy">Ägyptisch</value>
@@ -1307,45 +1288,45 @@
 						<value code="zun">Zuni</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Sprachcode der Zwischentitel</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="j" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="j">
 					<description>Sprachcode der Untertitel oder Beschriftung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="k">
 					<description>Sprachcode der Zwischenübersetzung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="m">
 					<description>Sprachcode der Originalsprache von Begleitmaterialien mit Ausnahme von Operntexten</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Sprachcode der Originalsprache von Operntexten</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="p" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="p">
 					<description>Sprachcode der Bildunterschriften</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="q" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="q">
 					<description>Sprachcode für barrierefreies Hören</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Sprachcode der zugänglichen visuellen Sprache (nicht textlich)</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="t">
 					<description>Spachcode von audiovisuellem Begleitmaterial</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle des Codes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
-		<data_field_configuration repeatable="true" mandatory="false" tag="044" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
+		<data_field_configuration repeatable="false" mandatory="false" tag="044" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
 			<description>Ländercode der veröffentlichenden/herstellenden Stelle</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/044/044.html</help_url>
 			<first_indicator_configuration>
@@ -1361,13 +1342,13 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>MARC-Ländercode</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Lokaler Unterentitätencode</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>ISO-Ländercode</description>
 					<values>
 						<value code="XC-EG">Ägypten</value>
@@ -1636,13 +1617,13 @@
 						<value code="XA-CY">Zypern</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="2">
 					<description>Quelle des lokalen Unterentitätencodes</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -1776,6 +1757,7 @@
 		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="090" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Weitere Codierungen</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/090/090.html</help_url>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -2081,7 +2063,7 @@
 						<value code="win">Verfasser einer Einleitung | writer of introduction | E</value>
 						<value code="aft">Verfasser eines Nachworts | author of afterword, colophon etc. | E</value>
 						<value code="aui">Verfasser eines Geleitwortes | writer of foreword | E</value>
-						<value code="wst">Verfasser eines Postscriptums | writer of postface | E</value>
+						<value code="wst$$eVerfasser eines Postscriptums">Verfasser eines Postscriptums | writer of postface | E</value>
 						<value code="wpr">Verfasser eines Vorworts | writer of preface | E</value>
 						<value code="wst">Verfasser von ergänzendem Text | writer of supplementary textual content | E</value>
 						<value code="wal">Verfasser von zusätzlichen Lyrics | writer of added lyrics | E</value>
@@ -2105,6 +2087,7 @@
 		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="110" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Haupteintragung - Körperschaftsname</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/110/110.html</help_url>
 			<first_indicator_configuration>
 				<description>Art der Eintragung des Köperschaftsnamenselements</description>
 				<values>
@@ -2289,7 +2272,7 @@
 						<value code="win">Verfasser einer Einleitung | writer of introduction | E</value>
 						<value code="aft">Verfasser eines Nachworts | author of afterword, colophon etc. | E</value>
 						<value code="aui">Verfasser eines Geleitwortes | writer of foreword | E</value>
-						<value code="wst">Verfasser eines Postscriptums | writer of postface | E</value>
+						<value code="wst$$eVerfasser eines Postscriptums">Verfasser eines Postscriptums | writer of postface | E</value>
 						<value code="wpr">Verfasser eines Vorworts | writer of preface | E</value>
 						<value code="wst">Verfasser von ergänzendem Text | writer of supplementary textual content | E</value>
 						<value code="wal">Verfasser von zusätzlichen Lyrics | writer of added lyrics | E</value>
@@ -2314,6 +2297,7 @@
 		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="111" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Haupteintragung - Veranstaltungsname</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/111/111.html</help_url>
 			<first_indicator_configuration>
 				<description>Art der Eintragung des Veranstaltungsnamenselements</description>
 				<values>
@@ -2501,7 +2485,7 @@
 						<value code="win">Verfasser einer Einleitung | writer of introduction | E</value>
 						<value code="aft">Verfasser eines Nachworts | author of afterword, colophon etc. | E</value>
 						<value code="aui">Verfasser eines Geleitwortes | writer of foreword | E</value>
-						<value code="wst">Verfasser eines Postscriptums | writer of postface | E</value>
+						<value code="wst$$eVerfasser eines Postscriptums">Verfasser eines Postscriptums | writer of postface | E</value>
 						<value code="wpr">Verfasser eines Vorworts | writer of preface | E</value>
 						<value code="wst">Verfasser von ergänzendem Text | writer of supplementary textual content | E</value>
 						<value code="wal">Verfasser von zusätzlichen Lyrics | writer of added lyrics | E</value>
@@ -2776,6 +2760,70 @@
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
+				<data_field_configuration repeatable="true" mandatory="false" tag="246" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<description>Titelvarianten</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/246/246.html</help_url>
+			<first_indicator_configuration>
+				<description>Anmerkung/Nebeneintragung</description>
+				<values>
+					<value code="0">Anmerkung, keine Nebeneintragung</value>
+					<value code="1">Anmerkung, Nebeneintragung</value>
+					<value code="2">Keine Anmerkung, keine Nebeneintragung</value>
+					<value code="3">Keine Anmerkung, Nebeneintragung</value>
+				</values>
+			</first_indicator_configuration>
+			<second_indicator_configuration>
+				<description>Art des Titels</description>
+				<values>
+					<value code="#">Keine Art spezifiziert</value>
+					<value code="0">Teil des Titels</value>
+					<value code="1">Paralleltitel</value>
+					<value code="2">Spezifischer Titel</value>
+					<value code="3">Anderer Titel</value>
+					<value code="4">Umschlagtitel</value>
+					<value code="5">Titel von einer weiteren Titelseite</value>
+					<value code="6">Kopftitel</value>
+					<value code="7">Kolumnentitel</value>
+					<value code="8">Rückentitel</value>
+					<value code="9">Ansetzungssachtitel</value>
+				</values>
+			</second_indicator_configuration>
+			<sub_fields_list>
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
+					<description>Haupttitel/Kurztitel</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
+					<description>Zusätzliche Angaben zum Titel</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="f">
+					<description>Erscheinungsdatum oder Bandbezeichnung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
+					<description>Sonstige Informationen</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
+					<description>Medium</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="i">
+					<description>Anzeigetext</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
+					<description>Zählung eines Teils/einer Abteilung eines Werkes</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="p">
+					<description>Name eines Teils/einer Abteilung eines Werkes</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="5">
+					<description>Institution, auf die sich das Feld bezieht</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
+					<description>Verknüpfung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
+					<description>Feldverknüpfung und Reihenfolge</description>
+				</sub_field_configuration>
+			</sub_fields_list>
+		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="249" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Weitere Titel bei Zusammenstellungen</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/249/249.html</help_url>
@@ -2808,6 +2856,7 @@
 		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="259" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Ausgabebezeichnung in normierter Form</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/259/259.html</help_url>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -2875,10 +2924,10 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Umfang</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="A" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="A">
 					<description>Umfang</description>
 					<values>
 						<value code="Seiten"> | </value>
@@ -2938,10 +2987,10 @@
 						<value code="Zeichnung"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Andere physische Details</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="B" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="B">
 					<description>Andere physische Details</description>
 					<values>
 						<value code="Illustrationen"> | </value>
@@ -2969,25 +3018,25 @@
 						<value code="Sepia"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Maße</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="e">
 					<description>Begleitmaterial</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Art der Einheit</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Größe der Einheit</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="3">
 					<description>Spezifische Materialangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verlinkung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3008,10 +3057,10 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Inhaltstyp in Textform</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="true">
+				<sub_field_configuration repeatable="true" mandatory="true" code="b">
 					<description>Inhaltstyp in codierter Form</description>
 					<values>
 						<value code="prm">aufgeführte Musik</value>
@@ -3041,22 +3090,22 @@
 						<value code="zzz">nicht spezifiziert</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>IDN des Normdatensatzes oder Standardnummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifische Materialangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3077,10 +3126,10 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Medientyp in Textform</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="true">
+				<sub_field_configuration repeatable="true" mandatory="true" code="b">
 					<description>Medientyp in codierter Form</description>
 					<values>
 						<value code="s">audio</value>
@@ -3095,22 +3144,22 @@
 						<value code="z">nicht spezifiziert</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>IDN des Normdatensatzes oder Standardnummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifische Materialangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3131,10 +3180,10 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Datenträgertyp in Textform</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="true">
+				<sub_field_configuration repeatable="true" mandatory="true" code="b">
 					<description>Datenträgertyp in codierter Form</description>
 					<values>
 						<value code="n--">Datenträger, die ohne Hilfsmittel zu benutzen sind</value>
@@ -3204,22 +3253,22 @@
 						<value code="zu">sonstige</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>IDN des Normdatensatzes oder Standardnummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifische Materialangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3240,7 +3289,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Trägermaterial und Zusammensetzung</description>
 					<values>
 						<value code="Alabaster"> | </value>
@@ -3295,10 +3344,10 @@
 						<value code="Zinn"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Umfang</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Materialoberfläche</description>
 					<values>
 						<value code="Acrylfarbe"> | </value>
@@ -3320,7 +3369,7 @@
 						<value code="Vesikular"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Aufnahmetechnik</description>
 					<values>
 						<value code="Abklatschverfahren"> | </value>
@@ -3441,7 +3490,7 @@
 						<value code="Zinkätzung"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Hilfsmaterial</description>
 					<values>
 						<value code="Bristolkarton"> | </value>
@@ -3470,19 +3519,19 @@
 						<value code="Zeichenkarton"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Herstellungsgeschwindigkeit/Übersetzung (u.a. Verkleinerungsfaktor)</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Farbinhalt</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="h">
 					<description>Speicherart innerhalb des Mediums</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="i">
 					<description>Technische Spezifikation des Mediums</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="j" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="j">
 					<description>Generation</description>
 					<values>
 						<value code="Masterband"> | </value>
@@ -3508,7 +3557,7 @@
 						<value code="zweite Generation, Vorführkopie"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="k">
 					<description>Layout</description>
 					<values>
 						<value code="beidseitig"> | </value>
@@ -3532,7 +3581,7 @@
 						<value code="einseitig"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="m">
 					<description>Buchformat</description>
 					<values>
 						<value code="Folio">Folio</value>
@@ -3546,7 +3595,7 @@
 						<value code="64o"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Schriftgröße</description>
 					<values>
 						<value code="Großdruck"> | </value>
@@ -3554,7 +3603,7 @@
 						<value code="Riesendruck"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Polarität</description>
 					<values>
 						<value code="positiv"> | </value>
@@ -3562,22 +3611,22 @@
 						<value code="gemischte Polarität"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Herkunft der Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Zuordnung zu bestimmten Teilen der Vorlage</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verküpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Sequenznummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>Feldzuordnung Aleph</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3598,14 +3647,14 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Art der Aufnahme</description>
 					<values>
 						<value code="analog"> | </value>
 						<value code="digital"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Aufzeichnungsmedium</description>
 					<values>
 						<value code="magnetisch"> | </value>
@@ -3613,10 +3662,10 @@
 						<value code="optisch"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Abspielgeschwindigkeit</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="C" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="C">
 					<description>Abspielgeschwindigkeit</description>
 					<values>
 						<value code="33 1/3 UpM"> | </value>
@@ -3627,7 +3676,7 @@
 						<value code="fps"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Rilleneigenschaften</description>
 					<values>
 						<value code="Mikrorille"> | </value>
@@ -3636,17 +3685,17 @@
 						<value code="Standard"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Spurlage</description>
 					<values>
 						<value code="Mittelspur"> | </value>
 						<value code="Seitenspur"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Bandkonfiguration</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Konfiguration der Wiedergabekanäle</description>
 					<values>
 						<value code="Mono"> | </value>
@@ -3655,7 +3704,7 @@
 						<value code="Surround"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>besondere Wiedergabeeigenschaften</description>
 					<values>
 						<value code="CCIR-Standard"> | </value>
@@ -3669,19 +3718,19 @@
 						<value code="NAB-Standard"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>Normdaten-ID-Nummer oder Standard-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Herkunft der Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Zuordnung zu bestimmten Teilen der Vorlage</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3702,7 +3751,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Wiedergabeformat</description>
 					<values>
 						<value code="3D"> | </value>
@@ -3719,19 +3768,19 @@
 						<value code="Techniscope"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Projektionsgeschwindigkeit</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Herkunft der Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Zuordnung zu bestimmten Teilen der Vorlage</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3752,7 +3801,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Videoformat</description>
 					<values>
 						<value code="8 mm"> | </value>
@@ -3772,7 +3821,7 @@
 						<value code="VHS"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Sendestandard</description>
 					<values>
 						<value code="HDTV"> | </value>
@@ -3781,19 +3830,19 @@
 						<value code="SECAM"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>Normdaten-ID oder Standard-Nummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Herkunft der Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Zuordnung zu bestimmten Teilen der Vorlage</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3814,7 +3863,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Dateityp</description>
 					<values>
 						<value code="Audiodatei"> | </value>
@@ -3825,7 +3874,7 @@
 						<value code="Videodatei"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Encodierungsformat</description>
 					<values>
 						<value code="Audio-CD"> | </value>
@@ -3875,13 +3924,13 @@
 						<value code="EPUB"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Dateigröße</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Auflösung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Regionalcode</description>
 					<values>
 						<value code="Alle Regionen"> | </value>
@@ -3901,19 +3950,19 @@
 						<value code="Region U/C"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Übertragungsgeschwindigkeit für Audio- und Video-Streaming</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Herkunft der Angaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Zuordnung zu bestimmten Teilen der Vorlage</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -3934,7 +3983,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Begriff der musikalischen Ausgabeform</description>
 					<values>
 						<value code="Aufführungsmaterial$$0(DE-588)1071243047$$2gnd-content"> | </value>
@@ -3969,25 +4018,25 @@
 						<value code="Table Book">bitte den Eintrag mit $$0 auswählen</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Code der musikalischen Ausgabeform</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>IDN des Normdatensatzes oder Standardnummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle des Begriffs</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifische Materialangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolg</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -4012,7 +4061,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Besetzung</description>
 					<values>
 						<value code="Akkordeon$$0(DE-588)4122772-4"> | </value>
@@ -4303,46 +4352,46 @@
 						<value code="Zupforchester">bitte den Eintrag mit $$0 auswählen</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Solist</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Doubling instrument</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Anzahl der Ensembles derselben Art</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Besetzungsstärke</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="p" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="p">
 					<description>Alternative Besetzung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="r">
 					<description>Gesamtanzahl von SolistInnen neben Ensembles</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="s">
 					<description>Gesamtbesetzungsstärke</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>Gesamtanzahl der Ensembles</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="v" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="v">
 					<description>Bemerkung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>IDN des Normdatensatzes oder Standardnummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle des Begriff</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Spezifische Materialangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -4363,7 +4412,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Bezeichnung der Zielgruppe</description>
 					<values>
 						<value code="Jugend$$0(DE-588)4028859-6$$2gnd-content"> | </value>
@@ -4384,28 +4433,28 @@
 						<value code="Erwachsener">bitte den Eintrag mit $$0 auswählen</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Zielgruppe in codierter Form</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="m">
 					<description>Demographische Gruppe in Textform</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="n">
 					<description>demographische Gruppe in codierter Form</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>GND-ID</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Angaben zur Quelle</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifische Materialangaben</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -4426,25 +4475,25 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Allgemeine Fußnote</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifische Materialangabe</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="5" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="5">
 					<description>Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="9">
 					<description>Feldzuordnung Aleph</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="D" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="D">
 					<description>Allgemeine Fußnote</description>
 					<values>
 						<value code="Erscheint täglich">EF</value>
@@ -4489,6 +4538,7 @@
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="501" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Anmerkung zu enthaltenen Werken</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/501/501.html</help_url>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -4535,10 +4585,10 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Hochschulschriftenvermerk</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Art des Abschlusses</description>
 					<values>
 						<value code="Bachelorarbeit"> | </value>
@@ -4550,22 +4600,22 @@
 						<value code="Masterarbeit"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
 					<description>Name der Institution, die den akademischen Grad verleiht</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
 					<description>Graduierungsjahr</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Sonstige Informationen</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Hochschulschriften-Identifier</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -4588,7 +4638,7 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Zugangsbedingungen</description>
 					<values>
 						<value code="Open Access"> | </value>
@@ -4596,19 +4646,19 @@
 						<value code="Open Access unbekannt"> | </value>
 					</values>					
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Institution, die die Zugangsbeschränkung geltend macht</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Bestimmungen für den physischen Zugang</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Nutzer, für die die Einschränkungen nicht gelten</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Rechtliche Grundlage für die Zugangsbeschränkung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Standardisierte Terminologie für Zugangsbeschränkungen</description>
 					<values>
 						<value code="Unrestricted online access$$2star"> | </value>
@@ -4619,31 +4669,31 @@
 						<value code="Restrictions unspecified">bitte den Eintrag mit $$2 auswählen</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Datum der Verfügbarkeit</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="q" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="q">
 					<description>Institution (bzw. Projekt), die die Daten erfasst hat</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="u">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle des Terms, der in $f verwendet wird</description>
 					<values>
 						<value code="star">Standardized terminology for access restriction</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Angabe des Teils</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="5" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="5">
 					<description>MARC-Code der Bibliothek/Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -4727,19 +4777,19 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Benutzungs- und Vervielfältigungsbedingungen</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Institution, die die Benutzungs- und Vervielfältigungsbedingungen geltend macht</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Rechtliche Grundlage für die Einschränkung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Nutzer, für die die Einschränkungen nicht gelten</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Standardisierte Terminologie für Nutzungs- und Vervielfältigungsrechte</description>
 					<values>
 						<value code="CC-BY">Namensnennung</value>
@@ -4750,28 +4800,28 @@
 						<value code="CC-BY-NC-ND">Namensnennung, nicht kommerziell, keine Bearbeitung</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Datum der Verfügbarkeit</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="q" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="q">
 					<description>Institution (bzw. Projekt), die die Daten erfasst hat</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="u">
 					<description>URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Quelle des Terms, der in $f verwendet wird</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Angabe des Teils</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="5" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="5">
 					<description>MARC-Code der Bibliothek/Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -5128,36 +5178,6 @@
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Genre-/Formangaben oder Fokus-Begriff</description>
 					<values>
-						<value code="Ausstellungskatalog$$0(DE-588)4135467-9$$2gnd-content">FE/SE</value>
-						<value code="Ausstellungskatalog">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Autobiografie$$0(DE-588)4003939-0$$2gnd-content">FE/SE</value>
-						<value code="Autobiografie">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Bibliografie$$0(DE-588)4006432-3$$2gnd-content">FE/SE</value>
-						<value code="Bibliografie">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Bildband$$0(DE-588)4145395-5$$2gnd-content">FE/SE</value>
-						<value code="Bildband">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Biografie$$0(DE-588)4006804-3$$2gnd-content">FE/SE</value>
-						<value code="Biografie">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Comic$$0(DE-588)4010427-8$$2gnd-content">FE/SE</value>
-						<value code="Comic">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Festschrift$$0(DE-588)4016928-5$$2gnd-content">FE/SE</value>
-						<value code="Festschrift">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Hochschulschrift$$0(DE-588)4113937-9$$2gnd-content">FE/SE</value>
-						<value code="Hochschulschrift">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Hörbuch$$0(DE-588)4329497-2$$2gnd-content">FE/SE</value>
-						<value code="Hörbuch">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Konferenzschrift$$0(DE-588)1071861417$$2gnd-content">FE/SE</value>
-						<value code="Konferenzschrift">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Monografische Reihe$$0(DE-588)4179998-7$$2gnd-content">FE/SE</value>
-						<value code="Monografische Reihe">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Schulbuch$$0(DE-588)4053458-3$$2gnd-content">FE/SE</value>
-						<value code="Schulbuch">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Website$$0(DE-588)4596172-4$$2gnd-content">FE/SE</value>
-						<value code="Website">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Zeitschrift$$0(DE-588)4067488-5$$2gnd-content">FE/SE</value>
-						<value code="Zeitschrift">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Zeitung$$0(DE-588)4067510-5$$2gnd-content">FE/SE</value>
-						<value code="Zeitung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Adressbuch$$0(DE-588)4141451-2$$2gnd-content">SE</value>
 						<value code="Adressbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Altkarte$$0(DE-588)4611904-8$$2gnd-content">SE</value>
@@ -5180,9 +5200,9 @@
 						<value code="Aufsatzsammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Auktionskatalog$$0(DE-588)4143482-1$$2gnd-content">SE</value>
 						<value code="Auktionskatalog">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Ausstellungskatalog$$0(DE-588)4135467-9$$2gnd-content">SE</value>
+						<value code="Ausstellungskatalog$$0(DE-588)4135467-9$$2gnd-content">FE/SE</value>
 						<value code="Ausstellungskatalog">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Autobiografie$$0(DE-588)4003939-0$$2gnd-content">SE</value>
+						<value code="Autobiografie$$0(DE-588)4003939-0$$2gnd-content">FE/SE</value>
 						<value code="Autobiografie">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Autograf$$0(DE-588)4003942-0$$2gnd-content">SE</value>
 						<value code="Autograf">bitte den Eintrag mit $$0 auswählen</value>
@@ -5194,21 +5214,23 @@
 						<value code="Bericht">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Bestimmungsbuch$$0(DE-588)4144950-2$$2gnd-content">SE</value>
 						<value code="Bestimmungsbuch">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Bibliografie$$0(DE-588)4006432-3$$2gnd-content">SE</value>
+						<value code="Bibliografie$$0(DE-588)4006432-3$$2gnd-content">FE/SE</value>
 						<value code="Bibliografie">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Bild$$0(DE-588)4006568-6$$2gnd-content">SE</value>
 						<value code="Bild">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Bildband$$0(DE-588)4145395-5$$2gnd-content">SE</value>
+						<value code="Bildband$$0(DE-588)4145395-5$$2gnd-content">FE/SE</value>
 						<value code="Bildband">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Bilderbogen$$0(DE-588)4145402-9$$2gnd-content">SE</value>
 						<value code="Bilderbogen">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Bilderbuch$$0(DE-588)4006604-6$$2gnd-content">SE</value>
 						<value code="Bilderbuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Bildkarte$$0(DE-588)4744722-9$$2gnd-content">SE optional</value>
+						<value code="Bildkarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Bildnis$$0(DE-588)4006627-7$$2gnd-content">SE</value>
 						<value code="Bildnis">bitte den Eintrag mit $$0 auswählen</value>			
 						<value code="Bildwörterbuch$$0(DE-588)4145505-8$$2gnd-content">SE</value>
 						<value code="Bildwörterbuch">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Biografie$$0(DE-588)4006804-3$$2gnd-content">SE</value>
+						<value code="Biografie$$0(DE-588)4006804-3$$2gnd-content">FE/SE</value>
 						<value code="Biografie">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Blindendruck$$0(DE-588)4282504-0$$2gnd-content">SE</value>
 						<value code="Blindendruck">bitte den Eintrag mit $$0 auswählen</value>
@@ -5218,7 +5240,7 @@
 						<value code="Briefsammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Checkliste$$0(DE-588)4398750-3$$2gnd-content">SE</value>
 						<value code="Checkliste">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Comic$$0(DE-588)4010427-8$$2gnd-content">SE</value>
+						<value code="Comic$$0(DE-588)4010427-8$$2gnd-content">FE/SE</value>
 						<value code="Comic">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Datenbank$$0(DE-588)4011119-2$$2gnd-content">SE</value>
 						<value code="Datenbank">bitte den Eintrag mit $$0 auswählen</value>
@@ -5228,6 +5250,8 @@
 						<value code="Diagramm">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Diskografie$$0(DE-588)7504297-6$$2gnd-content">SE</value>
 						<value code="Diskografie">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Dissertation &lt;Alter Druck&gt;$$0(DE-588)125354915X$$2gnd-content">SE optional</value>
+						<value code="Dissertation &lt;Alter Druck&gt;">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Drehbuch$$0(DE-588)4127976-1$$2gnd-content">SE</value>
 						<value code="Drehbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Einblattdruck$$0(DE-588)4151236-4$$2gnd-content">SE</value>
@@ -5250,7 +5274,9 @@
 						<value code="Fallsammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fallstudiensammlung$$0(DE-588)4522595-3$$2gnd-content">SE</value>
 						<value code="Fallstudiensammlung">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Festschrift$$0(DE-588)4016928-5$$2gnd-content">SE</value>
+						<value code="Fernsehserie$$0(DE-588)4154072-4$$2gnd-content">SE optional</value>
+						<value code="Fernsehserie">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Festschrift$$0(DE-588)4016928-5$$2gnd-content">FE/SE</value>
 						<value code="Festschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fiktionale Darstellung$$0(DE-588)1071854844$$2gnd-content">SE</value>
 						<value code="Fiktionale Darstellung">bitte den Eintrag mit $$0 auswählen</value>
@@ -5278,6 +5304,8 @@
 						<value code="Fundstellenverzeichnis">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Genealogische Tafel$$0(DE-588)4156582-4$$2gnd-content">SE</value>
 						<value code="Genealogische Tafel">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Gesetzesmaterialien$$0(DE-588)1119181364$$2gnd-content">SE optional</value>
+						<value code="Gesetzesmaterialien">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Gespräch$$0(DE-588)4020713-4$$2gnd-content">SE</value>
 						<value code="Gespräch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Globus$$0(DE-588)4157633-0$$2gnd-content">SE</value>
@@ -5286,13 +5314,15 @@
 						<value code="Grafik">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Graphzine$$0(DE-588)1032889837$$2gnd-content">SE</value>
 						<value code="Graphzine">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Grünbuch$$0(DE-588)7619734-7$$2gnd-content">SE optional</value>
+						<value code="Grünbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Handschrift$$0(DE-588)4023287-6$$2gnd-content">SE</value>
 						<value code="Handschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Haushaltsplan$$0(DE-588)4072349-5$$2gnd-content">SE</value>
 						<value code="Haushaltsplan">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Hochschulschrift$$0(DE-588)4113937-9$$2gnd-content">SE</value>
+						<value code="Hochschulschrift$$0(DE-588)4113937-9$$2gnd-content">FE/SE</value>
 						<value code="Hochschulschrift">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Hörbuch$$0(DE-588)4329497-2$$2gnd-content">SE</value>
+						<value code="Hörbuch$$0(DE-588)4329497-2$$2gnd-content">FE/SE</value>
 						<value code="Hörbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Hörspiel$$0(DE-588)4025435-5$$2gnd-content">SE</value>
 						<value code="Hörspiel">bitte den Eintrag mit $$0 auswählen</value>
@@ -5310,6 +5340,8 @@
 						<value code="Jugendsachbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Kalender$$0(DE-588)4029290-3$$2gnd-content">SE</value>
 						<value code="Kalender">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Kamishibai$$0(DE-588)7500391-0$$2gnd-content">SE optional</value>
+						<value code="Kamishibai">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Karikatur$$0(DE-588)4029670-2$$2gnd-content">SE</value>
 						<value code="Karikatur">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Karte$$0(DE-588)4029783-4$$2gnd-content">SE</value>
@@ -5326,12 +5358,14 @@
 						<value code="Kolumnensammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Kommentar$$0(DE-588)4136710-8$$2gnd-content">SE</value>
 						<value code="Kommentar">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Konferenzschrift$$0(DE-588)1071861417$$2gnd-content">SE</value>
+						<value code="Konferenzschrift$$0(DE-588)1071861417$$2gnd-content">FE/SE</value>
 						<value code="Konferenzschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Konkordanz$$0(DE-588)4165001-3$$2gnd-content">SE</value>
 						<value code="Konkordanz">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Künstlerbuch$$0(DE-588)4229053-3$$2gnd-content">SE</value>
 						<value code="Künstlerbuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Künstlerpostkarte$$0(DE-588)4165892-9$$2gnd-content">SE optional</value>
+						<value code="Künstlerpostkarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Kunstführer$$0(DE-588)4166029-8$$2gnd-content">SE</value>
 						<value code="Kunstführer">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Laudatio$$0(DE-588)4339326-3$$2gnd-content">SE</value>
@@ -5344,10 +5378,14 @@
 						<value code="Lehrmittel">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Lehrplan$$0(DE-588)4035117-8$$2gnd-content">SE</value>
 						<value code="Lehrplan">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Leichenpredigt$$0(DE-588)4074117-5$$2gnd-content">SE optional</value>
+						<value code="Leichenpredigt">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Lernsoftware$$0(DE-588)4126464-2$$2gnd-content">SE</value>
 						<value code="Lernsoftware">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Lesebuch$$0(DE-588)4035435-0$$2gnd-content">SE</value>
 						<value code="Lesebuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Libretto$$0(DE-588)4035588-3$$2gnd-content">SE optional</value>
+						<value code="Libretto">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Liederbuch$$0(DE-588)4167634-8$$2gnd-content">SE</value>
 						<value code="Liederbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Literaturbericht$$0(DE-588)4167870-9$$2gnd-content">SE</value>
@@ -5360,7 +5398,7 @@
 						<value code="Mitgliederverzeichnis">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Modell$$0(DE-588)4039798-1$$2gnd-content">SE</value>
 						<value code="Modell">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Monografische Reihe$$0(DE-588)4179998-7$$2gnd-content">SE</value>
+						<value code="Monografische Reihe$$0(DE-588)4179998-7$$2gnd-content">FE/SE</value>
 						<value code="Monografische Reihe">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Musikhandschrift$$0(DE-588)4040847-4$$2gnd-content">SE</value>
 						<value code="Musikhandschrift">bitte den Eintrag mit $$0 auswählen</value>
@@ -5418,11 +5456,13 @@
 						<value code="Rücklaufiges Wörterbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Sachbilderbuch$$0(DE-588)4221860-3$$2gnd-content">SE</value>
 						<value code="Sachbilderbuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Sachcomic$$0(DE-588)1042847282$$2gnd-content">SE optional</value>
+						<value code="Sachcomic">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Satzung$$0(DE-588)4051778-0$$2gnd-content">SE</value>
 						<value code="Satzung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Schematismus$$0(DE-588)4179484-9$$2gnd-content">SE</value>
 						<value code="Schematismus">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Schulbuch$$0(DE-588)4053458-3$$2gnd-content">SE</value>
+						<value code="Schulbuch$$0(DE-588)4053458-3$$2gnd-content">FE/SE</value>
 						<value code="Schulbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Schulprogramm$$0(DE-588)4077211-1$$2gnd-content">FE/SE</value>
 						<value code="Schulprogram">bitte den Eintrag mit $$0 auswählen</value>
@@ -5462,13 +5502,19 @@
 						<value code="Unterrichtseinheit">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Urkunde$$0(DE-588)4062132-7$$2gnd-content">SE</value>
 						<value code="Urkunde">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Vedute$$0(DE-588)4001393-5$$2gnd-content">SE optional</value>
+						<value code="Vedute">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Verkaufskatalog$$0(DE-588)4187788-3$$2gnd-content">SE</value>
 						<value code="Verkaufskatalog">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Verzeichnis$$0(DE-588)4188171-0$$2gnd-content">SE</value>
 						<value code="Verzeichnis">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Vorlesungsverzeichnis$$0(DE-588)4188684-7$$2gnd-content">SE</value>
 						<value code="Vorlesungsverzeichnis">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Website$$0(DE-588)4596172-4$$2gnd-content">SE</value>
+						<value code="Wandkarte$$0(DE-588)4124433-3$$2gnd-content">SE optional</value>
+						<value code="Wandkarte">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Weblog$$0(DE-588)4678688-0$$2gnd-content">SE</value>
+						<value code="Weblog">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Website$$0(DE-588)4596172-4$$2gnd-content">FE/SE</value>
 						<value code="Website">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Weltkarte$$0(DE-588)4065368-7$$2gnd-content">SE</value>
 						<value code="Weltkarte">bitte den Eintrag mit $$0 auswählen</value>
@@ -5480,7 +5526,7 @@
 						<value code="Wörterbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Zeichnung$$0(DE-588)4127900-1$$2gnd-content">SE</value>
 						<value code="Zeichnung">bitte den Eintrag mit $$0 auswählen</value>
-						<value code="Zeitschrift$$0(DE-588)4067488-5$$2gnd-content">SE</value>
+						<value code="Zeitschrift$$0(DE-588)4067488-5$$2gnd-content">FE/SE</value>
 						<value code="Zeitschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Zeittafel$$0(DE-588)4190631-7$$2gnd-content">SE</value>
 						<value code="Zeittafel">bitte den Eintrag mit $$0 auswählen</value>
@@ -5572,22 +5618,22 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Name, title, or term</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="e" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Relator term</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="g" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Miscellaneous information</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="0" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>Authority record control number or standard number</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="1" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="1">
 					<description>Real World Object URI</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Source of name, title, or term</description>
 					<values>
 						<value code="MeSH">MeSH</value>
@@ -5595,16 +5641,16 @@
 						<value code="SW-Musik ">SW-Musik</value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Materials specified</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="4" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="4">
 					<description>Relationship</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Linkage</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -5993,7 +6039,7 @@
 						<value code="win">Verfasser einer Einleitung | writer of introduction | E</value>
 						<value code="aft">Verfasser eines Nachworts | author of afterword, colophon etc. | E</value>
 						<value code="aui">Verfasser eines Geleitwortes | writer of foreword | E</value>
-						<value code="wst">Verfasser eines Postscriptums | writer of postface | E</value>
+						<value code="wst$$eVerfasser eines Postscriptums">Verfasser eines Postscriptums | writer of postface | E</value>
 						<value code="wpr">Verfasser eines Vorworts | writer of preface | E</value>
 						<value code="wst">Verfasser von ergänzendem Text | writer of supplementary textual content | E</value>
 						<value code="wal">Verfasser von zusätzlichen Lyrics | writer of added lyrics | E</value>
@@ -6247,7 +6293,7 @@
 						<value code="win">Verfasser einer Einleitung | writer of introduction | E</value>
 						<value code="aft">Verfasser eines Nachworts | author of afterword, colophon etc. | E</value>
 						<value code="aui">Verfasser eines Geleitwortes | writer of foreword | E</value>
-						<value code="wst">Verfasser eines Postscriptums | writer of postface | E</value>
+						<value code="wst$$eVerfasser eines Postscriptums">Verfasser eines Postscriptums | writer of postface | E</value>
 						<value code="wpr">Verfasser eines Vorworts | writer of preface | E</value>
 						<value code="wst">Verfasser von ergänzendem Text | writer of supplementary textual content | E</value>
 						<value code="wal">Verfasser von zusätzlichen Lyrics | writer of added lyrics | E</value>
@@ -6495,7 +6541,7 @@
 						<value code="win">Verfasser einer Einleitung | writer of introduction | E</value>
 						<value code="aft">Verfasser eines Nachworts | author of afterword, colophon etc. | E</value>
 						<value code="aui">Verfasser eines Geleitwortes | writer of foreword | E</value>
-						<value code="wst">Verfasser eines Postscriptums | writer of postface | E</value>
+						<value code="wst$$eVerfasser eines Postscriptums">Verfasser eines Postscriptums | writer of postface | E</value>
 						<value code="wpr">Verfasser eines Vorworts | writer of preface | E</value>
 						<value code="wst">Verfasser von ergänzendem Text | writer of supplementary textual content | E</value>
 						<value code="wal">Verfasser von zusätzlichen Lyrics | writer of added lyrics | E</value>
@@ -8151,70 +8197,70 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration code="a" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Servername</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="b" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Zugriffsnummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="c" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Information zur Komprimierung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="d" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Pfad</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="f" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Elektronischer Name</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="h" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="h">
 					<description>Ausführender der Anfrage</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="i" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Anweisung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="j" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="j">
 					<description>Bits pro Sekunde</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="k" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="k">
 					<description>Passwort</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="l" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="l">
 					<description>Verbindungsaufbau</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="m" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="m">
 					<description>Kontaktstelle für Hilfe beim Zugriff</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="n" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="n">
 					<description>Name des Standortes des Hosts</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="o" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="o">
 					<description>Betriebssystem</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="p" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="p">
 					<description>Port</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="q" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="q">
 					<description>Art des elektronischen Formats</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="r" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="r">
 					<description>Einstellungen</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="s" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="s">
 					<description>Dateigröße</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="t" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="t">
 					<description>Terminalemulation</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="u" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="u">
 					<description>Uniform Resource Identifier</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="v" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="v">
 					<description>Zugriffszeiten</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="w" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="w">
 					<description>Datensatzkontrollnummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="x" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="x">
 					<description>Nicht öffentliche Fußnote</description>
 					<values>
 						<value code="Verlag">Verlag/Host</value>
@@ -8229,19 +8275,19 @@
 						<value code="DBIS"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="y" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="y">
 					<description>Verküpfungstext</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="z" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
 					<description>öffentliche Fußnote</description>
 					<values>
 						<value code="kostenfrei"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="2" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
 					<description>Zugriffsart</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="3" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifizierte Materalien</description>
 					<values>
 						<value code="Abstract"> | </value>
@@ -8283,13 +8329,13 @@
 						<value code="Zusätzliche Angaben"> | </value>
 					</values>
 				</sub_field_configuration>
-				<sub_field_configuration code="6" repeatable="false" mandatory="false">
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="8" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
 					<description>Feldverküpfung und Sequenznummer</description>
 				</sub_field_configuration>
-				<sub_field_configuration code="9" repeatable="true" mandatory="false">
+				<sub_field_configuration repeatable="true" mandatory="false" code="9">
 					<description>Kennzeichnung Link PKN</description>
 				</sub_field_configuration>				
 			</sub_fields_list>
@@ -10922,8 +10968,20 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Abrufzeichen, Herkunft</description>
 				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
+					<description>Abrufzeichen Erwerbungsgruppe</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="g">
+					<description>Abrufzeichen Publikationsarten</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="h">
+					<description>Abrufzeichen Schenkungen, Leihgaben</description>
+				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Storniert</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="s">
+					<description>Sammlungsvermerke</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
 					<description>P2E-Prozess</description>
@@ -10933,7 +10991,7 @@
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
-		<data_field_configuration repeatable="false" mandatory="false" tag="981" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<data_field_configuration repeatable="true" mandatory="false" tag="981" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Systemnummer alt</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
@@ -10950,6 +11008,9 @@
 			<sub_fields_list>
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
 					<description>Systemnummer alt</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
+					<description>IDN Exemplar (EPN)</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -10973,6 +11034,9 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Sachschlagwort</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
+					<description>Formschlagwort</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11028,6 +11092,9 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Bevorzugter Name</description>
 				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
+					<description>Untergeordnete Körperschaft </description>
+				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Datumsangaben in Verbindung mit einem Namen</description>
 				</sub_field_configuration>
@@ -11039,6 +11106,9 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="4">
 					<description>Beziehungskennzeichen für Akteure, die mit einem Exemplar in Verbindung stehen</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="8">
+					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11081,10 +11151,10 @@
 						<value code="Maßnahme geplant">Maßnahme geplant</value>
 					</values>					
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="e">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>Bemerkungen Erhaltungszustand</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="f">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Signaturvermerk</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="g">
@@ -11105,10 +11175,10 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="l">
 					<description>Literaturhinweise</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="m">
+				<sub_field_configuration repeatable="true" mandatory="false" code="m">
 					<description>Marginalien</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="n">
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
 					<description>Illustrationen/Buchmalerei, Schreibstoff/Beschreibstoff, Wasserzeichen</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="o">
@@ -11126,11 +11196,17 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="r">
 					<description>Provenienz Bemerkung</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="s">
+				<sub_field_configuration repeatable="true" mandatory="false" code="s">
 					<description>Raubgutkennung</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="t">
+				<sub_field_configuration repeatable="true" mandatory="false" code="t">
 					<description>Restitutionsstatus</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="u">
+					<description>Scan</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="8">
+					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11161,10 +11237,10 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Motive </description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="e">
+				<sub_field_configuration repeatable="true" mandatory="false" code="e">
 					<description>EBDB-ID der Motive</description>
 				</sub_field_configuration>
-				<sub_field_configuration repeatable="false" mandatory="false" code="f">
+				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Werkstatt</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="g">
@@ -11184,6 +11260,9 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="l">
 					<description>Bemerkungen</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="8">
+					<description>Feldverknüpfung und Reihenfolge</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11255,7 +11334,16 @@
 			</second_indicator_configuration>
 			<sub_fields_list>
 				<sub_field_configuration repeatable="true" mandatory="false" code="a">
-					<description>Bemerkung extern</description>
+					<description>Bemerkung extern, Annotation</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="p">
+					<description>Bemerkung extern, NE Personenname</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="t">
+					<description>Bemerkung extern, NE Titel</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
+					<description>Herkunft</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11277,6 +11365,9 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Bemerkung intern</description>
 				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
+					<description>Bemerkung intern, Sondermaterial</description>
+				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="992" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -11297,6 +11388,9 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Signaturen</description>
 				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
+					<description>Herkunft</description>
+				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="993" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -11316,6 +11410,35 @@
 			<sub_fields_list>
 				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Deskriptor</description>
+				</sub_field_configuration>
+			</sub_fields_list>
+		</data_field_configuration>
+		<data_field_configuration repeatable="true" mandatory="false" tag="994" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<description>Aufnahmeinformation</description>
+			<first_indicator_configuration>
+				<description>nicht definiert</description>
+				<values>
+					<value code="#">nicht definiert</value>
+				</values>
+			</first_indicator_configuration>
+			<second_indicator_configuration>
+				<description>nicht definiert</description>
+				<values>
+					<value code="#">nicht definiert</value>
+				</values>
+			</second_indicator_configuration>
+			<sub_fields_list>
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
+					<description>Aufnahmeland</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="b">
+					<description>Sendeanstalt</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="c">
+					<description>Sendedatum</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="d">
+					<description>Bandposition</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11438,7 +11561,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="997" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>Aufnahmedatum </description>
+			<description>Aufnahmedatum ,Aufnahmejahr</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -11452,8 +11575,8 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
-				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>Aufnahmedatum </description>
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
+					<description>Aufnahmedatum, Aufnahmejahr</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11472,6 +11595,9 @@
 				</values>
 			</second_indicator_configuration>
 			<sub_fields_list>
+			    <sub_field_configuration repeatable="true" mandatory="false" code="a">
+					<description>URL aus 856 (Titel)</description>
+				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Lokale URL</description>
 				</sub_field_configuration>
