@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Doku für Wiki-Seite
+ neue CV-Liste bei 506 $$a
+ geänderte CV-Liste bei 506 $f
+ ergänzte Beschreibung bei CV-Liste 506 $$2
+ neue CV-Liste bei 540 $$f
+ gelöschte CV-Liste bei 542 $$f
+ neue Produktsigel bei 962 + umsortieren -->
 <marc_profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marc21_profile_configuration.xsd">
 	<data_fields_list>
 		<data_field_configuration repeatable="false" mandatory="false" tag="009" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -4580,6 +4587,11 @@
 			<sub_fields_list>
 				<sub_field_configuration code="a" repeatable="false" mandatory="false">
 					<description>Zugangsbedingungen</description>
+					<values>
+						<value code="Open Access"> | </value>
+						<value code="Kein Open Access"> | </value>
+						<value code="Open Access unbekannt"> | </value>
+					</values>					
 				</sub_field_configuration>
 				<sub_field_configuration code="b" repeatable="true" mandatory="false">
 					<description>Institution, die die Zugangsbeschränkung geltend macht</description>
@@ -4598,8 +4610,6 @@
 					<values>
 						<value code="Unrestricted online access$$2star"> | </value>
 						<value code="Online access with authorization$$2star"> | </value>
-						<value code="Preview only$$2star"> | </value>
-						<value code="No online access$$2star"> | </value>
 						<value code="Restrictions unspecified$$2star"> | </value>
 					</values>
 				</sub_field_configuration>
@@ -4615,7 +4625,7 @@
 				<sub_field_configuration code="2" repeatable="false" mandatory="false">
 					<description>Quelle des Terms, der in $f verwendet wird</description>
 					<values>
-						<value code="star"> | </value>
+						<value code="star">Standardized terminology for access restriction</value>
 					</values>
 				</sub_field_configuration>
 				<sub_field_configuration code="3" repeatable="false" mandatory="false">
@@ -4725,6 +4735,14 @@
 				</sub_field_configuration>
 				<sub_field_configuration code="f" repeatable="true" mandatory="false">
 					<description>Standardisierte Terminologie für Nutzungs- und Vervielfältigungsrechte</description>
+					<values>
+						<value code="CC-BY">Namensnennung</value>
+						<value code="CC-BY-SA">Namensnennung, Weitergabe unter gleichen Bedingungen</value>
+						<value code="CC-BY-ND">Namensnennung, keine Bearbeitung</value>
+						<value code="CC-BY-NC">Namensnennung, nicht kommerziell</value>
+						<value code="CC-BY-NC-SA">Namensnennung, nicht kommerziell, Weitergabe unter gleichen Bedingungen</value>
+						<value code="CC-BY-NC-ND">Namensnennung, nicht kommerziell, keine Bearbeitung</value>
+					</values>
 				</sub_field_configuration>
 				<sub_field_configuration code="g" repeatable="true" mandatory="false">
 					<description>Datum der Verfügbarkeit</description>
@@ -4787,14 +4805,6 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="f">
 					<description>Copyright-Angabe laut Vorlage</description>
-					<values>
-						<value code="CC-BY">Namensnennung</value>
-						<value code="CC-BY-SA">Namensnennung, Weitergabe unter gleichen Bedingungen</value>
-						<value code="CC-BY-ND">Namensnennung, keine Bearbeitung</value>
-						<value code="CC-BY-NC">Namensnennung, nicht kommerziell</value>
-						<value code="CC-BY-NC-SA">Namensnennung, nicht kommerziell, Weitergabe unter gleichen Bedingungen</value>
-						<value code="CC-BY-NC-ND">Namensnennung, nicht kommerziell, keine Bearbeitung</value>
-					</values>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="g">
 					<description>Copyright-Datum</description>
@@ -9440,11 +9450,12 @@
 						<value code="ZDB-7-SPL">Taylor &amp; Francis eBooks / Sports and Leisure</value>
 						<value code="ZDB-7-SSC">Taylor &amp; Francis eBooks / Social Sciences</value>
 						<value code="ZDB-7-TAR">Taylor &amp; Francis eBooks / Arts</value>
-						<value code="ZDB-7-THE">Taylor &amp; Francis eBooks / Tourism, Hospitality and Events</value>
 						<value code="ZDB-7-TFC">Taylor &amp; Francis eBooks / Complete</value>
 						<value code="ZDB-7-TLL">Taylor &amp; Francis eBooks / Language &amp; Linguistics</value>
 						<value code="ZDB-7-TLW">Taylor &amp; Francis eBooks / Law</value>
+						<value code="ZDB-7-THE">Taylor &amp; Francis eBooks / Tourism, Hospitality and Events</value>
 						<value code="ZDB-7-URB">Taylor &amp; Francis eBooks / Urban Studies</value>
+						<value code="ZDB-8-APN">PsycBOOKS (via APA PsycNET)</value>
 						<value code="ZDB-9-GMT">Gale Archives Unbound / Global Missions and Theology</value>
 						<value code="ZDB-9-VRL">Gale Virtual Reference Library-E-Books</value>
 						<value code="ZDB-10-KNL">Knovel library</value>
@@ -9472,6 +9483,7 @@
 						<value code="ZDB-18-BDA">beck-online / Datenschutz- und Informationsfreiheitsrecht PREMIUM</value>
 						<value code="ZDB-18-BDI">beck-online / Datenschutz- und Informationsfreiheitsrecht PLUS</value>
 						<value code="ZDB-18-BEL">Beck eLibrary</value>
+						<value code="ZDB-18-BEO">Beck online</value>
 						<value code="ZDB-18-BFP">beck-online / Familienrecht PREMIUM</value>
 						<value code="ZDB-18-BIT">beck-online / IT- und Multimediarecht PREMIUM</value>
 						<value code="ZDB-18-BKB">beck-online / KOMMUNALPRAXIS Bayern PLUS</value>
@@ -9510,8 +9522,11 @@
 						<value code="ZDB-18-NIR">Nomos eLibrary / Internationales Recht, Völkerrecht</value>
 						<value code="ZDB-18-NJG">Nomos eLibrary / Studienliteratur Jura Grundlagen</value>
 						<value code="ZDB-18-NJR">Nomos eLibrary / Jura Gesamt</value>
+						<value code="ZDB-18-NLA">Nomos eLibrary / Anthropologie und Ethnologie </value>
 						<value code="ZDB-18-NLAR">Nomos eLibrary / Arbeitsrecht</value>
+						<value code="ZDB-18-NLM">Nomos eLibrary / Musikwissenschaft</value>
 						<value code="ZDB-18-NOA">NomosOnline Arbeitsrecht</value>
+						<value code="ZDB-18-NOB">NomosOnline Bundesrecht</value>
 						<value code="ZDB-18-NOE">Nomos eLibrary / Europa</value>
 						<value code="ZDB-18-NOG">Nomos eLibrary / Geschichte</value>
 						<value code="ZDB-18-NOJ">Nomos eLibrary / Jura Grundlagen</value>
@@ -9522,6 +9537,7 @@
 						<value code="ZDB-18-NOS">NomosOnline Sozialrecht</value>
 						<value code="ZDB-18-NOW">Nomos eLibrary / Wirtschaft</value>
 						<value code="ZDB-18-NOZ">Nomos eLibrary / Soziologie </value>
+						<value code="ZDB-18-NPA">Nomos eLibrary / Pädagogik</value>
 						<value code="ZDB-18-NPH">Nomos eLibrary / Philosophie</value>
 						<value code="ZDB-18-NPP">Nomos eLibrary / Psychotherapie und Psychologie</value>
 						<value code="ZDB-18-NPW">Nomos eLibrary / Studienliteratur Politikwissenschaft</value>
@@ -9542,6 +9558,7 @@
 						<value code="ZDB-20-CCO">Cambridge Companions Complete-E-Books</value>
 						<value code="ZDB-20-CHO">Cambridge Histories Online-E-Books</value>
 						<value code="ZDB-20-CUL">Cambridge University Press / London Mathematical Society Lecture Note Series</value>
+						<value code="ZDB-21-EIL">Torrossa</value>
 						<value code="ZDB-22-CAN">Ciando-E-Books</value>
 						<value code="ZDB-22-CWH">Ciando / Lehrbuchpaket Wiley Hauptfach</value>
 						<value code="ZDB-22-CWN">Ciando / Lehrbuchpaket Wiley Nebenfach</value>
@@ -9553,112 +9570,354 @@
 						<value code="ZDB-23-BON">de Gruyter Basics Online eBook-Paket</value>
 						<value code="ZDB-23-DAD">de Gruyter eBook-Paket Architektur und Design</value>
 						<value code="ZDB-23-DAT">de Gruyter eBook-Paket Altdeutsche Textbibliothek Online</value>
+						<value code="ZDB-23-DBA">de Gruyter e-dition 2: Best of Classical Studies </value>
+						<value code="ZDB-23-DBB">de Gruyter e-dition 2: Best of Classical Studies Titles in English</value>
 						<value code="ZDB-23-DBC">de Gruyter eBook-Paket Biologie, Chemie, Geowissenschaften deutsch </value>
+						<value code="ZDB-23-DBD">de Gruyter e-dition 2: Best of German Studies</value>
 						<value code="ZDB-23-DBE">de Gruyter eBook-Paket Biologie, Chemie, Geowissenschaften englisch</value>
+						<value code="ZDB-23-DBF">de Gruyter e-dition 2: Best of History</value>
+						<value code="ZDB-23-DBG">de Gruyter e-dition 2: Best of Library &amp; Information Science</value>
+						<value code="ZDB-23-DBH">de Gruyter e-dition 2: Best of Linguistics Titles in English</value>
+						<value code="ZDB-23-DBI">de Gruyter e-dition 2: Best of Mathematics, Physics</value>
+						<value code="ZDB-23-DBJ">de Gruyter e-dition 2: Best of Philosophy</value>
+						<value code="ZDB-23-DBK">de Gruyter e-dition 2: Best of Theology</value>
+						<value code="ZDB-23-DBL">de Gruyter e-dition 2: Best of Theology Titles in English</value>
 						<value code="ZDB-23-DBV">de Gruyter eBook-Paket BWL und VWL</value>
+						<value code="ZDB-23-DCA">de Gruyter e-dition 2: Best of Law / Rechtswissenschaften</value>
 						<value code="ZDB-23-DCM">de Gruyter eBook-Paket Chemie, Materialwissenschaften, Biologie, Geowissenschaften </value>
 						<value code="ZDB-23-DEG">de Gruyter eBook-Paket Geschichte</value>
 						<value code="ZDB-23-DEI">de Gruyter eBook-Paket Informatik</value>
-						<value code="ZDB-23-DGG">de Gruyter-E-Books</value>
+						<value code="ZDB-23-DEM">de Gruyter eBook-Paket Mathematik und Physik</value>
+						<value code="ZDB-23-DGA">de Gruyter E-Books / Linguistik und Literaturwissenschaft</value>
+						<value code="ZDB-23-DGB">de Gruyter eBook-Paket Bibliothekswesen, Dokumentation und Information</value>
+						<value code="ZDB-23-DGD">de Gruyter E-Books / Altertumswissenschaften</value>
+						<value code="ZDB-23-DGE">de Gruyter E-Books / Philosophie und Geschichte</value>
+						<value code="ZDB-23-DGF">de Gruyter E-Books / Theologie, Religionswissenschaften, Judaistik</value>
+						<value code="ZDB-23-DGG">de Gruyter E-Books</value>
+						<value code="ZDB-23-DGH">de Gruyter e-dition: Best of German Studies / Germanistik </value>
+						<value code="ZDB-23-DGO">de Gruyter e-dition: Best of Linguistics / Linguistik</value>
+						<value code="ZDB-23-DGS">de Gruyter Handbücher zur Sprach- und Kommunikationswissenschaft</value>
 						<value code="ZDB-23-DIW">de Gruyter eBook-Paket Ingenieurswissenschaften</value>
+						<value code="ZDB-23-DKA">de Gruyter eBook-Paket Kunst, Architektur und Design</value>
+						<value code="ZDB-23-DKU">de Gruyter eBook-Paket Literatur- und Kulturwissenschaft, Area Studies</value>
+						<value code="ZDB-23-DLW">de Gruyter eBook-Paket Literaturwissenschaft</value>
+						<value code="ZDB-23-DMA">de Gruyter eBook-Paket Mathematik</value>
+						<value code="ZDB-23-DMD">de Gruyter eBook-Paket Medizin deutsch</value>
+						<value code="ZDB-23-DME">de Gruyter eBook-Paket Medizin englisch</value>
+						<value code="ZDB-23-DMI">de Gruyter eBook-Paket Mathematik, Physik, Ingenieurwissenschaften englisch</value>
+						<value code="ZDB-23-DMN">de Gruyter E-Books / Mathematik, Naturwissenschaften, Medizin</value>
+						<value code="ZDB-23-DMP">de Gruyter eBook-Paket Mathematik, Physik, Ingenieurwissenschaften deutsch</value>
+						<value code="ZDB-23-DON">de Gruyter eBook-Paket Ontos</value>
 						<value code="ZDB-23-DPC">de Gruyter eBook-Paket Physik, Chemie, Industrielle Chemie, Materialwissenschaft, Geowissenschaften</value>
+						<value code="ZDB-23-DPH">de Gruyter eBook-Paket Philosophie</value>
 						<value code="ZDB-23-DPK">de Gruyter eBook-Paket Kunst</value>
+						<value code="ZDB-23-DPM">de Gruyter eBook-Paket Medizin</value>
+						<value code="ZDB-23-DPS">de Gruyter E-Books / Geschichte, Politikwissenschaft, Soziologie</value>
 						<value code="ZDB-23-DSP">de Gruyter eBook-Paket Sprachwissenschaft</value>
-						<value code="ZDB-23-EXM">De Gruyter Expositions in Mathematics</value>
+						<value code="ZDB-23-DSW">de Gruyter eBook-Paket Sozialwissenschaften</value>
+						<value code="ZDB-23-DTO">de Gruyter eBook-Paket Tusculum Online</value>
+						<value code="ZDB-23-EXM">de Gruyter Expositions in Mathematics</value>
 						<value code="ZDB-23-FJR">de Gruyter eBook-Paket 500 Jahre Reformation</value>
-						<value code="ZDB-23-GHI">De Gruyter Book Archive / History</value>
+						<value code="ZDB-23-GHI">de Gruyter Book Archive / History</value>
 						<value code="ZDB-23-GKO">de Gruyter e-Book-Paket Das Kapital Online (Marx-Engels-Gesamtausgabe Abteilung II)</value>
-						<value code="ZDB-23-GOA">De Gruyter Open Access Bücher</value>
+						<value code="ZDB-23-GOA">de Gruyter Open Access Bücher</value>
 						<value code="ZDB-23-GRA">de Gruyter Rights, Action and Social Responsibility</value>
-						<value code="ZDB-23-GSM">De Gruyter Studies in Mathematics</value>
+						<value code="ZDB-23-GSM">de Gruyter Studies in Mathematics</value>
 						<value code="ZDB-23-OAT">eBook-Paket Oldenbourg-Akademie / Altertum</value>
 						<value code="ZDB-23-OAV">eBook-Paket Oldenbourg-Akademie / BWL, VWL</value>
-						<value code="ZDB-23-ODJ">De Gruyter Oldenbourg ebook Paket Deutsch-jüdische Quellen aus Palästina / Israel</value>
+						<value code="ZDB-23-ODJ">de Gruyter Oldenbourg ebook Paket Deutsch-jüdische Quellen aus Palästina / Israel</value>
 						<value code="ZDB-23-OEM">eBook-Paket Oldenbourg / Elektrotechnik, Maschinenbau, Ingenieurswissenschaften</value>
 						<value code="ZDB-23-OGS">eBook-Paket Oldenbourg-Akademie / Geschichte</value>
-						<value code="ZDB-23-OLW">De Gruyter Oldenbourg ebook Paket Lehrbücher Wirtschaftswissenschaften</value>
+						<value code="ZDB-23-OLI">de Gruyter Oldenbourg ebook Paket Lehrbücher Informatik</value>
+						<value code="ZDB-23-OLT">de Gruyter Oldenbourg ebook Paket Lehrbücher Technik</value>
+						<value code="ZDB-23-OLW">de Gruyter Oldenbourg ebook Paket Lehrbücher Wirtschaftswissenschaften</value>
 						<value code="ZDB-23-OPS">eBook-Paket Oldenbourg-Akademie / Politik- und Sozialwissenschaften</value>
 						<value code="ZDB-23-OSQ">eBook-Paket Oldenbourg-Akademie / Sprachwissenschaft</value>
-						<value code="ZDB-23-OTI">De Gruyter Oldenbourg ebook Paket Lehrbücher Technik und Informatikt</value>
+						<value code="ZDB-23-OTI">de Gruyter Oldenbourg ebook Paket Lehrbücher Technik und Informatikt</value>
+						<value code="ZDB-23-PAM">Princeton Series in Applied Mathematics</value>
 						<value code="ZDB-23-PHM">de Gruyter eBook-Paket Philosophie des Mittelalters Online</value>
-						<value code="ZDB-23-SEW">De Gruyter eBook-Paket Erziehungswissenschaften, Psychologie, Kommunikation</value>
+						<value code="ZDB-23-PMB">Princeton Annals of Mathematics Backlist eBook Package</value>
+						<value code="ZDB-23-PMN">Princeton Mathematical Notes</value>
+						<value code="ZDB-23-PMS">Princeton Mathematical Series</value>
+						<value code="ZDB-23-PST">Princeton Annals of Mathematics Studies</value>
+						<value code="ZDB-23-SEW">de Gruyter eBook-Paket Erziehungswissenschaften, Psychologie, Kommunikation</value>
 						<value code="ZDB-23-TGP">de Gruyter / transcript eBook-Gesamtpaket</value>
 						<value code="ZDB-23-TSO">de Gruyter / transcript eBook-Sonderpaket Gesamtpaket</value>
 						<value code="ZDB-23-TSW">de Gruyter / transcript eBook-Sonderpaket Sozialwissenschaften</value>
+						<value code="ZDB-25-KAG">Karger eBook Archive Collection (German)</value>
+						<value code="ZDB-25-KAS">Karger eBook Archive Collection (Series)</value>
+						<value code="ZDB-25-KEN">Karger eBook Archive Collection (Non-Series)</value>
+						<value code="ZDB-25-KGC">Karger eBook Collection (German)</value>
+						<value code="ZDB-25-KNS">Karger eBook Non-Series Collection</value>
+						<value code="ZDB-25-KRG">Karger eBook Collection</value>
+						<value code="ZDB-25-KSE">Karger eBook Series Collection</value>
 						<value code="ZDB-27-OVI">Books@Ovid</value>
 						<value code="ZDB-28-CHI">Chicago Scholarship Online / Music</value>
 						<value code="ZDB-28-CMU">Cornell Scholarship Online / Music</value>
 						<value code="ZDB-28-CSM">California Scholarship Online / Music</value>
 						<value code="ZDB-28-CSO">Colombia Scholarship Online</value>
-						<value code="ZDB-28-ORP">E-Books von Oxford Reference Online Premium</value>		
+						<value code="ZDB-28-DRS">Oxford Digital Reference Shelf</value>
+						<value code="ZDB-28-FOS">Fordham Scholarship Online</value>
+						<value code="ZDB-28-FSM">Florida Scholarship Online / Music</value>
+						<value code="ZDB-28-HOS">Hong Kong Scholarship Online</value>
+						<value code="ZDB-28-MMU">Mississippi Scholarship Online / Music</value>
+						<value code="ZDB-28-MPM">MIT Press Scholarship Online / Mathematics</value>
+						<value code="ZDB-28-MSM">Minnesota Scholarship Online / Music</value>
+						<value code="ZDB-28-NCM">North Carolina Scholarship Online / Music</value>
+						<value code="ZDB-28-NYU">NYU Scholarship Online</value>
+						<value code="ZDB-28-OAR">Oxford Handbooks Online / Archaelogy</value>
+						<value code="ZDB-28-OCP">Oxford Clinical Psychology</value>
+						<value code="ZDB-28-OCR">Oxford Handbooks Online / Criminology</value>
+						<value code="ZDB-28-OCS">Oxford Handbooks Online / Classical Studies</value>
+						<value code="ZDB-28-OEF">Oxford Handbooks Online - Economics &amp; Finance</value>
+						<value code="ZDB-28-OFT">Oxford Scholarship Online - Film, Television and Radio</value>
+						<value code="ZDB-28-OHB">Oxford Handbooks Online - Business and Management</value>
+						<value code="ZDB-28-OHH">Oxford Handbooks Online - History</value>
+						<value code="ZDB-28-OHI">Oxford Handbooks Online - Literature</value>
+						<value code="ZDB-28-OHL">Oxford Handbooks Online - Linguistics</value>
+						<value code="ZDB-28-OHO">Oxford Handbooks Online</value>
+						<value code="ZDB-28-OHP">Oxford Handbooks Online - Philosophy</value>
+						<value code="ZDB-28-OHR">Oxford Handbooks Online - Religion</value>
+						<value code="ZDB-28-OHY">Oxford Handbooks Online - Psychology</value>
+						<value code="ZDB-28-OLA">Oxford Handbooks Online - Law</value>
+						<value code="ZDB-28-OME">Oxford Medicine Online</value>
+						<value code="ZDB-28-OMU">Oxford Handbooks Online / Music</value>
+						<value code="ZDB-28-OPC">Oxford Handbooks Online - Political Science</value>
+						<value code="ZDB-28-ORC">Oxford Quick Reference</value>
+						<value code="ZDB-28-ORP">E-Books von Oxford Reference Online Premium</value>
+						<value code="ZDB-28-OSA">Oxford Scholarship Online / Business and Management</value>
+						<value code="ZDB-28-OSB">Oxford Scholarship Online / Biology</value>
+						<value code="ZDB-28-OSC">Oxford Scholarship Online - Linguistics</value>
+						<value code="ZDB-28-OSD">Oxford Scholarship Online - Complete</value>
+						<value code="ZDB-28-OSE">Oxford Scholarship Online / Economics and Finance</value>
+						<value code="ZDB-28-OSF">Oxford Scholarship Online - Palliative Care</value>
+						<value code="ZDB-28-OSG">Oxford Scholarship Online - Psychology</value>
+						<value code="ZDB-28-OSI">Oxford Scholarship Online - Literature</value>
+						<value code="ZDB-28-OSK">Oxford Scholarship Online - Mathematics</value>
+						<value code="ZDB-28-OSN">Oxford Scholarship Online - Neuroscience</value>
+						<value code="ZDB-28-OSP">Oxford Scholarship Online - Philosophy </value>
+						<value code="ZDB-28-OSS">Oxford Scholarship Online - Sociology</value>
+						<value code="ZDB-28-OST">Oxford Scholarship Online - Political Science</value>
 						<value code="ZDB-28-OSV">University Press Scholarship Online</value>
+						<value code="ZDB-28-OSY">Oxford Scholarship Online - Physics</value>
 						<value code="ZDB-28-YSM">Yale Scholarship Online / Music</value>
-						<value code="ZDB-168-MAM">Access Medicine / EBooks</value>
-						<value code="ZDB-275-AIPB">AIP / Gesamt E-Books</value>
-						<value code="ZDB-215-ALN">Aisthesis / Literaturwissenschaften Novitäten</value>
-						<value code="ZDB-215-ATH">Aisthesis / Theater</value>
-						<value code="ZDB-215-AWR1">Aisthesis / Zur Literatur der Weimarer Republik 1</value>
-						<value code="ZDB-203-AHO">Artech House eBooks</value>
-						<value code="ZDB-74-AKA">akademie-link / Aristoteles</value>
-						<value code="ZDB-74-AKG">akademie-link / Geschichte</value>
-						<value code="ZDB-74-AKB">akademie-link / Goedeke</value>
-						<value code="ZDB-74-AKE">akademie-link / Goethe Briefe 10-2012</value>
-						<value code="ZDB-74-AKC">akademie-link / Heine</value>
-						<value code="ZDB-74-AKK">akademie-link / Klassiker Auslegen</value>
-						<value code="ZDB-74-AKF">akademie-link / Kunstgeschichte 10-2012</value>
-						<value code="ZDB-74-AKI">akademie-link / Leibniz Philosophische Schriften 10-2012</value>
-						<value code="ZDB-74-AKQ">akademie-link / Mittelalter 10-2012</value>
-						<value code="ZDB-74-AKD">akademie-link / Mittelalter, Frühe Neuzeit</value>
-						<value code="ZDB-74-AKM">akademie-link / Mittelalter Monographie</value>
-						<value code="ZDB-74-AKP">akademie-link / Philosophie</value>
-						<value code="ZDB-74-AKJ">akademie-link / Schöneberger Repertorium Philosophie Mittelalter 10-2012</value>
-						<value code="ZDB-74-AKL">akademie-link / Sprach- und Literaturwissenschaften 10-2012</value>
-						<value code="ZDB-74-AKS">akademie-link / Studienbücher</value>
-						<value code="ZDB-74-AKN">akademie-link / Tusculum Cicero Reden 10-2012</value>
-						<value code="ZDB-74-AKO">akademie-link / Tusculum Plinius Naturkunde 10-2012</value>
-						<value code="ZDB-138-AME">AMS ebooks / AMS Chelsea Publishing</value>
-						<value code="ZDB-138-AMQ">AMS ebooks / Colloquium Publications</value>
-						<value code="ZDB-138-AMM">AMS ebooks / Contemporary Mathematics</value>
-						<value code="ZDB-138-AMN">AMS ebooks / Courant Lecture Notes</value>
-						<value code="ZDB-138-AMD">AMS ebooks / Fields Institute Communications</value>
-						<value code="ZDB-138-AMB">AMS ebooks / Fields Institute Monographs</value>
-						<value code="ZDB-138-AMR">AMS ebooks / Graduate Studies in Mathematics</value>
-						<value code="ZDB-138-AMH">AMS ebooks / History of Mathematics</value>
-						<value code="ZDB-138-AMS">AMS ebooks / Mathematical Surveys and Monographs</value>
-						<value code="ZDB-138-AMA">AMS ebooks / Memoirs of the American Mathematical Society</value>
-						<value code="ZDB-138-AML">AMS ebooks / Student mathematical library</value>
-						<value code="ZDB-138-AMU">AMS ebooks / University Lecture Series</value>
-						<value code="ZDB-265-AFC">AVA Library / Film collection</value>
-						<value code="ZDB-128-BJO">Beck eLibrary / C.H. Beck Jura Öffentliches Recht</value>
-						<value code="ZDB-128-BJS">Beck eLibrary / C.H. Beck Jura Strafrecht</value>
-						<value code="ZDB-128-BJZ1">Beck eLibrary / C.H. Beck Jura Zivilrecht I</value>
-						<value code="ZDB-128-BJZ2">Beck eLibrary / C.H. Beck Jura Zivilrecht II</value>
-						<value code="ZDB-128-UFI">Beck eLibrary / UVK Finance</value>
-						<value code="ZDB-128-UMM">Beck eLibrary / UVK Management &amp; Marketing</value>
-						<value code="ZDB-128-URC">Beck eLibrary / UVK Rechnungswesen &amp; Controlling</value>
-						<value code="ZDB-128-UVK">Beck eLibrary / UVK Wirtschaft</value>
-						<value code="ZDB-128-UWW">Beck eLibrary / UVK Wirtschaftswissenschaften</value>
-						<value code="ZDB-128-VAB">Beck eLibrary / Vahlen Allgemeine Betriebswirtschaftslehre</value>
-						<value code="ZDB-128-VBB">Beck eLibrary / Vahlen Buchführung, Bilanz, Steuern</value>
-						<value code="ZDB-128-VIF">Beck eLibrary / Vahlen Investition und Finanzierung</value>
-						<value code="ZDB-128-VJR">Beck eLibrary / Vahlen Jura Öffentliches Recht</value>
-						<value code="ZDB-128-JUR">Beck eLibrary / Vahlen Jura Referendariat</value>
-						<value code="ZDB-128-VEL">Beck eLibrary</value>
-						<value code="ZDB-128-VJS">Beck eLibrary / Vahlen Jura Strafrecht</value>
-						<value code="ZDB-128-VKC">Beck eLibrary / Vahlen Kostenrechnung und Controlling</value>
-						<value code="ZDB-128-VMH">Beck eLibrary / Vahlen Marketing und Handel</value>
-						<value code="ZDB-128-VMW">Beck eLibrary / Vahlen Mathematik für Wirtschaftswissenschaftler</value>
-						<value code="ZDB-128-VPM">Beck eLibrary / Vahlen Personalmanagement</value>
-						<value code="ZDB-128-VPL">Beck eLibrary / Vahlen Produktion und Logistik</value>
-						<value code="ZDB-128-VRW">Beck eLibrary / Vahlen Recht für Wirtschaftswissenschaftler</value>
-						<value code="ZDB-128-VSO">Beck eLibrary / Vahlen Strafrecht/Öffentliches Recht</value>
-						<value code="ZDB-128-VUM">Beck eLibrary / Vahlen Unternehmensführung, Management, Organisation</value>
-						<value code="ZDB-128-VVW">Beck eLibrary / Vahlen Volkswirtschaftslehre</value>
-						<value code="ZDB-128-ZR1">Beck eLibrary / Vahlen Zivilrecht I</value>
-						<value code="ZDB-128-ZR2">Beck eLibrary / Vahlen Zivilrecht II</value>
-						<value code="ZDB-128-VVA">Beck eLibrary / Versus Allgemeine Betriebswirtschaftslehre</value>
-						<value code="ZDB-128-VVK">Beck eLibrary / Versus kompakt BWL</value>
-						<value code="ZDB-128-VVM">Beck eLibrary / Versus kompakt Management</value>
+						<value code="ZDB-30-LOR">Literature Online Reference Edition - LORE</value>
+						<value code="ZDB-30-ORH">O'Reilly Higher Education</value>
+						<value code="ZDB-30-PAD">ProQuest Academic Complete</value>
+						<value code="ZDB-30-PBE">ProQuest Business Ebook Subscription</value>
+						<value code="ZDB-30-PGC">German Literature Collections</value>
+						<value code="ZDB-30-PQE">ProQuest Ebook Central</value>
+						<value code="ZDB-30-PRI">Prisma. Publicaciones y revistas sociales y humanisticas</value>
+						<value code="ZDB-32-STB">Safari Tech Books Online</value>
+						<value code="ZDB-33-ABS">Elsevier e-book collection - Agricultural, Biological, and Food Sciences</value>
+						<value code="ZDB-33-BGM">Elsevier e-book collection - Biochemistry, Genetics and Molecular Biology</value>
+						<value code="ZDB-33-BMT">Elsevier e-book collection - Business, Management, Hospitality, and Tourism</value>
+						<value code="ZDB-33-CEN">Elsevier e-book collection - Chemical Engineering</value>
+						<value code="ZDB-33-CHM">Elsevier e-book collection - Chemistry</value>
+						<value code="ZDB-33-CKB">ClinicalKey / Student Foundation Medicine German Package</value>
+						<value code="ZDB-33-COS">Elsevier e-book collection - Computer Science</value>
+						<value code="ZDB-33-EGE">Elsevier e-book collection - Engineering</value>
+						<value code="ZDB-33-EGY">Elsevier e-book collection - Energy</value>
+						<value code="ZDB-33-ENV">Elsevier e-book collection - Environmental science</value>
+						<value code="ZDB-33-EPS">Elsevier e-book collection - Earth &amp; Planetary Sciences</value>
+						<value code="ZDB-33-ESD">Elsevier Online Books on ScienceDirect</value>
+						<value code="ZDB-33-EUF">Elsevier / Urban &amp; Fischer</value>
+						<value code="ZDB-33-FIN">Elsevier e-book collection - Finance</value>
+						<value code="ZDB-33-FOR">Elsevier e-book collection - Forensics</value>
+						<value code="ZDB-33-GMC">Elsevier ScienceDirect German Medical Collection</value>
+						<value code="ZDB-33-GPC">Elsevier ScienceDirect German Premium Collection 2003-2008</value>
+						<value code="ZDB-33-HSC">Elsevier e-book collection - Health Sciences</value>
+						<value code="ZDB-33-IMU">Elsevier e-book collection - Immunology &amp; Microbiology</value>
+						<value code="ZDB-33-MAD">Elsevier e-book collection - Medicine &amp; Dentistry</value>
+						<value code="ZDB-33-MSC">Elsevier e-book collection - Materials Science</value>
+						<value code="ZDB-33-MTC">Elsevier e-book collection - Mathematics</value>
+						<value code="ZDB-33-MTY">Elsevier e-book collection - Media Technology</value>
+						<value code="ZDB-33-NEU">Elsevier e-book collection - Neuroscience</value>
+						<value code="ZDB-33-PAS">Elsevier e-book collection - Physics &amp; Astronomy</value>
+						<value code="ZDB-33-PCH">Elsevier e-book collection - Psychology</value>
+						<value code="ZDB-33-PTP">Elsevier e-book collection - Pharmacology, Toxicology and Pharmaceutical Science</value>
+						<value code="ZDB-33-SDR">Elsevier Online Books on ScienceDirect / Reference Works</value>
+						<value code="ZDB-33-WKT">Woodhead / Knovel - Textiles</value>
+						<value code="ZDB-34-CNE">Thieme CNE</value>
+						<value code="ZDB-34-TGK">Thieme / Gesundheitsmanagement, Klinikmanagement, Gesundheitswirtschaft</value>
+						<value code="ZDB-34-THI">Thieme-E-Books</value>
+						<value code="ZDB-34-THLO">Thieme / Logopädie</value>
+						<value code="ZDB-34-THP">Thieme / Psychiatrie</value>
+						<value code="ZDB-34-THPP">Thieme / Psychologie, Psychotherapiee</value>
+						<value code="ZDB-34-TKPA">Thieme / Anästhesie, Intensiv- und Notfallmedizin</value>
+						<value code="ZDB-34-TKPC">Thieme / Chirurgie, Orthopädie, Unfallchirurgie</value>
+						<value code="ZDB-34-TKPD">Thieme / Dermatologie</value>
+						<value code="ZDB-34-TKPG">Thieme / Gynäkologie</value>
+						<value code="ZDB-34-TKPH">Thieme / HNO</value>
+						<value code="ZDB-34-TKPI">Thieme / Innere Medizin</value>
+						<value code="ZDB-34-TKPM">Thieme / Mikrobiologie, Hygiene + übergreifende Titel</value>
+						<value code="ZDB-34-TKPN">Thieme / Neurologie</value>
+						<value code="ZDB-34-TKPO">Thieme / Ophthalmologie</value>
+						<value code="ZDB-34-TKPP">Thieme / Pädiatrie</value>
+						<value code="ZDB-34-TKPR">Thieme / Radiologie</value>
+						<value code="ZDB-34-TKPU">Thieme / Urologie</value>
+						<value code="ZDB-34-TKPZ">Thieme / Zahnmedizin</value>
+						<value code="ZDB-35-UBC">Wiley Online Library / Usage-Based-Collection Management (UBCM)</value>
+						<value code="ZDB-35-WCA">Wiley Collection Agriculture</value>
+						<value code="ZDB-35-WCB">Wiley Collection Biochemistry</value>
+						<value code="ZDB-35-WCE">Wiley Collection Business, Economics, Finance, Accounting</value>
+						<value code="ZDB-35-WCF">Wiley Collection Chemical Engineering</value>
+						<value code="ZDB-35-WCG">Wiley Collection Ecology</value>
+						<value code="ZDB-35-WCH">Wiley Collection Energy</value>
+						<value code="ZDB-35-WCI">Wiley Collection Electrical &amp; Electronics Engineering</value>
+						<value code="ZDB-35-WCJ">Wiley Collection General &amp; Physical Chemistry</value>
+						<value code="ZDB-35-WCK">Wiley Collection Geography</value>
+						<value code="ZDB-35-WCL">Wiley Collection Industrial Chemistry</value>
+						<value code="ZDB-35-WCM">Wiley Collection Industrial Engineering</value>
+						<value code="ZDB-35-WCN">Wiley Collection Materials Science</value>
+						<value code="ZDB-35-WCO">Wiley Collection Mechanical Engineering</value>
+						<value code="ZDB-35-WCP">Wiley Collection Plant Sciences</value>
+						<value code="ZDB-35-WCQ">Wiley Collection Nanotechnology</value>
+						<value code="ZDB-35-WCR">Wiley Collection Organic Chemistry &amp; Catalysis</value>
+						<value code="ZDB-35-WCS">Wiley Collection Physics</value>
+						<value code="ZDB-35-WCT">Wiley Collection Earth &amp; Environmental Sciences</value>
+						<value code="ZDB-35-WCU">Wiley Collection Polymer Science &amp; Technology</value>
+						<value code="ZDB-35-WCV">Wiley Collection Pharmaceutical &amp; Medicinal Chemistry</value>
+						<value code="ZDB-35-WEL">IEEE-Wiley eBooks Library</value>
+						<value code="ZDB-35-WIC">Wiley-E-Books (Wiley InterScience Online Books)</value>
+						<value code="ZDB-37-IED">IEEE Computer Society Digital Library</value>
+						<value code="ZDB-37-IEL">IEEE/IET Electronic Library (IEL)</value>
+						<value code="ZDB-37-IEX">IEEE Xplore digital library</value>
+						<value code="ZDB-38-EBR">ebrary</value>
+						<value code="ZDB-39-JBK">JSTOR Books</value>
+						<value code="ZDB-39-JOA">JSTOR Open Access EBooks</value>
+						<value code="ZDB-41-SBC">UTB scholars-e-library / Psychologische Beratung &amp; Coaching</value>
+						<value code="ZDB-41-SCG">UTB scholars-e-library / Schulpädagogik/Grundschule</value>
+						<value code="ZDB-41-SCT">UTB scholars-e-library / Schulpädagogik/Sekundarstufe</value>
+						<value code="ZDB-41-SDH">UTB scholars-e-library / Pädagogik/ Hochschule</value>
+						<value code="ZDB-41-SEL">UTB scholars-e-library</value>
+						<value code="ZDB-41-SFD">UTB scholars-e-library / Fachdidaktik Religion</value>
+						<value code="ZDB-41-SGK">UTB scholars-e-library / Geschichte/Kulturgeschichte</value>
+						<value code="ZDB-41-SGM">UTB scholars-e-library / Germanistik</value>
+						<value code="ZDB-41-SGS">UTB scholars-e-library / Geschichte</value>
+						<value code="ZDB-41-SHO">UTB scholars-e-library / Philosophie</value>
+						<value code="ZDB-41-SIK">UTB scholars-e-library / Schulpädagogik</value>
+						<value code="ZDB-41-SKM">UTB scholars-e-library / Kunst/Musik/Theater</value>
+						<value code="ZDB-41-SKP">UTB scholars-e-library / Klassische Philologie</value>
+						<value code="ZDB-41-SLI">UTB scholars-e-library / Literaturwissenschaft</value>
+						<value code="ZDB-41-SMK">UTB scholars-e-library / Medien &amp; Kommunikation</value>
+						<value code="ZDB-41-SML">UTB scholars-e-library / Medizin und Pflege</value>
+						<value code="ZDB-41-SMZ">UTB scholars-e-library / Medizin</value>
+						<value code="ZDB-41-SNG">UTB scholars-e-library / Anglistik</value>
+						<value code="ZDB-41-SNI">UTB scholars-e-library / Naturwissenschaften/Technik/Informatik</value>
+						<value code="ZDB-41-SOM">UTB scholars-e-library / Romanistik</value>
+						<value code="ZDB-41-SPA">UTB scholars-e-library / Pädagogik (allgemein)</value>
+						<value code="ZDB-41-SPG">UTB scholars-e-library / Pädagogik/Genderforschung</value>
+						<value code="ZDB-41-SPJ">UTB scholars-e-library / Pädagogik/ Erwachsenenbildung</value>
+						<value code="ZDB-41-SPK">UTB scholars-e-library / Pädagogik/Kindergarten- und Vorschule</value>
+						<value code="ZDB-41-SPO">UTB scholars-e-library / Politikwissenschaft</value>
+						<value code="ZDB-41-SPP">UTB scholars-e-library / Psychologie/Psychologische Beratung</value>
+						<value code="ZDB-41-SPU">UTB scholars-e-library / Pädagogik/ Berufs- und Wirtschaftspädagogik</value>
+						<value code="ZDB-41-SPW">UTB scholars-e-library / Pädagogik/Bildungswesen</value>
+						<value code="ZDB-41-SPY">UTB scholars-e-library / Psychologie</value>
+						<value code="ZDB-41-SRT">UTB scholars-e-library / Recht</value>
+						<value code="ZDB-41-SSA">UTB scholars-e-library / Soziale Arbeit</value>
+						<value code="ZDB-41-SSBH">UTB scholars-e-library / Soziologie/ Backlist Hamburger Edition</value>
+						<value code="ZDB-41-SSE">UTB scholars-e-library / Sprachwissenschaft/Spracherwerb</value>
+						<value code="ZDB-41-SSG">UTB scholars-e-library / Soziologie/Geschlechterforschung</value>
+						<value code="ZDB-41-SSK">UTB scholars-e-library / Schlüsselkompetenzen</value>
+						<value code="ZDB-41-SSP">UTB scholars-e-library / Sonderpädagogik</value>
+                        <value code="ZDB-41-SSR">UTB scholars-e-library / Sprachwissenschaft</value>						
+						<value code="ZDB-41-SSS">UTB scholars-e-library / Soziologie/Soziologische Theorien</value>
+                        <value code="ZDB-41-SSU">UTB scholars-e-library / Sprachwissenschaft/Übersetzungswissenschaft</value>
+						<value code="ZDB-41-SSW">UTB scholars-e-library / Soziologie/Arbeits- und Wirtschaftssoziologie</value>
+						<value code="ZDB-41-SSY">UTB scholars-e-library / Psychotherapie</value>
+						<value code="ZDB-41-SSZ">UTB scholars-e-library / Soziologie</value>
+						<value code="ZDB-41-STH">UTB scholars-e-library / Religion/Theologie</value>
+						<value code="ZDB-41-SWM">UTB scholars-e-library / Wirtschaft und Management</value>
+						<value code="ZDB-41-SWT">UTB scholars-e-library / Wirtschaft</value>
+						<value code="ZDB-41-SWU">UTB scholars-e-library / Wirtschaft/Unternehmenskommunikation</value>
+						<value code="ZDB-41-UTB">utb-studi-e-book</value>
+						<value code="ZDB-41-UTBA">utb-studi-e-book / BWL und VWL</value>
+						<value code="ZDB-41-UTBB">utb-studi-e-book / Naturwissenschaften</value>
+						<value code="ZDB-41-UTBC">utb-studi-e-book / Geowissenschaften</value>
+						<value code="ZDB-41-UTBD">utb-studi-e-book / Geschichte</value>
+						<value code="ZDB-41-UTBE">utb-studi-e-book / Kunst und Kultur</value>
+						<value code="ZDB-41-UTBF">utb-studi-e-book / Literaturwissenschaften</value>
+						<value code="ZDB-41-UTBG">utb-studi-e-book / Medien- und Kommunikationswiss.</value>
+						<value code="ZDB-41-UTBH">utb-studi-e-book / Pädagogik</value>
+						<value code="ZDB-41-UTBI">utb-studi-e-book / Schulpädagogik</value>
+						<value code="ZDB-41-UTBJ">utb-studi-e-book / Philosophie</value>
+						<value code="ZDB-41-UTBK">utb-studi-e-book / Politik</value>
+						<value code="ZDB-41-UTBL">utb-studi-e-book / Psychologie</value>
+						<value code="ZDB-41-UTBM">utb-studi-e-book / Schlüsselkompetenzen</value>
+						<value code="ZDB-41-UTBN">utb-studi-e-book / Soziale Arbeit - Sozialpädagogik</value>
+						<value code="ZDB-41-UTBO">utb-studi-e-book / Soziologie</value>
+						<value code="ZDB-41-UTBOA">UTB / Open Access</value>
+						<value code="ZDB-41-UTBP">utb-studi-e-book / Sprachwissenschaft</value>
+						<value code="ZDB-41-UTBQ">utb-studi-e-book / Theologie und Religion</value>
+						<value code="ZDB-41-UTBR">utb-studi-e-book / Recht</value>
+						<value code="ZDB-41-UTBS">UTB scholars-e-library / Pflege</value>
+						<value code="ZDB-41-UTBT">UTB scholars-e-library / Journalistik</value>
+						<value code="ZDB-41-UTBU">UTB scholars-e-library / Film und Fernsehen</value>
+						<value code="ZDB-41-UTBW">utb-studi-e-book / Mathematik/ Statistik/ Informatik</value>
+						<value code="ZDB-41-UTBX">utb-studi-e-book / Sportwissenschaft</value>
+						<value code="ZDB-41-UTBY">utb-studi-e-book / Technik/Ingenieurwesen</value>
+						<value code="ZDB-42-OAP">oldenbourg-link / Akten auswärtige Politik</value>
+						<value code="ZDB-42-OBL">oldenbourg-link</value>
+						<value code="ZDB-42-OBT">oldenbourg-link / Betriebswirtschaftslehre und Tourismus</value>
+						<value code="ZDB-42-OBW">oldenbourg-link / Betriebswirtschaftslehre</value>
+						<value code="ZDB-42-OEG">oldenbourg-link / Enzyklopädie deutscher Geschichte</value>
+						<value code="ZDB-42-OGE">oldenbourg-link / Geschichte</value>
+						<value code="ZDB-42-OGG">oldenbourg-link / Grundriss der Geschichte</value>
+						<value code="ZDB-42-OIN">oldenbourg-link / Informatik</value>
+						<value code="ZDB-42-OMA">oldenbourg-link / Management</value>
+						<value code="ZDB-42-ON1">oldenbourg-link / Naturwissenschaft und Technik 1</value>
+						<value code="ZDB-42-ON2">oldenbourg-link / Naturwissenschaft und Technik 2</value>
+						<value code="ZDB-42-ON3">oldenbourg-link / Naturwissenschaft und Technik 3</value>
+						<value code="ZDB-42-OPW">oldenbourg-link / Politikwissenschaften</value>
+						<value code="ZDB-42-OVW">oldenbourg-link / Volkswirtschaftslehre</value>
+						<value code="ZDB-42-OWS">oldenbourg-link / Wirtschaftsmathematik und -statistik</value>
+						<value code="ZDB-42-OWW">oldenbourg-link / Wirtschaftswissenschaften</value>
+						<value code="ZDB-42-OWZ">oldenbourg-link / Zeitgeschichte ab 1933</value>
+						<value code="ZDB-42-OZG">oldenbourg-link / Schriftenreihe der Vierteljahreshefte für Zeitgeschichte</value>
+						<value code="ZDB-42-OZW">oldenbourg-link / Sozialwissenschaften</value>
+						<value code="ZDB-44-LIO">Literature online</value>
+						<value code="ZDB-47-CPD">COMPLIANCEdigital-E-Books</value>
+						<value code="ZDB-47-EHP">ESVcampus / Hueber eBooks Philologie</value>
+						<value code="ZDB-47-ESP">Erich Schmidt Verlag E-Books / Sportmanagement</value>
+						<value code="ZDB-47-ESR">Erich Schmidt Verlag E-Books / Recht</value>
+						<value code="ZDB-47-ESV">Erich Schmidt Verlag E-Books</value>
+						<value code="ZDB-48-LNR">Jurion (ehemals LexisNexis / Recht)</value>
+						<value code="ZDB-48-LNW">LexisNexis/Wirtschaft</value>
+						<value code="ZDB-48-WKF">Wolters Kluwer Online-Flat</value>
+						<value code="ZDB-48-WKG">Wolters Kluwer Handels- und Gesellschaftsrecht</value>
+						<value code="ZDB-48-WKH">Wolters Kluwer Hochschulen</value>
+						<value code="ZDB-48-WKI">Wolters Kluwer Heymanns Insolvenzrecht Plus</value>
+						<value code="ZDB-48-WKS">Wolters Kluwer Sozilrecht</value>
+						<value code="ZDB-48-WKZ">Wolters Kluwer BGHZ</value>
+						<value code="ZDB-49-OLR">Olms Online / Reprints</value>
+						<value code="ZDB-50-SPI">SPIE Digital Library</value>
+						<value code="ZDB-51-LIP">Library Information Portal</value>
+						<value code="ZDB-53-ICE">ICE Virtual Library Complete Ebook Collection</value>
+						<value code="ZDB-54-DHE">Duncker &amp; Humblot eLibrary</value>
+						<value code="ZDB-54-DHG">Duncker &amp; Humblot eLibrary / GYIL (German Yearbook of International Law)</value>
+						<value code="ZDB-54-DHH">Duncker &amp; Humblot eLibrary / Paket HIST</value>
+						<value code="ZDB-54-DHR">Duncker &amp; Humblot eLibrary / Paket RECHT</value>
+						<value code="ZDB-54-DHO">Duncker &amp; Humblot eLibrary / Paket SÖR</value>
+						<value code="ZDB-54-DHP">Duncker &amp; Humblot eLibrary / Paket WISO</value>
+						<value code="ZDB-54-DHL">Duncker &amp; Humblot eLibrary / PHIL (Kollektion Philosophie)</value>
+						<value code="ZDB-54-DHS">Duncker &amp; Humblot eLibrary / SCHMITT (Karl-Schmitt-Kollektion)</value>
+						<value code="ZDB-55-BME">Emerald Business, Management and Economics eBook Series Collection</value>
+						<value code="ZDB-55-ELD">Emerald eBooks</value>
+						<value code="ZDB-55-EJC">Emerald Engineering eJournal Collection</value>
+						<value code="ZDB-55-HSO">Emerald Health &amp; Social Care eJournal Collection</value>
+						<value code="ZDB-55-IKM">Emerald Information &amp; Knowledge Management eJournal Collection</value>
+						<value code="ZDB-55-LSE">Emerald Library Studies eJournal Collection</value>
+						<value code="ZDB-55-EM1">Emerald Management 120 eJournal Collection</value>
+						<value code="ZDB-55-EM2">Emerald Management 200 eJournal Collection</value>
+						<value code="ZDB-55-EMP">Emerald Management Premier eJournal Collection</value>
+						<value code="ZDB-55-OLQ">Emerald Operations, Logistics &amp; Quality eJournal Collection</value>
+						<value code="ZDB-55-PRM">Emerald Property Management &amp; Built Environment eJournal Collection</value>
+						<value code="ZDB-55-PPE">Emerald Public Policy &amp; Environmental Management eJournal Collection</value>
+						<value code="ZDB-55-ESS">Emerald Social Sciences eBook Series Collection</value>
+						<value code="ZDB-55-THM">Emerald Tourism &amp; Hospitality Management eJournal Collection</value>
+						<value code="ZDB-55-ETC">Emerald Transport eBooks Collection</value>
 						<value code="ZDB-59-BTZ">Beltz E-Books</value>
 						<value code="ZDB-59-BEZ">Beltz Erziehungswissenschaft</value>
 						<value code="ZDB-59-BPF">Beltz Frühpädagogik</value>
@@ -9676,193 +9935,36 @@
 						<value code="ZDB-59-BSO">Beltz Soziologie</value>
 						<value code="ZDB-59-TCB">Beltz Training, Coaching und Beratung</value>
 						<value code="ZDB-59-BWB">Beltz Weiterbildung</value>
-						<value code="ZDB-266-BWE">Berliner Wissenschafts-Verlag / eLibrary</value>
-						<value code="ZDB-162-ECL">Bloomsbury Collections / 18th- and 19th Century Literature Achive 2006-2012</value>
-						<value code="ZDB-162-ACT">Bloomsbury Collections / Aesthetics and Cultural Theory Archive 1999-2012</value>
-						<value code="ZDB-162-BCC">Bloomsbury Collections / Complete</value>
-						<value code="ZDB-162-CWT">Bloomsbury Collections / Contemprary Writing, Theory and Culture Archive 2006-2012</value>
-						<value code="ZDB-162-BFM">Bloomsbury Collections / Film &amp; Media Studies</value>
-						<value code="ZDB-162-BFS">Bloomsbury Collections / Film Studies Archive 2000-2013</value>
-						<value code="ZDB-162-LCT">Bloomsbury Collections / Literary Criticism Landmark Texts (Bloomsbury Academic Collection series)</value>
-						<value code="ZDB-162-BCL">Bloomsbury Collections / Literary Studies</value>
-						<value code="ZDB-162-BMS">Bloomsbury Collections / Media Studies Archive 2008-2013</value>
-						<value code="ZDB-162-BMA">Bloomsbury Collections / Modernism Archive 2005-2012</value>
-						<value code="ZDB-162-SSL">Bloomsbury Collections / Shakespeare Studies Landmark Texts (Bloomsbury Academic Collections)</value>
-						<value code="ZDB-162-BLO">Bloomsbury open</value>
-						<value code="ZDB-211-BRE">BrepolsOnline Books</value>
-						<value code="ZDB-95-SFB">Brill / Schöningh and Fink Biology E-Books Online</value>
-						<value code="ZDB-95-BAS">Brill Online / Asian Studies</value>
-						<value code="ZDB-95-BOB">Brill Online / Biology</value>
-						<value code="ZDB-95-BCS">Brill Online / Classical Studies</value>
-						<value code="ZDB-95-BOC">Brill Online / Complete</value>
-						<value code="ZDB-95-BOD">Brill Online / Dictionaries</value>
-						<value code="ZDB-95-EHC">Brill Online / European History and Culture</value>
-						<value code="ZDB-95-HRH">Brill Online / Human Rights and Humanitarian Law</value>
-						<value code="ZDB-95-BLL">Brill Online / Language &amp; Linguistics</value>
-						<value code="ZDB-95-LCS">Brill Online / Literature and Cultural Studies</value>
-						<value code="ZDB-95-MIS">Brill Online / Middle East and Islamic Studies E-Books Online</value>
-						<value code="ZDB-95-RST">Brill Online / Religious studies, theology and philosophy</value>
-						<value code="ZDB-95-SFL">Brill Online / Schöningh and Fink Literature and Culture E-Books Online Collection</value>
-						<value code="ZDB-95-SFS">Brill Online / Schöningh and Fink Social Sciences E-Books Online Collection</value>
-						<value code="ZDB-95-SFR">Brill Online / Schöningh, Fink and mentis Religious Studies, Theology and Philosophy E-Books Online</value>
-						<value code="ZDB-272-BSE">BuildingSMART Germany / E-Books</value>
 						<value code="ZDB-73-CVA">campus e-books</value>
 						<value code="ZDB-73-CVB">campus e-books / Business</value>
-						<value code="ZDB-73-CVF">campus e-books / Business Audio</value>
 						<value code="ZDB-73-CVC">campus e-books / Business Backlist</value>
+						<value code="ZDB-73-CVD">campus e-books / WestEnd</value>
+						<value code="ZDB-73-CVE">campus e-books / Soziologie</value>
+						<value code="ZDB-73-CVF">campus e-books / Business Audio</value>
 						<value code="ZDB-73-CVG">campus e-books / Geschichte</value>
 						<value code="ZDB-73-CVH">campus e-books / Geschichte Backlist</value>
 						<value code="ZDB-73-CVK">campus e-books / Karriereratgeber / Besser leben Audio</value>
 						<value code="ZDB-73-CVS">campus e-books / Sozialwissenschaft</value>
 						<value code="ZDB-73-CVT">campus e-books / Sozialwissenschaft Backlist</value>
-						<value code="ZDB-73-CVE">campus e-books / Soziologie</value>
-						<value code="ZDB-73-CVD">campus e-books / WestEnd</value>
-						<value code="ZDB-33-CKB">ClinicalKey / Student Foundation Medicine German Package</value>
-						<value code="ZDB-47-CPD">COMPLIANCEdigital-E-Books</value>
-						<value code="ZDB-161-CSL">Commonwealth Secretariat iLibrary</value>
-						<value code="ZDB-176-DCH">Digital Concert Hall</value>
-						<value code="ZDB-94-OAB">Directory of Open Access Books</value>
-						<value code="ZDB-219-DPV">dpunkt.verlag E-Books</value>
-						<value code="ZDB-219-DAI">dpunkt.verlag / Administration &amp; IT-Sicherheit</value>
-						<value code="ZDB-219-DIB">dpunkt.verlag / IT &amp; Business</value>
-						<value code="ZDB-219-DMT">dpunkt.verlag / Maker-Themen</value>
-						<value code="ZDB-219-DPR">dpunkt.verlag / Programmierung - dpunkt</value>
-						<value code="ZDB-219-DSO">dpunkt.verlag / Softwareentwicklung</value>
-						<value code="ZDB-219-DWE">dpunkt.verlag / Webentwicklung</value>
-						<value code="ZDB-198-DUG">Duke University Press / Gender Studies e-book collection</value>
-						<value code="ZDB-54-DHE">Duncker &amp; Humblot eLibrary</value>
-						<value code="ZDB-54-DHG">Duncker &amp; Humblot eLibrary / GYIL (German Yearbook of International Law)</value>
-						<value code="ZDB-54-DHH">Duncker &amp; Humblot eLibrary / Paket HIST</value>
-						<value code="ZDB-54-DHR">Duncker &amp; Humblot eLibrary / Paket RECHT</value>
-						<value code="ZDB-54-DHO">Duncker &amp; Humblot eLibrary / Paket SÖR</value>
-						<value code="ZDB-54-DHP">Duncker &amp; Humblot eLibrary / Paket WISO</value>
-						<value code="ZDB-54-DHL">Duncker &amp; Humblot eLibrary / PHIL (Kollektion Philosophie)</value>
-						<value code="ZDB-54-DHS">Duncker &amp; Humblot eLibrary / SCHMITT (Karl-Schmitt-Kollektion)</value>
+						<value code="ZDB-74-AKA">akademie-link / Aristoteles</value>
+						<value code="ZDB-74-AKB">akademie-link / Goedeke</value>
+						<value code="ZDB-74-AKC">akademie-link / Heine</value>
+						<value code="ZDB-74-AKD">akademie-link / Mittelalter, Frühe Neuzeit</value>
+						<value code="ZDB-74-AKE">akademie-link / Goethe Briefe 10-2012</value>
+						<value code="ZDB-74-AKF">akademie-link / Kunstgeschichte 10-2012</value>
+						<value code="ZDB-74-AKG">akademie-link / Geschichte</value>
+						<value code="ZDB-74-AKI">akademie-link / Leibniz Philosophische Schriften 10-2012</value>
+						<value code="ZDB-74-AKJ">akademie-link / Schöneberger Repertorium Philosophie Mittelalter 10-2012</value>
+						<value code="ZDB-74-AKK">akademie-link / Klassiker Auslegen</value>
+						<value code="ZDB-74-AKL">akademie-link / Sprach- und Literaturwissenschaften 10-2012</value>
+						<value code="ZDB-74-AKM">akademie-link / Mittelalter Monographie</value>
+						<value code="ZDB-74-AKN">akademie-link / Tusculum Cicero Reden 10-2012</value>
+						<value code="ZDB-74-AKO">akademie-link / Tusculum Plinius Naturkunde 10-2012</value>
+						<value code="ZDB-74-AKP">akademie-link / Philosophie</value>
+						<value code="ZDB-74-AKQ">akademie-link / Mittelalter 10-2012</value>
+						<value code="ZDB-74-AKS">akademie-link / Studienbücher</value>
+						<value code="ZDB-75-TLO">Torrossa / Leo S. Olschki eBooks</value>
 						<value code="ZDB-77-EEC">Edward Elgar Ebook Collection</value>
-						<value code="ZDB-33-EUF">Elsevier / Urban &amp; Fischer</value>
-						<value code="ZDB-33-ABS">Elsevier e-book collection - Agricultural, Biological, and Food Sciences</value>
-						<value code="ZDB-33-BGM">Elsevier e-book collection - Biochemistry, Genetics and Molecular Biology</value>
-						<value code="ZDB-33-BMT">Elsevier e-book collection - Business, Management, Hospitality, and Tourism</value>
-						<value code="ZDB-33-CEN">Elsevier e-book collection - Chemical Engineering</value>
-						<value code="ZDB-33-CHM">Elsevier e-book collection - Chemistry</value>
-						<value code="ZDB-33-COS">Elsevier e-book collection - Computer Science</value>
-						<value code="ZDB-33-EPS">Elsevier e-book collection - Earth &amp; Planetary Sciences</value>
-						<value code="ZDB-33-EGY">Elsevier e-book collection - Energy</value>
-						<value code="ZDB-33-EGE">Elsevier e-book collection - Engineering</value>
-						<value code="ZDB-33-ENV">Elsevier e-book collection - Environmental science</value>
-						<value code="ZDB-33-FIN">Elsevier e-book collection - Finance</value>
-						<value code="ZDB-33-FOR">Elsevier e-book collection - Forensics</value>
-						<value code="ZDB-33-HSC">Elsevier e-book collection - Health Sciences</value>
-						<value code="ZDB-33-IMU">Elsevier e-book collection - Immunology &amp; Microbiology</value>
-						<value code="ZDB-33-MSC">Elsevier e-book collection - Materials Science</value>
-						<value code="ZDB-33-MTC">Elsevier e-book collection - Mathematics</value>
-						<value code="ZDB-33-MTY">Elsevier e-book collection - Media Technology</value>
-						<value code="ZDB-33-MAD">Elsevier e-book collection - Medicine &amp; Dentistry</value>
-						<value code="ZDB-33-NEU">Elsevier e-book collection - Neuroscience</value>
-						<value code="ZDB-33-PTP">Elsevier e-book collection - Pharmacology, Toxicology and Pharmaceutical Science</value>
-						<value code="ZDB-33-PAS">Elsevier e-book collection - Physics &amp; Astronomy</value>
-						<value code="ZDB-33-PCH">Elsevier e-book collection - Psychology</value>
-						<value code="ZDB-33-ESD">Elsevier Online Books on ScienceDirect</value>
-						<value code="ZDB-33-SDR">Elsevier Online Books on ScienceDirect / Reference Works</value>
-						<value code="ZDB-33-GMC">Elsevier ScienceDirect German Medical Collection</value>
-						<value code="ZDB-55-BME">Emerald Business, Management and Economics eBook Series Collection</value>
-						<value code="ZDB-55-ELD">Emerald eBooks</value>
-						<value code="ZDB-55-EJC">Emerald Engineering eJournal Collection</value>
-						<value code="ZDB-55-HSO">Emerald Health &amp; Social Care eJournal Collection</value>
-						<value code="ZDB-55-IKM">Emerald Information &amp; Knowledge Management eJournal Collection</value>
-						<value code="ZDB-55-LSE">Emerald Library Studies eJournal Collection</value>
-						<value code="ZDB-55-EM1">Emerald Management 120 eJournal Collection</value>
-						<value code="ZDB-55-EM2">Emerald Management 200 eJournal Collection</value>
-						<value code="ZDB-55-EMP">Emerald Management Premier eJournal Collection</value>
-						<value code="ZDB-55-OLQ">Emerald Operations, Logistics &amp; Quality eJournal Collection</value>
-						<value code="ZDB-55-PRM">Emerald Property Management &amp; Built Environment eJournal Collection</value>
-						<value code="ZDB-55-PPE">Emerald Public Policy &amp; Environmental Management eJournal Collection</value>
-						<value code="ZDB-55-ESS">Emerald Social Sciences eBook Series Collection</value>
-						<value code="ZDB-55-THM">Emerald Tourism &amp; Hospitality Management eJournal Collection</value>
-						<value code="ZDB-55-ETC">Emerald Transport eBooks Collection</value>
-						<value code="ZDB-147-EMB">EMS E-Books (European Mathematical Society E-Books)</value>
-						<value code="ZDB-268-EGB">Equinox / Gesamt E-Books</value>
-						<value code="ZDB-47-ESV">Erich Schmidt Verlag E-Books</value>
-						<value code="ZDB-47-ESR">Erich Schmidt Verlag E-Books / Recht</value>
-						<value code="ZDB-47-ESP">Erich Schmidt Verlag E-Books / Sportmanagement</value>
-						<value code="ZDB-88-SOP">ESV Modul Sozialrecht Premium powered by juris</value>
-						<value code="ZDB-269-FFD">Filmfriend</value>
-						<value code="ZDB-28-FSM">Florida Scholarship Online / Music</value>
-						<value code="ZDB-28-FOS">Fordham Scholarship Online</value>
-						<value code="ZDB-120-SVG">Franz Steiner Verlag eLibrary / EBooks</value>
-						<value code="ZDB-120-SVB">Franz Steiner Verlag eLibrary / Geisteswissenschaften</value>
-						<value code="ZDB-120-SVA">Franz Steiner Verlag eLibrary / Jahresgesamtpaket</value>
-						<value code="ZDB-210-GSC">GeoScienceWorld eBooks</value>
-						<value code="ZDB-30-PGC">German Literature Collections</value>
-						<value code="ZDB-94-OAB">Directory of Open Access Books</value>
-						<value code="hade">Harri Deutsch</value>
-						<value code="ZDB-178-HEG">hep E-Books</value>
-						<value code="herder">Herder-E-Books</value>
-						<value code="ZDB-157-HFP">Herder / Frühpädagogik, aktuelle Themen</value>
-						<value code="ZDB-157-HPT">Herder / Praktische Theologie</value>
-						<value code="ZDB-157-HPS">Herder / Psychologie</value>
-						<value code="ZDB-157-HSU">Herder / Studienliteratur</value>
-						<value code="ZDB-149-HCB">Herdt Campus eBooks</value>
-						<value code="ZDB-133-HEL">Hirzel eLibrary</value>
-						<value code="ZDB-90-HGE">Hogrefe eLibrary</value>
-						<value code="huguenots">Huguenots-E-Book</value>
-						<value code="ZDB-207-IBV">Iberoamericana Vervuert / eBooks</value>
-						<value code="ZDB-53-ICE">ICE Virtual Library Complete Ebook Collection</value>
-						<value code="ZDB-239-IPG">International Press / Geometry, Topology, Analysis and Theoretical Physics Package</value>
-						<value code="ZDB-239-IPP">International Press / Pure Mathematics Package</value>
-						<value code="ZDB-135-IAL">IOP ebooks (All collections)</value>
-						<value code="ZDB-135-IAS">IOP ebooks / AAS-IOP Astronomy</value>
-						<value code="ZDB-135-ICP">IOP ebooks / Concise physics</value>
-						<value code="ZDB-135-IEP">IOP ebooks / Expanding physics</value>
-						<value code="ZDB-218-IOS">IOS Press Ebooks</value>
-						<value code="ZDB-184-ITO">InTechOpen</value>
-						<value code="ZDB-35-WEL">IEEE-Wiley eBooks Library</value>
-						<value code="ZDB-37-IED">IEEE Computer Society Digital Library</value>
-						<value code="ZDB-37-IEX">IEEE Xplore digital library</value>
-						<value code="ZDB-98-IGB">IGI Global Books</value>
-						<value code="igi global">IGI Global-E-Books</value>
-						<value code="iorm">INFORMS</value>
-						<value code="ZDB-129-JBB">John Benjamin / Bochumer Studien zur Philosphie</value>
-						<value code="ZDB-129-JBC">John Benjamin / Communication studies</value>
-						<value code="ZDB-129-JBE">John Benjamin e-Books</value>
-						<value code="ZDB-129-JBO">John Benjamin Open Access Books</value>
-						<value code="ZDB-39-JBK">JSTOR Books</value>
-						<value code="ZDB-39-JOA">JSTOR Open Access EBooks</value>
-						<value code="ZDB-48-LNR">Jurion (ehemals LexisNexis / Recht)</value>
-						<value code="ZDB-88-LEG">Juris / OVS Module in juris</value>
-						<value code="ZDB-88-JPG">Juris PraxisKommentar SGB - Gesamtausgabe</value>
-						<value code="ZDB-88-JRB">juris Spectrum / Hochschulen</value>
-						<value code="ZDB-88-JSO">juris Staudinger Online</value>
-						<value code="ZDB-88-ZHS">juris Zusatzmodul Hochschulen</value>
-						<value code="juris">Juris-E-Books</value>
-						<value code="ZDB-25-KAG">Karger eBook Archive Collection (German)</value>
-						<value code="ZDB-25-KEN">Karger eBook Archive Collection (Non-Series)</value>
-						<value code="ZDB-25-KAS">Karger eBook Archive Collection (Series)</value>
-						<value code="ZDB-25-KGC">Karger eBook Collection (German)</value>
-						<value code="ZDB-25-KNS">Karger eBook Non-Series Collection</value>
-						<value code="ZDB-25-KSE">Karger eBook Series Collection</value>
-						<value code="ZDB-25-KRG">Karger eBook Collection</value>
-						<value code="ZDB-104-KIT">KIT Monographs and Scientific Reports</value>
-						<value code="ZDB-116-KEZ">Klett-Cotta / Erziehung</value>
-						<value code="ZDB-116-KGL">Klett-Cotta / Gegenwartsliteratur</value>
-						<value code="ZDB-116-KGT">Klett-Cotta / Geschichte</value>
-						<value code="ZDB-116-KGP">Klett-Cotta / Gesellschaft/Politik</value>
-						<value code="ZDB-116-KKJ">Klett-Cotta / Kinder und Jugendliche</value>
-						<value code="ZDB-116-KPF">Klett-Cotta / Psychologie Fachbuch</value>
-						<value code="ZDB-116-KPT">Klett-Cotta / Psychotherapie</value>
-						<value code="ZDB-116-KST">Klett-Cotta / Systemische Therapie</value>
-						<value code="ZDB-116-KTR">Klett-Cotta / Trauma</value>
-						<value code="vkv">Klostermann-E-Books</value>
-						<value code="ZDB-127-KPH">Klostermann-E-Books / Philosophie</value>
-						<value code="ZDB-119-KNU">Knowledge Unlatched</value>
-						<value code="ZDB-119-KH1">Knowledge Unlatched / History 1</value>
-						<value code="ZDB-119-KH2">Knowledge Unlatched / History 2</value>
-						<value code="ZDB-119-KLS">Knowledge Unlatched / Language Science Press</value>
-						<value code="ZDB-119-KURG">Knowledge Unlatched / Routledge Gender Studies</value>
-						<value code="ZDB-119-KTO">Knowledge Unlatched / transcript OPEN library Politikwissenschaft</value>
-						<value code="ZDB-119-KSH">KU select HSS</value>
-						<value code="ZDB-119-KSS">KU select STEM</value>
-						<value code="ZDB-267-KEL">Kogan Page / Ebook Collection Logistics</value>
 						<value code="ZDB-84-KHA">Kohlhammer Altenpflege, Demenz und Palliativpflege</value>
 						<value code="ZDB-84-KOL">Kohlhammer Bildung, Erziehung u. Sozialisation</value>
 						<value code="ZDB-84-KOS">Kohlhammer Biographien</value>
@@ -9916,6 +10018,174 @@
 						<value code="ZDB-84-KOV">Kohlhammer Völkergeschichte</value>
 						<value code="ZDB-84-KHW">Kohlhammer Wirtschaftswissenschaften</value>
 						<value code="ZDB-84-KHQ">Kohlhammer Zivilrecht</value>
+						<value code="ZDB-90-HGE">Hogrefe eLibrary</value>
+						<value code="ZDB-92-LJC">Liverpool University Press / Littman E-Library of Jewish Civilization</value>
+						<value code="ZDB-93-VOS">Verlag Otto Sagner Digital</value>
+						<value code="ZDB-94-OAB">Directory of Open Access Books</value>
+						<value code="ZDB-95-BAS">Brill Online / Asian Studies</value>
+						<value code="ZDB-95-BCS">Brill Online / Classical Studies</value>
+						<value code="ZDB-95-BLL">Brill Online / Language &amp; Linguistics</value>
+						<value code="ZDB-95-BOB">Brill Online / Biology</value>
+						<value code="ZDB-95-BOC">Brill Online / Complete</value>
+						<value code="ZDB-95-BOD">Brill Online / Dictionaries</value>
+						<value code="ZDB-95-EHC">Brill Online / European History and Culture</value>
+						<value code="ZDB-95-HRH">Brill Online / Human Rights and Humanitarian Law</value>
+						<value code="ZDB-95-LCS">Brill Online / Literature and Cultural Studies</value>
+						<value code="ZDB-95-MIS">Brill Online / Middle East and Islamic Studies E-Books Online</value>
+						<value code="ZDB-95-PJA">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Ephraim Deinard (1846-1930)</value>
+						<value code="ZDB-95-PJB">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Hebrew and Judeo Printing in Baghdad</value>
+						<value code="ZDB-95-PJC">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Hebrew Printing in India</value>
+						<value code="ZDB-95-PJD">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Moses Maimonides, unparalleled editions</value>
+						<value code="ZDB-95-PJE">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Israel's Messenger</value>
+						<value code="ZDB-95-PSA">Primary sources / Reformation Studies / Anti-Calvin</value>
+						<value code="ZDB-95-PSC">Primary sources / Reformation Studies / Conrad Gessner's Private Library</value>
+						<value code="ZDB-95-PSH">Primary sources / Reformation Studies / Huguenots</value>
+						<value code="ZDB-95-PSI">Primary sources / Reformation Studies / Italian Reformation, Part 1</value>
+						<value code="ZDB-95-PSR">Primary sources / Reformation Studies / Hungarian Reformation</value>
+						<value code="ZDB-95-RST">Brill Online / Religious studies, theology and philosophy</value>
+						<value code="ZDB-95-SFB">Brill / Schöningh and Fink Biology E-Books Online</value>
+						<value code="ZDB-95-SFL">Brill Online / Schöningh and Fink Literature and Culture E-Books Online Collection</value>
+						<value code="ZDB-95-SFR">Brill Online / Schöningh, Fink and mentis Religious Studies, Theology and Philosophy E-Books Online</value>
+						<value code="ZDB-95-SFS">Brill Online / Schöningh and Fink Social Sciences E-Books Online Collection</value>
+						<value code="ZDB-95-WFB">Wilhelm Fink eBooks</value>
+						<value code="ZDB-96-SKC">Sage knowledge / Complete</value>
+						<value code="ZDB-98-IGB">IGI Global Books</value>
+						<value code="ZDB-168-MAM">Access Medicine / EBooks</value>
+						<value code="ZDB-275-AIPB">AIP / Gesamt E-Books</value>
+						<value code="ZDB-215-ALN">Aisthesis / Literaturwissenschaften Novitäten</value>
+						<value code="ZDB-215-ATH">Aisthesis / Theater</value>
+						<value code="ZDB-215-AWR1">Aisthesis / Zur Literatur der Weimarer Republik 1</value>
+						<value code="ZDB-203-AHO">Artech House eBooks</value>
+						<value code="ZDB-138-AMA">AMS ebooks / Memoirs of the American Mathematical Society</value>
+						<value code="ZDB-138-AMB">AMS ebooks / Fields Institute Monographs</value>
+						<value code="ZDB-138-AMD">AMS ebooks / Fields Institute Communications</value>
+						<value code="ZDB-138-AME">AMS ebooks / AMS Chelsea Publishing</value>
+						<value code="ZDB-138-AMF">AMS ebooks / Translations of Mathematical Monograph</value>
+						<value code="ZDB-138-AMH">AMS ebooks / History of Mathematics</value>
+						<value code="ZDB-138-AML">AMS ebooks / Student mathematical library</value>
+						<value code="ZDB-138-AMM">AMS ebooks / Contemporary Mathematics</value>
+						<value code="ZDB-138-AMN">AMS ebooks / Courant Lecture Notes</value>
+						<value code="ZDB-138-AMQ">AMS ebooks / Colloquium Publications</value>
+						<value code="ZDB-138-AMR">AMS ebooks / Graduate Studies in Mathematics</value>
+						<value code="ZDB-138-AMS">AMS ebooks / Mathematical Surveys and Monographs</value>
+						<value code="ZDB-138-AMU">AMS ebooks / University Lecture Series</value>
+						<value code="ZDB-265-AFC">AVA Library / Film collection</value>
+						<value code="ZDB-128-BJO">Beck eLibrary / C.H. Beck Jura Öffentliches Recht</value>
+						<value code="ZDB-128-BJS">Beck eLibrary / C.H. Beck Jura Strafrecht</value>
+						<value code="ZDB-128-BJZ1">Beck eLibrary / C.H. Beck Jura Zivilrecht I</value>
+						<value code="ZDB-128-BJZ2">Beck eLibrary / C.H. Beck Jura Zivilrecht II</value>
+						<value code="ZDB-128-UFI">Beck eLibrary / UVK Finance</value>
+						<value code="ZDB-128-UMM">Beck eLibrary / UVK Management &amp; Marketing</value>
+						<value code="ZDB-128-URC">Beck eLibrary / UVK Rechnungswesen &amp; Controlling</value>
+						<value code="ZDB-128-UVK">Beck eLibrary / UVK Wirtschaft</value>
+						<value code="ZDB-128-UWW">Beck eLibrary / UVK Wirtschaftswissenschaften</value>
+						<value code="ZDB-128-VAB">Beck eLibrary / Vahlen Allgemeine Betriebswirtschaftslehre</value>
+						<value code="ZDB-128-VBB">Beck eLibrary / Vahlen Buchführung, Bilanz, Steuern</value>
+						<value code="ZDB-128-VIF">Beck eLibrary / Vahlen Investition und Finanzierung</value>
+						<value code="ZDB-128-VJR">Beck eLibrary / Vahlen Jura Öffentliches Recht</value>
+						<value code="ZDB-128-JUR">Beck eLibrary / Vahlen Jura Referendariat</value>
+						<value code="ZDB-128-VEL">Beck eLibrary</value>
+						<value code="ZDB-128-VJS">Beck eLibrary / Vahlen Jura Strafrecht</value>
+						<value code="ZDB-128-VKC">Beck eLibrary / Vahlen Kostenrechnung und Controlling</value>
+						<value code="ZDB-128-VMH">Beck eLibrary / Vahlen Marketing und Handel</value>
+						<value code="ZDB-128-VMW">Beck eLibrary / Vahlen Mathematik für Wirtschaftswissenschaftler</value>
+						<value code="ZDB-128-VPM">Beck eLibrary / Vahlen Personalmanagement</value>
+						<value code="ZDB-128-VPL">Beck eLibrary / Vahlen Produktion und Logistik</value>
+						<value code="ZDB-128-VRW">Beck eLibrary / Vahlen Recht für Wirtschaftswissenschaftler</value>
+						<value code="ZDB-128-VSO">Beck eLibrary / Vahlen Strafrecht/Öffentliches Recht</value>
+						<value code="ZDB-128-VUM">Beck eLibrary / Vahlen Unternehmensführung, Management, Organisation</value>
+						<value code="ZDB-128-VVW">Beck eLibrary / Vahlen Volkswirtschaftslehre</value>
+						<value code="ZDB-128-ZR1">Beck eLibrary / Vahlen Zivilrecht I</value>
+						<value code="ZDB-128-ZR2">Beck eLibrary / Vahlen Zivilrecht II</value>
+						<value code="ZDB-128-VVA">Beck eLibrary / Versus Allgemeine Betriebswirtschaftslehre</value>
+						<value code="ZDB-128-VVK">Beck eLibrary / Versus kompakt BWL</value>
+						<value code="ZDB-128-VVM">Beck eLibrary / Versus kompakt Management</value>
+						<value code="ZDB-266-BWE">Berliner Wissenschafts-Verlag / eLibrary</value>
+						<value code="ZDB-161-CSL">Commonwealth Secretariat iLibrary</value>
+						<value code="ZDB-162-ACT">Bloomsbury Collections / Aesthetics and Cultural Theory Archive 1999-2012</value>
+						<value code="ZDB-162-BCC">Bloomsbury Collections / Complete</value>
+						<value code="ZDB-162-BCL">Bloomsbury Collections / Literary Studies</value>
+						<value code="ZDB-162-BFM">Bloomsbury Collections / Film &amp; Media Studies</value>
+						<value code="ZDB-162-BFS">Bloomsbury Collections / Film Studies Archive 2000-2013</value>
+						<value code="ZDB-162-BLO">Bloomsbury open</value>
+						<value code="ZDB-162-BMA">Bloomsbury Collections / Modernism Archive 2005-2012</value>
+						<value code="ZDB-162-BMS">Bloomsbury Collections / Media Studies Archive 2008-2013</value>
+						<value code="ZDB-162-CWT">Bloomsbury Collections / Contemprary Writing, Theory and Culture Archive 2006-2012</value>
+						<value code="ZDB-162-ECL">Bloomsbury Collections / 18th- and 19th Century Literature Achive 2006-2012</value>
+						<value code="ZDB-162-LCT">Bloomsbury Collections / Literary Criticism Landmark Texts (Bloomsbury Academic Collection series)</value>
+						<value code="ZDB-162-PHY">Bloomsbury Collections / Philosophy</value>
+						<value code="ZDB-162-SSL">Bloomsbury Collections / Shakespeare Studies Landmark Texts (Bloomsbury Academic Collections)</value>
+						<value code="ZDB-211-BRE">BrepolsOnline Books</value>
+						<value code="ZDB-272-BSE">BuildingSMART Germany / E-Books</value>
+						<value code="ZDB-176-DCH">Digital Concert Hall</value>
+						<value code="ZDB-219-DPV">dpunkt.verlag E-Books</value>
+						<value code="ZDB-219-DAI">dpunkt.verlag / Administration &amp; IT-Sicherheit</value>
+						<value code="ZDB-219-DIB">dpunkt.verlag / IT &amp; Business</value>
+						<value code="ZDB-219-DMT">dpunkt.verlag / Maker-Themen</value>
+						<value code="ZDB-219-DPR">dpunkt.verlag / Programmierung - dpunkt</value>
+						<value code="ZDB-219-DSO">dpunkt.verlag / Softwareentwicklung</value>
+						<value code="ZDB-219-DWE">dpunkt.verlag / Webentwicklung</value>
+						<value code="ZDB-198-DUG">Duke University Press / Gender Studies e-book collection</value>
+						<value code="ZDB-147-EMB">EMS E-Books (European Mathematical Society E-Books)</value>
+						<value code="ZDB-268-EGB">Equinox / Gesamt E-Books</value>
+						<value code="ZDB-88-SOP">ESV Modul Sozialrecht Premium powered by juris</value>
+						<value code="ZDB-269-FFD">Filmfriend</value>
+						<value code="ZDB-120-SVG">Franz Steiner Verlag eLibrary / EBooks</value>
+						<value code="ZDB-120-SVB">Franz Steiner Verlag eLibrary / Geisteswissenschaften</value>
+						<value code="ZDB-120-SVA">Franz Steiner Verlag eLibrary / Jahresgesamtpaket</value>
+						<value code="ZDB-210-GSC">GeoScienceWorld eBooks</value>
+						<value code="hade">Harri Deutsch</value>
+						<value code="ZDB-178-HEG">hep E-Books</value>
+						<value code="herder">Herder-E-Books</value>
+						<value code="ZDB-157-HFP">Herder / Frühpädagogik, aktuelle Themen</value>
+						<value code="ZDB-157-HPT">Herder / Praktische Theologie</value>
+						<value code="ZDB-157-HPS">Herder / Psychologie</value>
+						<value code="ZDB-157-HSU">Herder / Studienliteratur</value>
+						<value code="ZDB-149-HCB">Herdt Campus eBooks</value>
+						<value code="ZDB-133-HEL">Hirzel eLibrary</value>
+						<value code="huguenots">Huguenots-E-Book</value>
+						<value code="ZDB-207-IBV">Iberoamericana Vervuert / eBooks</value>
+						<value code="ZDB-239-IPG">International Press / Geometry, Topology, Analysis and Theoretical Physics Package</value>
+						<value code="ZDB-239-IPP">International Press / Pure Mathematics Package</value>
+						<value code="ZDB-135-IAL">IOP ebooks (All collections)</value>
+						<value code="ZDB-135-IAS">IOP ebooks / AAS-IOP Astronomy</value>
+						<value code="ZDB-135-ICP">IOP ebooks / Concise physics</value>
+						<value code="ZDB-135-IEP">IOP ebooks / Expanding physics</value>
+						<value code="ZDB-218-IOS">IOS Press Ebooks</value>
+						<value code="ZDB-184-ITO">InTechOpen</value>
+						<value code="igi global">IGI Global-E-Books</value>
+						<value code="iorm">INFORMS</value>
+						<value code="ZDB-129-JBB">John Benjamin / Bochumer Studien zur Philosphie</value>
+						<value code="ZDB-129-JBC">John Benjamin / Communication studies</value>
+						<value code="ZDB-129-JBE">John Benjamin e-Books</value>
+						<value code="ZDB-129-JBO">John Benjamin Open Access Books</value>
+						<value code="ZDB-88-LEG">Juris / OVS Module in juris</value>
+						<value code="ZDB-88-JPG">Juris PraxisKommentar SGB - Gesamtausgabe</value>
+						<value code="ZDB-88-JRB">juris Spectrum / Hochschulen</value>
+						<value code="ZDB-88-JSO">juris Staudinger Online</value>
+						<value code="ZDB-88-ZHS">juris Zusatzmodul Hochschulen</value>
+						<value code="juris">Juris-E-Books</value>
+						<value code="ZDB-104-KIT">KIT Monographs and Scientific Reports</value>
+						<value code="ZDB-116-KEZ">Klett-Cotta / Erziehung</value>
+						<value code="ZDB-116-KGL">Klett-Cotta / Gegenwartsliteratur</value>
+						<value code="ZDB-116-KGT">Klett-Cotta / Geschichte</value>
+						<value code="ZDB-116-KGP">Klett-Cotta / Gesellschaft/Politik</value>
+						<value code="ZDB-116-KKJ">Klett-Cotta / Kinder und Jugendliche</value>
+						<value code="ZDB-116-KPF">Klett-Cotta / Psychologie Fachbuch</value>
+						<value code="ZDB-116-KPT">Klett-Cotta / Psychotherapie</value>
+						<value code="ZDB-116-KST">Klett-Cotta / Systemische Therapie</value>
+						<value code="ZDB-116-KTR">Klett-Cotta / Trauma</value>
+						<value code="vkv">Klostermann-E-Books</value>
+						<value code="ZDB-127-KPH">Klostermann-E-Books / Philosophie</value>
+						<value code="ZDB-119-KNU">Knowledge Unlatched</value>
+						<value code="ZDB-119-KH1">Knowledge Unlatched / History 1</value>
+						<value code="ZDB-119-KH2">Knowledge Unlatched / History 2</value>
+						<value code="ZDB-119-KLS">Knowledge Unlatched / Language Science Press</value>
+						<value code="ZDB-119-KURG">Knowledge Unlatched / Routledge Gender Studies</value>
+						<value code="ZDB-119-KTO">Knowledge Unlatched / transcript OPEN library Politikwissenschaft</value>
+						<value code="ZDB-119-KSH">KU select HSS</value>
+						<value code="ZDB-119-KSS">KU select STEM</value>
+						<value code="ZDB-267-KEL">Kogan Page / Ebook Collection Logistics</value>
 						<value code="ZDB-119-KSH">KU select HSS</value>
 						<value code="ZDB-109-LAP">Lambertus / Alter und Pflege</value>
 						<value code="ZDB-109-LCE">Lambertus / Caritas, Ethik und Theologie</value>
@@ -9940,8 +10210,6 @@
 						<value code="ZDB-109-LTS">Lambertus / Theorie der Sozialen Arbeit</value>
 						<value code="ZDB-114-LAC">Peter Lang eBooks / Complete</value>
 						<value code="learntechlib">LearnTechLib-E-Books</value>
-						<value code="ZDB-48-LNR">LexisNexis/Recht</value>
-						<value code="ZDB-48-LNW">LexisNexis/Wirtschaft</value>
 						<value code="ZDB-139-LCB">Loeb Classical Library</value>
 						<value code="Logos">Logos Verlag Berlin</value>
 						<value code="ZDB-171-LAK">Logos / Akustik</value>
@@ -9977,9 +10245,6 @@
 						<value code="melanchthon">Melanchthon-E-Books</value>
 						<value code="ZDB-205-MET">Metropois eBooks</value>
 						<value code="minnso">University of Minnesota Press / Minnesota Scholarship Online</value>
-						<value code="ZDB-28-MSM">Minnesota Scholarship Online / Music</value>
-						<value code="ZDB-28-MMU">Mississippi Scholarship Online / Music</value>
-						<value code="ZDB-28-MPM">MIT Press Scholarship Online / Mathematics</value>
 						<value code="ZDB-197-MSE">Mohr Siebeck eBooks</value>
 						<value code="ZDB-197-MAW">Mohr Siebeck / Altertumswissenschaft</value>
 						<value code="ZDB-197-MWE">Mohr Siebeck / Max Weber Gesamtausgabe</value>
@@ -10007,81 +10272,23 @@
 						<value code="ZDB-71-NAR">Narr-E-Books</value>
 						<value code="ZDB-71-NVL">Narr-E-Books / Literaturwissenschaft</value>
 						<value code="ZDB-165-NOC">Nordic iLibrary</value>
-						<value code="ZDB-28-NCM">North Carolina Scholarship Online / Music</value>
 						<value code="ZDB-245-NWSG">NWB Campus Library / Steuerrecht - Gesamt</value>
 						<value code="ZDB-245-NWSL">NWB Campus Library / Steuerrecht - Lehrbücher</value>
 						<value code="ZDB-245-NPR">NWB PRO</value>
 						<value code="ZDB-245-NPM">NWB PRO max</value>
 						<value code="ZDB-245-NPU">NWB PRO plus</value>
-						<value code="ZDB-28-NYU">NYU Scholarship Online</value>
 						<value code="ZDB-126-OKE">oekom verlag / Konsum und Ernährung</value>
 						<value code="ZDB-126-ONW">oekom verlag / Nachhaltiges Wirtschaften</value>
 						<value code="ZDB-126-OVD">oekom verlag / Vordenker</value>
-								
-						<value code="ZDB-42-OBL">oldenbourg-link</value>
-						<value code="ZDB-42-OAP">oldenbourg-link / Akten auswärtige Politik</value>
-						<value code="ZDB-42-OBT">oldenbourg-link / Betriebswirtschaftslehre und Tourismus</value>
-						<value code="ZDB-42-OBW">oldenbourg-link / Betriebswirtschaftslehre</value>
-						<value code="ZDB-42-OEG">oldenbourg-link / Enzyklopädie deutscher Geschichte</value>
-						<value code="ZDB-42-OGE">oldenbourg-link / Geschichte</value>
-						<value code="ZDB-42-OGG">oldenbourg-link / Grundriss der Geschichte</value>
-						<value code="ZDB-42-OIN">oldenbourg-link / Informatik</value>
-						<value code="ZDB-42-OMA">oldenbourg-link / Management</value>
-						<value code="ZDB-42-ON1">oldenbourg-link / Naturwissenschaft und Technik 1</value>
-						<value code="ZDB-42-ON2">oldenbourg-link / Naturwissenschaft und Technik 2</value>
-						<value code="ZDB-42-ON3">oldenbourg-link / Naturwissenschaft und Technik 3</value>
-						<value code="ZDB-42-OPW">oldenbourg-link / Politikwissenschaften</value>
-						<value code="ZDB-42-OZW">oldenbourg-link / Sozialwissenschaften</value>
-						<value code="ZDB-42-OZG">oldenbourg-link / Schriftenreihe der Vierteljahreshefte für Zeitgeschichte</value>
-						<value code="ZDB-42-OVW">oldenbourg-link / Volkswirtschaftslehre</value>
-						<value code="ZDB-42-OWS">oldenbourg-link / Wirtschaftsmathematik und -statistik</value>
-						<value code="ZDB-42-OWW">oldenbourg-link / Wirtschaftswissenschaften</value>
-						<value code="ZDB-42-OWZ">oldenbourg-link / Zeitgeschichte ab 1933</value>
 						<value code="ZDB-174-OHU">Open Humanities Press / Books</value>
 						<value code="obp">OpenBook Publishers-E-Books</value>
-						<value code="ZDB-30-ORH">O'Reilly Higher Education</value>
 						<value code="ZDB-219-OAG">O'Reilly / Agil</value>
 						<value code="ZDB-219-ODS">O'Reilly / Data Science &amp; Deep Learning</value>
 						<value code="ZDB-219-ODV">O'Reilly / Divers</value>
 						<value code="ZDB-219-OMT">O'Reilly / Microsoft-Themen</value>
 						<value code="ZDB-219-ORG">O'Reilly / Programmierung</value>
 						<value code="ZDB-219-OWD">O'Reilly / Webprogrammierung/-Design</value>
-						<value code="ZDB-93-VOS">Verlag Otto Sagner Digital</value>
 						<value code="oso">Otto Schmidt online</value>
-						<value code="ZDB-28-OCP">Oxford Clinical Psychology</value>
-						<value code="ZDB-28-DRS">Oxford Digital Reference Shelf</value>
-						<value code="ZDB-28-OHO">Oxford Handbooks Online</value>
-						<value code="ZDB-28-OHB">Oxford Handbooks Online - Business and Management</value>
-						<value code="ZDB-28-OCS">Oxford Handbooks Online / Classical Studies</value>
-						<value code="ZDB-28-OEF">Oxford Handbooks Online - Economics &amp; Finance</value>
-						<value code="ZDB-28-OHH">Oxford Handbooks Online - History</value>
-						<value code="ZDB-28-OLA">Oxford Handbooks Online - Law</value>
-						<value code="ZDB-28-OHL">Oxford Handbooks Online - Linguistics</value>
-						<value code="ZDB-28-OHI">Oxford Handbooks Online - Literature</value>
-						<value code="ZDB-28-OMU">Oxford Handbooks Online / Music</value>
-						<value code="ZDB-28-OHP">Oxford Handbooks Online - Philosophy</value>
-						<value code="ZDB-28-OPC">Oxford Handbooks Online - Political Science</value>
-						<value code="ZDB-28-OHY">Oxford Handbooks Online - Psychology</value>
-						<value code="ZDB-28-OHR">Oxford Handbooks Online - Religion</value>
-						<value code="ZDB-28-OAR">Oxford Handbooks Online / Archaelogy</value>
-						<value code="ZDB-28-OCR">Oxford Handbooks Online / Criminology</value>
-						<value code="ZDB-28-OME">Oxford Medicine Online</value>
-						<value code="ZDB-28-ORC">Oxford Quick Reference</value>
-						<value code="ZDB-28-OSB">Oxford Scholarship Online / Biology</value>
-						<value code="ZDB-28-OSA">Oxford Scholarship Online / Business and Management</value>
-						<value code="ZDB-28-OSD">Oxford Scholarship Online - Complete</value>
-						<value code="ZDB-28-OSE">Oxford Scholarship Online / Economics and Finance</value>
-						<value code="ZDB-28-OFT">Oxford Scholarship Online - Film, Television and Radio</value>
-						<value code="ZDB-28-OSC">Oxford Scholarship Online - Linguistics</value>
-						<value code="ZDB-28-OSI">Oxford Scholarship Online - Literature</value>
-						<value code="ZDB-28-OSK">Oxford Scholarship Online - Mathematics</value>
-						<value code="ZDB-28-OSN">Oxford Scholarship Online - Neuroscience</value>
-						<value code="ZDB-28-OSF">Oxford Scholarship Online - Palliative Care</value>
-						<value code="ZDB-28-OSP">Oxford Scholarship Online - Philosophy </value>
-						<value code="ZDB-28-OSY">Oxford Scholarship Online - Physics</value>
-						<value code="ZDB-28-OST">Oxford Scholarship Online - Political Science</value>
-						<value code="ZDB-28-OSG">Oxford Scholarship Online - Psychology</value>
-						<value code="ZDB-28-OSS">Oxford Scholarship Online - Sociology</value>
 						<value code="ZDB-221-PCL">Packt Cloud</value>
 						<value code="ZDB-221-PDA">Packt Data</value>
 						<value code="ZDB-221-PPR">Packt Programming</value>
@@ -10094,32 +10301,11 @@
 						<value code="ZDB-114-LAR">Peter Lang eBooks / Rechtswissenschaft</value>
 						<value code="ZDB-114-VOS">Peter Lang eBooks / Slavistik online</value>
 						<value code="philon">Philosophy Online-E-Books</value>
-						<value code="ZDB-95-PJA">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Ephraim Deinard (1846-1930)</value>
-						<value code="ZDB-95-PJB">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Hebrew and Judeo Printing in Baghdad</value>
-						<value code="ZDB-95-PJC">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Hebrew Printing in India</value>
-						<value code="ZDB-95-PJD">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Moses Maimonides, unparalleled editions</value>
-						<value code="ZDB-95-PJE">Primary sources / Jewish Stud., Middle East., Islamic Stud. / Israel's Messenger</value>
-						<value code="ZDB-95-PSA">Primary sources / Reformation Studies / Anti-Calvin</value>
-						<value code="ZDB-95-PSC">Primary sources / Reformation Studies / Conrad Gessner's Private Library</value>
-						<value code="ZDB-95-PSH">Primary sources / Reformation Studies / Huguenots</value>
-						<value code="ZDB-95-PSI">Primary sources / Reformation Studies / Italian Reformation, Part 1</value>
-						<value code="ZDB-95-PSR">Primary sources / Reformation Studies / Hungarian Reformation</value>
-						<value code="ZDB-23-PST">Princeton Annals of Mathematics Studies</value>
-						<value code="ZDB-23-PMB">Princeton Annals of Mathematics Backlist eBook Package</value>
-						<value code="ZDB-23-PMN">Princeton Mathematical Notes</value>
-						<value code="ZDB-23-PMS">Princeton Mathematical Series</value>
-						<value code="ZDB-23-PAM">Princeton Series in Applied Mathematics</value>
-						<value code="ZDB-30-PAD">ProQuest Academic Complete</value>
-						<value code="ZDB-30-PBE">ProQuest Business Ebook Subscription</value>
-						<value code="ZDB-30-PQE">ProQuest Ebook Central</value>
-						<value code="ZDB-8-APN">PsycBOOKS (via APA PsycNET)</value>
 						<value code="ZDB-202-PSG">Psychosozial-Verlag / Gesamt</value>
 						<value code="ZDB-202-PVP">Psychosozial-Verlag / Pädagogik</value>
 						<value code="ZDB-202-PSP">Psychosozial-Verlag / Psychologie</value>
 						<value code="ZDB-202-PPT">Psychosozial-Verlag / Psychotherapie</value>
 						<value code="ZDB-256-RHV">Rainer Hampp Verlag e-books</value>
-						<value code="ZDB-32-STB">Safari Tech Books Online</value>
-						<value code="ZDB-96-SKC">Sage knowledge / Complete</value>
 						<value code="ZDB-112-SRF">Schattauer E-Medien / Kardio Vascular</value>
 						<value code="ZDB-112-SRK">Schattauer E-Medien / Orthopädie, Sportmedizin</value>
 						<value code="ZDB-122-SHP">Schäffer-Poeschel E-Books</value>
@@ -10154,25 +10340,6 @@
 						<value code="ZDB-181-TWW">Tectum eLibrary / Wirtschaftswissenschaften</value>
 						<value code="kenso">The University Press of Kentucky / Kentucky Scholarship Online</value>
 						<value code="uncso">The University of North Carolina Press / North Carolina Scholarship Online</value>
-						<value code="ZDB-34-CNE">Thieme CNE</value>
-						<value code="ZDB-34-TKPA">Thieme / Anästhesie, Intensiv- und Notfallmedizin</value>
-						<value code="ZDB-34-TKPC">Thieme / Chirurgie, Orthopädie, Unfallchirurgie</value>
-						<value code="ZDB-34-TKPD">Thieme / Dermatologie</value>
-						<value code="ZDB-34-TGK">Thieme / Gesundheitsmanagement, Klinikmanagement, Gesundheitswirtschaft</value>
-						<value code="ZDB-34-TKPG">Thieme / Gynäkologie</value>
-						<value code="ZDB-34-TKPH">Thieme / HNO</value>
-						<value code="ZDB-34-TKPI">Thieme / Innere Medizin</value>
-						<value code="ZDB-34-THLO">Thieme / Logopädie</value>
-						<value code="ZDB-34-TKPM">Thieme / Mikrobiologie, Hygiene + übergreifende Titel</value>
-						<value code="ZDB-34-TKPN">Thieme / Neurologie</value>
-						<value code="ZDB-34-TKPO">Thieme / Ophthalmologie</value>
-						<value code="ZDB-34-TKPP">Thieme / Pädiatrie</value>
-						<value code="ZDB-34-THPP">Thieme / Psychologie, Psychotherapiee</value>
-						<value code="ZDB-34-THP">Thieme / Psychiatrie</value>
-						<value code="ZDB-34-TKPR">Thieme / Radiologie</value>
-						<value code="ZDB-34-TKPU">Thieme / Urologie</value>
-						<value code="ZDB-34-TKPZ">Thieme / Zahnmedizin</value>
-						<value code="ZDB-34-THI">Thieme-E-Books</value>
 						<value code="thieref">Thieme eRef</value>
 						<value code="ZDB-125-TAG">transcript Verlag / Aging - Disability - Fashion - Human Animal - Postcolonial Studies</value>
 						<value code="ZDB-125-TEK">transcript Verlag / Ethnologie und Kulturanthropologie</value>
@@ -10204,73 +10371,6 @@
 						<value code="ZDB-164-UNL">UN iLibrary</value>
 						<value code="chiso">University of Chicago Press / Chicago Scholarship Online</value>
 						<value code="misso">University Press Scholarship Online / Mississippi Scholarship Online</value>
-						<value code="ZDB-41-SEL">UTB scholars-e-library</value>
-						<value code="ZDB-41-SNG">UTB scholars-e-library / Anglistik</value>
-						<value code="ZDB-41-SFD">UTB scholars-e-library / Fachdidaktik Religion</value>
-						<value code="ZDB-41-UTBU">UTB scholars-e-library / Film und Fernsehen</value>
-						<value code="ZDB-41-SGM">UTB scholars-e-library / Germanistik</value>
-						<value code="ZDB-41-SGS">UTB scholars-e-library / Geschichte</value>
-						<value code="ZDB-41-SGK">UTB scholars-e-library / Geschichte/Kulturgeschichte</value>
-						<value code="ZDB-41-UTBT">UTB scholars-e-library / Journalistik</value>
-						<value code="ZDB-41-SKP">UTB scholars-e-library / Klassische Philologie</value>
-						<value code="ZDB-41-SKM">UTB scholars-e-library / Kunst/Musik/Theater</value>
-						<value code="ZDB-41-SLI">UTB scholars-e-library / Literaturwissenschaft</value>
-						<value code="ZDB-41-SMK">UTB scholars-e-library / Medien &amp; Kommunikation</value>
-						<value code="ZDB-41-SML">scholars-e-library / Medizin und Pflege</value>
-						<value code="ZDB-41-SMZ">UTB scholars-e-library / Medizin</value>
-						<value code="ZDB-41-SNI">UTB scholars-e-library / Naturwissenschaften/Technik/Informatik</value>
-						<value code="ZDB-41-SPA">UTB scholars-e-library / Pädagogik (allgemein)</value>
-						<value code="ZDB-41-SPW">UTB scholars-e-library / Pädagogik/Bildungswesen</value>
-						<value code="ZDB-41-SPG">UTB scholars-e-library / Pädagogik/Genderforschung</value>
-						<value code="ZDB-41-SPK">UTB scholars-e-library / Pädagogik/Kindergarten- und Vorschule</value>
-						<value code="ZDB-41-UTBS">UTB scholars-e-library / Pflege</value>
-						<value code="ZDB-41-SHO">UTB scholars-e-library / Philosophie</value>
-						<value code="ZDB-41-SPO">UTB scholars-e-library / Politikwissenschaft</value>
-						<value code="ZDB-41-SPY">UTB scholars-e-library / Psychologie</value>
-						<value code="ZDB-41-SPP">UTB scholars-e-library / Psychologie/Psychologische Beratung</value>
-						<value code="ZDB-41-SBC">UTB scholars-e-library / Psychologische Beratung &amp; Coaching</value>
-						<value code="ZDB-41-SSY">UTB scholars-e-library / Psychotherapie</value>
-						<value code="ZDB-41-SRT">UTB scholars-e-library / Recht</value>
-						<value code="ZDB-41-STH">UTB scholars-e-library / Religion/Theologie</value>
-						<value code="ZDB-41-SOM">UTB scholars-e-library / Romanistik</value>
-						<value code="ZDB-41-SSK">UTB scholars-e-library / Schlüsselkompetenzen</value>
-						<value code="ZDB-41-SIK">UTB scholars-e-library / Schulpädagogik</value>
-						<value code="ZDB-41-SCG">UTB scholars-e-library / Schulpädagogik/Grundschule</value>
-						<value code="ZDB-41-SCT">UTB scholars-e-library / Schulpädagogik/Sekundarstufe</value>
-						<value code="ZDB-41-SSP">UTB scholars-e-library / Sonderpädagogik</value>
-						<value code="ZDB-41-SSA">UTB scholars-e-library / Soziale Arbeit</value>
-						<value code="ZDB-41-SSZ">UTB scholars-e-library / Soziologie</value>
-						<value code="ZDB-41-SSW">UTB scholars-e-library / Soziologie/Arbeits- und Wirtschaftssoziologie</value>
-						<value code="ZDB-41-SSG">UTB scholars-e-library / Soziologie/Geschlechterforschung</value>
-						<value code="ZDB-41-SSS">UTB scholars-e-library / Soziologie/Soziologische Theorien</value>
-						<value code="ZDB-41-SSR">UTB scholars-e-library / Sprachwissenschaft</value>
-						<value code="ZDB-41-SSE">UTB scholars-e-library / Sprachwissenschaft/Spracherwerb</value>
-						<value code="ZDB-41-SSU">UTB scholars-e-library / Sprachwissenschaft/Übersetzungswissenschaft</value>
-						<value code="ZDB-41-SWT">UTB scholars-e-library / Wirtschaft</value>
-						<value code="ZDB-41-SWM">UTB scholars-e-library / Wirtschaft und Management</value>
-						<value code="ZDB-41-SWU">UTB scholars-e-library / Wirtschaft/Unternehmenskommunikation</value>
-						<value code="ZDB-41-UTB">utb-studi-e-book</value>
-						<value code="ZDB-41-UTBA">utb-studi-e-book / BWL und VWL</value>
-						<value code="ZDB-41-UTBB">utb-studi-e-book / Naturwissenschaften</value>
-						<value code="ZDB-41-UTBC">utb-studi-e-book / Geowissenschaften</value>
-						<value code="ZDB-41-UTBD">utb-studi-e-book / Geschichte</value>
-						<value code="ZDB-41-UTBE">utb-studi-e-book / Kunst und Kultur</value>
-						<value code="ZDB-41-UTBF">utb-studi-e-book / Literaturwissenschaften</value>
-						<value code="ZDB-41-UTBG">utb-studi-e-book / Medien- und Kommunikationswiss.</value>
-						<value code="ZDB-41-UTBH">utb-studi-e-book / Pädagogik</value>
-						<value code="ZDB-41-UTBI">utb-studi-e-book / Schulpädagogik</value>
-						<value code="ZDB-41-UTBJ">utb-studi-e-book / Philosophie</value>
-						<value code="ZDB-41-UTBK">utb-studi-e-book / Politik</value>
-						<value code="ZDB-41-UTBL">utb-studi-e-book / Psychologie</value>
-						<value code="ZDB-41-UTBM">utb-studi-e-book / Schlüsselkompetenzen</value>
-						<value code="ZDB-41-UTBN">utb-studi-e-book / Soziale Arbeit - Sozialpädagogik</value>
-						<value code="ZDB-41-UTBO">utb-studi-e-book / Soziologie</value>
-						<value code="ZDB-41-UTBP">utb-studi-e-book / Sprachwissenschaft</value>
-						<value code="ZDB-41-UTBY">utb-studi-e-book / Technik/Ingenieurwesen</value>
-						<value code="ZDB-41-UTBQ">utb-studi-e-book / Theologie und Religion</value>
-						<value code="ZDB-41-UTBR">utb-studi-e-book / Recht</value>
-						<value code="ZDB-41-UTBW">utb-studi-e-book / Mathematik/ Statistik/ Informatik</value>
-						<value code="ZDB-41-UTBX">utb-studi-e-book / Sportwissenschaft</value>
 						<value code="ZDB-117-APE">V&amp;R eLibrary / Angewandte Psychologie Erwachsene</value>
 						<value code="ZDB-117-VRE">V&amp;R eLibrary / E-Books</value>
 						<value code="ZDB-117-EXE">V&amp;R eLibrary / Exegese</value>
@@ -10329,6 +10429,15 @@
 						<value code="ZDB-107-WFK">Waxmann / Sozialpädagogik &amp; Pädagogik der frühen Kindheit</value>
 						<value code="ZDB-107-WSO">Waxmann / Soziologie</value>
 						<value code="ZDB-107-WSB">Waxmann / Sprachliche Bildung</value>
+						<value code="ZDB-124-WMH">World Scientific Publishing / Mathematics</value>
+						<value code="ZDB-124-WOP">World Scientific Publishing</value>
+						<value code="ZDB-124-WPN">World Scientific Publishing /Physics, Nonlinear Science</value>
+						<value code="ZDB-130-BBA">UTB scholars-e-library / Pädagogik/ Betriebliche Aus- und Weiterbildung / Backlist wbv</value>
+						<value code="ZDB-130-BBW">wbv / Berufs- und Wirtschaftspädagogik</value>
+						<value code="ZDB-130-BEB">UTB scholars-e-library / Pädagogik / Erwachsenenbildung Praktiker / Backlist wbv</value>
+						<value code="ZDB-130-BEW">UTB scholars-e-library / Pädagogik / Erwachsenenbildungsforschung / Backlist wbv</value>
+						<value code="ZDB-130-BPE">wbv / Personalentwicklung</value>
+						<value code="ZDB-130-BZS">wbv / Erziehungswissenchaft &amp; Sozialforschung</value>
 						<value code="ZDB-142-WAR">WBG / Archäologie</value>
 						<value code="ZDB-142-WAG">WBG / Alte Geschichte</value>
 						<value code="ZDB-142-WEA">WBG / Edition Antike</value>
@@ -10351,44 +10460,8 @@
 						<value code="ZDB-142-WSY">WBG / Systemische Theologie</value>
 						<value code="ZDB-142-WWG">WBG / Weltgeschichte</value>
 						<value code="ZDB-142-WWI">WBG / Weltreligionen und interreligiöser Dialog</value>
-						<value code="ZDB-130-BBW">wbv / Berufs- und Wirtschaftspädagogik</value>
-						<value code="ZDB-130-BZS">wbv / Erziehungswissenchaft &amp; Sozialforschung</value>
-						<value code="ZDB-130-BPE">wbv / Personalentwicklung</value>
 						<value code="ZDB-156-WGG">Wichmann / Geoinformatik, Geodäsie, Photogrammetrie</value>
-						<value code="ZDB-35-WCA">Wiley Collection Agriculture</value>
-						<value code="ZDB-35-WCB">Wiley Collection Biochemistry</value>
-						<value code="ZDB-35-WCE">Wiley Collection Business, Economics, Finance, Accounting</value>
-						<value code="ZDB-35-WCF">Wiley Collection Chemical Engineering</value>
-						<value code="ZDB-35-WCT">Wiley Collection Earth &amp; Environmental Sciences</value>
-						<value code="ZDB-35-WCG">Wiley Collection Ecology</value>
-						<value code="ZDB-35-WCI">Wiley Collection Electrical &amp; Electronics Engineering</value>
-						<value code="ZDB-35-WCH">Wiley Collection Energy</value>
-						<value code="ZDB-35-WCJ">Wiley Collection General &amp; Physical Chemistry</value>
-						<value code="ZDB-35-WCK">Wiley Collection Geography</value>
-						<value code="ZDB-35-WCL">Wiley Collection Industrial Chemistry</value>
-						<value code="ZDB-35-WCM">Wiley Collection Industrial Engineering</value>
-						<value code="ZDB-35-WCN">Wiley Collection Materials Science</value>
-						<value code="ZDB-35-WCO">Wiley Collection Mechanical Engineering</value>
-						<value code="ZDB-35-WCQ">Wiley Collection Nanotechnology</value>
-						<value code="ZDB-35-WCR">Wiley Collection Organic Chemistry &amp; Catalysis</value>
-						<value code="ZDB-35-WCV">Wiley Collection Pharmaceutical &amp; Medicinal Chemistry</value>
-						<value code="ZDB-35-WCS">Wiley Collection Physics</value>
-						<value code="ZDB-35-WCP">Wiley Collection Plant Sciences</value>
-						<value code="ZDB-35-WCU">Wiley Collection Polymer Science &amp; Technology</value>
-						<value code="ZDB-35-WIC">Wiley-E-Books (Wiley InterScience Online Books)</value>
-						<value code="ZDB-35-UBC">Wiley Online Library / Usage-Based-Collection Management (UBCM)</value>
-						<value code="ZDB-95-WFB">Wilhelm Fink eBooks</value>
 						<value code="ZDB-246-WVE">Wochenschau Verlag E-Books</value>
-						<value code="ZDB-48-WKZ">Wolters Kluwer BGHZ</value>
-						<value code="ZDB-48-WKG">Wolters Kluwer Handels- und Gesellschaftsrecht</value>
-						<value code="ZDB-48-WKI">Wolters Kluwer Heymanns Insolvenzrecht Plus</value>
-						<value code="ZDB-48-WKH">Wolters Kluwer Hochschulen</value>
-						<value code="ZDB-48-WKF">Wolters Kluwer Online-Flat</value>
-						<value code="ZDB-48-WKS">Wolters Kluwer Sozilrecht</value>
-						<value code="ZDB-33-WKT">Woodhead / Knovel - Textiles</value>
-						<value code="ZDB-124-WOP">World Scientific Publishing</value>
-						<value code="ZDB-124-WMH">World Scientific Publishing / Mathematics</value>
-						<value code="ZDB-124-WPN">World Scientific Publishing /Physics, Nonlinear Science</value>
 						<value code="ZDB-186-WTM">WTM-Verlag E-Books</value>
 						<value code="ZDB-199-WTO">WTO iLibrary</value>
 						<value code="APA PsycBOOKS (via APA PsycNET)">s. PsycBOOKS (via APA PsycNET)</value>
@@ -10468,8 +10541,9 @@
 						<value code="ZDB-159-TPT">SciFo / Thermoprozesstechnik</value>
 						<value code="ZDB-281-VDG">VDI Verlag-eLibrary / Gesamt</value>
 						<value code="ZDB-245-NWIR">NWB Internationale Rechnungslegung</value>
-						<value code="ZDB-245-NWSI">NWB Steuern International</value>
-						<value code="ZDB-41-UTBOA">UTB / Open Access</value>
+						<value code="ZDB-245-NWSI">NWB Steuern International</value>	
+						<value code="ZDB-287-WOA">wbv / Open Access</value>
+						<value code="ZDB-291-LRG">Reichert Media Library / Gesamt</value>
 					</values>
 				</sub_field_configuration>
 			</sub_fields_list>
@@ -10821,7 +10895,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="981" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>SISIS-Katkey</description>
+			<description>Systemnummer alt</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -10836,7 +10910,7 @@
 			</second_indicator_configuration>
 			<sub_fields_list>
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>SISIS-Katkey</description>
+					<description>Systemnummer alt</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -10886,6 +10960,12 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Notation</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
+					<description>Beschreibung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
+					<description>Herkunft</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -10956,6 +11036,7 @@
 				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Bestandserhaltungsmaßnahmen</description>
 					<values>
+						<value code="Ersatzbeschaffung geplant">Ersatzbeschaffung geplant</value>
 						<value code="restauriert">restauriert</value>
 						<value code="Schutzverpackung">Schutzverpackung</value>
 						<value code="Maßnahme geplant">Maßnahme geplant</value>
@@ -11087,6 +11168,38 @@
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
+		<data_field_configuration repeatable="true" mandatory="false" tag="988" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<description>Digitalisierungsangaben</description>
+			<first_indicator_configuration>
+				<description>nicht definiert</description>
+				<values>
+					<value code="#">nicht definiert</value>
+				</values>
+			</first_indicator_configuration>
+			<second_indicator_configuration>
+				<description>nicht definiert</description>
+				<values>
+					<value code="#">nicht definiert</value>
+				</values>
+			</second_indicator_configuration>
+			<sub_fields_list>
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
+					<description>Marginalien</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="b">
+					<description>Extras Inhalt</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="c">
+					<description>Allg. Anmerkung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="u">
+					<description>URL</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
+					<description>Anmerkung zur URL</description>
+				</sub_field_configuration>
+			</sub_fields_list>
+		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="989" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Bemerkung extern</description>
 			<first_indicator_configuration>
@@ -11124,6 +11237,26 @@
 			<sub_fields_list>
 				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>Bemerkung intern</description>
+				</sub_field_configuration>
+			</sub_fields_list>
+		</data_field_configuration>
+		<data_field_configuration repeatable="true" mandatory="false" tag="992" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<description>Signaturen</description>
+			<first_indicator_configuration>
+				<description>nicht definiert</description>
+				<values>
+					<value code="#">nicht definiert</value>
+				</values>
+			</first_indicator_configuration>
+			<second_indicator_configuration>
+				<description>nicht definiert</description>
+				<values>
+					<value code="#">nicht definiert</value>
+				</values>
+			</second_indicator_configuration>
+			<sub_fields_list>
+				<sub_field_configuration repeatable="true" mandatory="false" code="a">
+					<description>Signaturen</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -11170,6 +11303,12 @@
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="c">
 					<description>Bearbeitungsvermerk Dissertationen</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="d">
+					<description>Standorte</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
+					<description>Herkunft</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
