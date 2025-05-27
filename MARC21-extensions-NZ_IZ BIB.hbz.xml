@@ -40,6 +40,50 @@
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
+		<data_field_configuration repeatable="true" mandatory="false" tag="022" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<description>Internationale Standardseriennummer</description>
+			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/022/022.html</help_url>
+			<first_indicator_configuration>
+				<description>Level</description>
+				<values>
+					<value code="#">kein Level spezifiziert</value>
+					<value code="0">Fortlaufende Ressource von internationalem Interesse</value>
+					<value code="1">Fortlaufende Ressource nicht von internationalem Interesse</value>
+				</values>
+			</first_indicator_configuration>
+			<second_indicator_configuration>
+				<description>nicht definiert</description>
+				<values>
+					<value code="#">nicht definiert</value>
+				</values>
+			</second_indicator_configuration>
+			<sub_fields_list>
+				<sub_field_configuration repeatable="false" mandatory="false" code="a">
+					<description>Internationale Standardseriennummer</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="l">
+					<description>ISSN-L</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="m">
+					<description>Gelöschte ISSN-L</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="y">
+					<description>Falsche ISSN</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="z">
+					<description>Gelöschte ISSN</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="2">
+					<description>Quelle</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="false" mandatory="false" code="6">
+					<description>Verknüpfung</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="8">
+					<description>Feldverknüpfung und Reihenfolge</description>
+				</sub_field_configuration>				
+			</sub_fields_list>
+		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="024" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<description>Anderer Standard-Identifier</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/024/024.html</help_url>
@@ -203,7 +247,7 @@
 					<description>Rektazension westliche Grenze</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="p">
-					<description> Äquinoktium</description>
+					<description>Äquinoktium</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="r">
 					<description>Entfernung von der Erde</description>
@@ -2006,7 +2050,7 @@
 					<description>Vollständige Form eines Namens</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -2248,7 +2292,7 @@
 					<description>Titel eines Teils/einer Abteilung eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -2493,7 +2537,7 @@
 					<description>Name der Veranstaltung, der dem Gebietskörperschaftsnamen als Eintragungselement folgt</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -2749,7 +2793,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="0">
 					<description>IDN des Normdatensatzes oder Standardnummer</description>
@@ -3997,14 +4041,14 @@
 					<description>Buchformat</description>
 					<values>
 						<value code="Folio">Folio</value>
-						<value code="4o"> | </value>
-						<value code="8o"> | </value>
-						<value code="12o"> | </value>
-						<value code="16o"> | </value>
-						<value code="24o"> | </value>
-						<value code="32o"> | </value>
-						<value code="48o"> | </value>
-						<value code="64o"> | </value>
+						<value code="4°"> | </value>
+						<value code="8°"> | </value>
+						<value code="12°"> | </value>
+						<value code="16°"> | </value>
+						<value code="24°"> | </value>
+						<value code="32°"> | </value>
+						<value code="48°"> | </value>
+						<value code="64°"> | </value>
 					</values>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="n">
@@ -4928,7 +4972,7 @@
 			</second_indicator_configuration>
 			<sub_fields_list>
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>Allgemeine Fußnote</description>
+					<description>Allgemeine Fussnote</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="3">
 					<description>Spezifische Materialangabe</description>
@@ -4946,7 +4990,7 @@
 					<description>Feldzuordnung Aleph</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="D">
-					<description>Allgemeine Fußnote</description>
+					<description>Allgemeine Fussnote</description>
 					<values>
 						<value code="Erscheint täglich">EF</value>
 						<value code="Erscheint dreimal pro Woche">EF</value>
@@ -5005,10 +5049,10 @@
 			</second_indicator_configuration>
 			<sub_fields_list>
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>Fußnote zu enthaltenen Werken</description>
+					<description>Fussnote zu enthaltenen Werken</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="5">
-					<description>Das Unterfeld gibt die Institution an, auf die sich das Feld bezieht</description>
+					<description>Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
@@ -5076,7 +5120,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="505" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
-			<description>Fußnote zu strukturierten Inhaltsangaben</description>
+			<description>Fussnote zu strukturierten Inhaltsangaben</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/505/505.html</help_url>
 			<first_indicator_configuration>
 				<description>Anzeigekonstante</description>
@@ -5096,7 +5140,7 @@
 			</second_indicator_configuration>
 			<sub_fields_list>
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>Fußnote zu strukturierten Inhaltsangaben</description>
+					<description>Fussnote zu strukturierten Inhaltsangaben</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="g">
 					<description>Sonstige Informationen</description>
@@ -5189,7 +5233,7 @@
 					<description>Angabe des Teils</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="5">
-					<description>MARC-Code der Bibliothek/Institution, auf die sich das Feld bezieht</description>
+					<description>Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
@@ -5249,7 +5293,7 @@
 					<description>Angabe des Teils</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="5">
-					<description>Bibliothek/Institution, auf die sich das Feld bezieht</description>
+					<description>Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
@@ -5328,7 +5372,7 @@
 					<description>Angabe des Teils</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="5">
-					<description>MARC-Code der Bibliothek/Institution, auf die sich das Feld bezieht</description>
+					<description>Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="6">
 					<description>Verknüpfung</description>
@@ -5477,7 +5521,7 @@
 					<description>Identifikator der Aktion</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="c">
-					<description>Zeit/Datum der Bearbeitung</description>
+					<description>Zeit / Datum der Bearbeitung</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="d">
 					<description>Aktionsintervall</description>
@@ -5486,10 +5530,10 @@
 					<description>Auslösendes Ereignis</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="f">
-					<description>Kontext/Rechtsprechungsgrundlage</description>
+					<description>Kontext / Rechtsprechungsgrundlage</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="h">
-					<description>Kontext/Rechtliche Verantwortung</description>
+					<description>Kontext / Rechtliche Verantwortung</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="i">
 					<description>Bearbeitungsmethode</description>
@@ -5525,7 +5569,7 @@
 					<description>Spezifische Materialangaben, Bestandsangaben/Signatur</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="5">
-					<description>Bibliothek/Institution</description>
+					<description>Institution, auf die sich das Feld bezieht</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="6">
 					<description>Verküpfung</description>
@@ -6170,6 +6214,8 @@
 						<value code="Enzyklopädie">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Erlebnisbericht$$0(DE-588)4133254-4$$2gnd-content">SE</value>
 						<value code="Erlebnisbericht">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Exlibris$$0(DE-588)4015985-1$$2gnd-content">SE optional</value>
+						<value code="Exlibris">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fachkunde$$0(DE-588)4153488-8$$2gnd-content">SE</value>
 						<value code="Fachkunde">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fahrplan$$0(DE-588)4153563-7$$2gnd-content">SE</value>
@@ -6212,18 +6258,26 @@
 						<value code="Führer">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Fundstellenverzeichnis$$0(DE-588)4155642-2$$2gnd-content">SE</value>
 						<value code="Fundstellenverzeichnis">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Gebetbuch$$0(DE-588)4019515-6$$2gnd-content">SE optional</value>
+						<value code="Gebetbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Gelegenheitsschrift$$0(DE-588)4156438-8$$2gnd-content">SE optional</value>
 						<value code="Gelegenheitsschrift">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Genealogische Tafel$$0(DE-588)4156582-4$$2gnd-content">SE</value>
 						<value code="Genealogische Tafel">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Gesangbuch$$0(DE-588)4137651-1$$2gnd-content">SE optional</value>
+						<value code="Gesangbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Gesetzesmaterialien$$0(DE-588)1119181364$$2gnd-content">SE optional</value>
 						<value code="Gesetzesmaterialien">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Gespräch$$0(DE-588)4020713-4$$2gnd-content">SE</value>
 						<value code="Gespräch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Getränkekarte$$0(DE-588)1350087343$$2gnd-content">SE optional</value>
+						<value code="Getränkekarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Globus$$0(DE-588)4157633-0$$2gnd-content">SE</value>
 						<value code="Globus">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Grafik$$0(DE-588)4021845-4$$2gnd-content">SE</value>
 						<value code="Grafik">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Graphic Novel$$0(DE-588)7658564-5$$2gnd-content">SE optional</value>
+						<value code="Graphic Novel">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Graphzine$$0(DE-588)1032889837$$2gnd-content">SE</value>
 						<value code="Graphzine">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Grünbuch$$0(DE-588)7619734-7$$2gnd-content">SE optional</value>
@@ -6310,12 +6364,16 @@
 						<value code="Liederbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Literaturbericht$$0(DE-588)4167870-9$$2gnd-content">SE</value>
 						<value code="Literaturbericht">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Lokalzeitung$$0(DE-588)4074317-2$$2gnd-content">SE optional</value>
+						<value code="Lokalzeitung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Loseblattsammlung$$0(DE-588)4343271-2$$2gnd-content">SE</value>
 						<value code="Loseblattsammlung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Manuskriptkarte$$0(DE-588)1268890804$$2gnd-content">SE optional</value>
 						<value code="Manuskriptkarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Mehrsprachiges Wörterbuch$$0(DE-588)4491366-7$$2gnd-content">SE</value>
 						<value code="Mehrsprachiges Wörterbuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Menükarte$$0(DE-588)1350087084$$2gnd-content">SE optional</value>
+						<value code="Menükarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Mitgliederverzeichnis$$0(DE-588)4170173-2$$2gnd-content">SE</value>
 						<value code="Mitgliederverzeichnis">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Modell$$0(DE-588)4039798-1$$2gnd-content">SE</value>
@@ -6352,6 +6410,8 @@
 						<value code="Postkarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Praktikum$$0(DE-588)4127380-1$$2gnd-content">SE</value>
 						<value code="Praktikum">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Predigt$$0(DE-588)4047089-1$$2gnd-content">SE optional</value>
+						<value code="Predigt">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Predigthilfe$$0(DE-588)4175601-0$$2gnd-content">SE</value>
 						<value code="Predigthilfe">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Pressendruck$$0(DE-588)4159043-0$$2gnd-content">SE</value>
@@ -6372,6 +6432,10 @@
 						<value code="Referateorgan">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Regest$$0(DE-588)4049007-5$$2gnd-content">SE</value>
 						<value code="Regest">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Regiebuch$$0(DE-588)4364687-6$$2gnd-content">SE optional</value>
+						<value code="Regiebuch">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Regionalzeitung$$0(DE-588)4177435-8$$2gnd-content">SE optional</value>
+						<value code="Regionalzeitung">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Reisebericht$$0(DE-588)4076645-7$$2gnd-content">SE</value>
 						<value code="Reisebericht">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Reportagensammlung$$0(DE-588)107186257X$$2gnd-content">SE</value>
@@ -6398,6 +6462,8 @@
 						<value code="Schulprogram">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Software$$0(DE-588)4055382-6$$2gnd-content">SE</value>
 						<value code="Software">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Speisekarte$$0(DE-588)4056112-4$$2gnd-content">SE optional</value>
+						<value code="Speisekarte">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Spiel$$0(DE-588)4056218-9$$2gnd-content">SE</value>
 						<value code="Spiel">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Sprachatlas$$0(DE-588)4056446-0$$2gnd-content">SE</value>
@@ -6410,6 +6476,8 @@
 						<value code="Statistik">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Stummfilm$$0(DE-588)4058257-7$$2gnd-content">SE optional</value>
 						<value code="Stummfilm">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Stundenbuch$$0(DE-588)4132719-6$$2gnd-content">SE optional</value>
+						<value code="Stundenbuch">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Tabelle$$0(DE-588)4184303-4$$2gnd-content">SE</value>
 						<value code="Tabelle">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Tafel$$0(DE-588)4184335-6$$2gnd-content">SE</value>
@@ -6424,6 +6492,8 @@
 						<value code="Testmaterial">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Theaterstück$$0(DE-588)4304080-9$$2gnd-content">SE</value>
 						<value code="Theaterstück">bitte den Eintrag mit $$0 auswählen</value>
+						<value code="Theaterzettel$$0(DE-588)4185060-9$$2gnd-content">SE optional</value>
+						<value code="Theaterzettel">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Thesaurus$$0(DE-588)4185172-9$$2gnd-content">SE</value>
 						<value code="Thesaurus">bitte den Eintrag mit $$0 auswählen</value>
 						<value code="Übungssammlung$$0(DE-588)4222208-4$$2gnd-content">SE</value>
@@ -6658,7 +6728,7 @@
 					</values>
 				</sub_field_configuration>					
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>Schlagwort - Name </description>
+					<description>Schlagwort - Name</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="b">
 					<description>Zählung, Abteilung</description>
@@ -6694,7 +6764,7 @@
 					<description>Besetzung</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="n">
-					<description>Zählung eines Teils/einer Abteilung eines Werkes </description>
+					<description>Zählung eines Teils/einer Abteilung eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="o">
 					<description>Angabe des Musikarrangements</description>
@@ -6712,7 +6782,7 @@
 					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="v">
-					<description>Unterteilung nach Formn</description>
+					<description>Unterteilung nach Form</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="x">
 					<description>Allgemeine Unterteilung</description>
@@ -6817,7 +6887,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -7090,7 +7160,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -7354,7 +7424,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -7710,7 +7780,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="770" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
-			<description>Beilage/Sonderheft</description>
+			<description>Beilage / Sonderheft</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/770/770.html</help_url>
 			<first_indicator_configuration>
 				<description>Anzeige</description>
@@ -8239,7 +8309,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="777" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans">
-			<description>Erschienen  mit</description>
+			<description>Erschienen mit</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/777/777.html</help_url>
 			<first_indicator_configuration>
 				<description>Anzeige</description>
@@ -8738,8 +8808,6 @@
 						<value code="Rezension von"> | </value>
 						<value code="Romanbearbeitung von"> | </value>
 						<value code="Skript für Radiosendung"> | </value>
-						<value code="Sonderdruck"> | </value>
-						<value code="Sonderdruck aus"> | </value>
 						<value code="Überarbeitet als"> | </value>
 						<value code="Überarbeitung von"> | </value>
 						<value code="Variationen basierend auf"> | </value>
@@ -8875,7 +8943,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -8989,7 +9057,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -9100,7 +9168,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="u">
 					<description>Zugehörigkeit</description>
@@ -9148,7 +9216,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="830" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>NNebeneintragung unter dem Gesamttitel - Bevorzugter Titel des Werks</description>
+			<description>Nebeneintragung unter dem Gesamttitel - Bevorzugter Titel des Werks</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/830/830.html</help_url>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
@@ -9212,7 +9280,7 @@
 					<description>Version</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="t">
-					<description>Titel eines Werkes </description>
+					<description>Titel eines Werkes</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="v">
 					<description>Band/Erscheinungsverlauf</description>
@@ -9346,7 +9414,7 @@
 					<description>Datensatzkontrollnummer</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="x">
-					<description>Nicht öffentliche Fußnote</description>
+					<description>Nicht öffentliche Fussnote</description>
 					<values>
 						<value code="Inhaltsverzeichnis"> | </value>
 						<value code="Agentur"> | </value>
@@ -9366,7 +9434,7 @@
 					<description>Verküpfungstext</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="z">
-					<description>öffentliche Fußnote</description>
+					<description>öffentliche Fussnote</description>
 					<values>
 						<value code="kostenfrei"> | </value>
 						<value code="lizenzpflichtig"> | </value>
@@ -9450,7 +9518,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="912" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>Paketsigel</description>
+			<description>Produktsigel</description>
 			<help_url>https://www.alma-dach.org/alma-marc/bibliographic/912/912.html</help_url>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
@@ -9466,7 +9534,7 @@
 			</second_indicator_configuration>
 			<sub_fields_list>
 				<sub_field_configuration repeatable="false" mandatory="false" code="a">
-					<description>Paketsigel</description>
+					<description>Produktsigel</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="false" mandatory="false" code="b">
 					<description>Lizenzjahr</description>
@@ -9927,19 +9995,19 @@
 					<description>Gesamtzahl Stimmen</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="e">
-					<description>Stimmen/ Instrumente</description>
+					<description>Stimmen / Instrumente</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="f">
-					<description>Form/ Gattung</description>
+					<description>Form / Gattung</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="940" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>reserviert für BVB</description>
+			<description>Kennzeichen auf der regionalen MARC-Anwenderebene des BVB</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
-					<value code="#">nicht definiert</value>
+					<value code="1">nicht definiert</value>
 				</values>
 			</first_indicator_configuration>
 			<second_indicator_configuration>
@@ -9951,6 +10019,12 @@
 			<sub_fields_list>
 				<sub_field_configuration repeatable="true" mandatory="false" code="a">
 					<description>BVB-Feld</description>
+				</sub_field_configuration>
+				<sub_field_configuration repeatable="true" mandatory="false" code="n">
+					<description>Selektionskennzeichen für bibliotheksübergreifende Projekte (z.B. Judaica)</description>
+					<values>
+						<value code="jfk">Judaica</value>
+					</values>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -10466,7 +10540,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="962" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>Selektionskennzeichen EBooks, Digitalisate</description>
+			<description>Selektionskennzeichen E-Books, Digitalisate</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -10481,7 +10555,7 @@
 			</second_indicator_configuration>
 			<sub_fields_list>
 			     <sub_field_configuration repeatable="true" mandatory="false" code="e">
-					<description>Selektionskennzeichen EBooks, Digitalisate</description>
+					<description>Selektionskennzeichen E-Books, Digitalisate</description>
 				</sub_field_configuration>
 			</sub_fields_list>
 		</data_field_configuration>
@@ -10868,7 +10942,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="982" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>Lokales Schlagwort </description>
+			<description>Lokales Schlagwort</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -10926,7 +11000,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="true" mandatory="false" tag="984" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>Provenienzen: Mit dem Exemplar in Beziehung stehende Person/Körperschaft, Sammlungen</description>
+			<description>Provenienzen: Mit dem Exemplar in Beziehung stehende Person / Körperschaft, Sammlungen</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
@@ -11112,7 +11186,7 @@
 					<description>Entstehungsort</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="k">
-					<description>Referenznummern/Nachweis</description>
+					<description>Referenznummern / Nachweis</description>
 				</sub_field_configuration>
 				<sub_field_configuration repeatable="true" mandatory="false" code="l">
 					<description>Bemerkungen</description>
@@ -11417,7 +11491,7 @@
 			</sub_fields_list>
 		</data_field_configuration>
 		<data_field_configuration repeatable="false" mandatory="false" tag="997" xmlns="http://com/exlibris/repository/mdprofile/xmlbeans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-			<description>Aufnahmedatum ,Aufnahmejahr</description>
+			<description>Aufnahmedatum, Aufnahmejahr</description>
 			<first_indicator_configuration>
 				<description>nicht definiert</description>
 				<values>
